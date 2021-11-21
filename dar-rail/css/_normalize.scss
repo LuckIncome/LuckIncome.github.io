@@ -1,0 +1,54 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  font-weight: 500;
+  line-height: 1;
+}

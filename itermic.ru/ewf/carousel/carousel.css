@@ -1,0 +1,26 @@
+.ewf_carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.ewf_carousel .images {
+    position: absolute;
+}
+
+.ewf_carousel #prev {
+    position: absolute;
+    top: 145px;
+    left: 20px;
+}
+
+.ewf_carousel #next {
+    position: absolute;
+    top: 145px;
+    right: 20px;
+}
+
+.ewf_carousel .bullets {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}

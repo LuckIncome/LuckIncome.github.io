@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="img/logo.svg"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Qaz Fasad</title>
+  </head>
+
+  <body>
+
+    <main id="app" ref="infoBox">
+      <div class="dark-wrapper"  :class="{'dark-wrapper-active': isDarkWrapper}"></div>
+      
+      <header class="header">
+        <div class="container">
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="">
+          </a>
+          <div class="header__menu">
+            <a href="company.html">О компании</a>
+            <a href="products.html">Продукция</a>
+            <a href="#">Документы</a>
+            <a href="#">Инструкции</a>
+            <a href="objects.html">Наши объекты</a>
+            <a href="contact.html">Контакты</a>
+          </div>
+          <div class="header__phone-group">
+            <a href="tel:+7 777 011 0222" class="header__phone">
+              <img src="icons/call.svg" alt="">
+              <span>+7 777 011 0222</span>
+            </a>
+            <div class="btn-group">
+              <div class="header__phone" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                <i class="bi bi-caret-down-fill"></i>
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <a class="dropdown-item" href="tel:+7 777 011 0222">+7 777 011 0222</a>
+                <a class="dropdown-item" href="tel:+7 777 011 0222">+7 777 011 0222</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <header class="header header-mobile" :class="{'header-fixed' : isMobile}">
+        <div class="container">
+          <div class="header__toggle" @click="toggleMobile">
+            <transition name="fade" mode="out-in">
+              <button key="open" v-if="!isMobile"><i class="bi bi-list"></i></button>
+              <button key="close" v-else><i class="bi bi-x"></i></button>
+            </transition>
+          </div>
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="">
+          </a>
+          <a href="tel:+7 777 011 0222" class="header__phone">
+            <img src="icons/call.svg" alt="">
+          </a>
+          <transition name="fade" mode="out-in">
+                <div class="header__trigger" v-if="isMobile">
+                  <a href="tel:+7 777 011 0222" class="header__phone">
+                    <img src="icons/call.svg" alt="">
+                    <span>+7 777 011 0222</span>
+                  </a>
+                  <a href="tel:+7 777 011 0222" class="header__phone">
+                    <img src="icons/call.svg" alt="">
+                    <span>+7 777 011 0222</span>
+                  </a>
+                  <div class="header__menu">
+                    <a href="company.html">О компании</a>
+                    <a href="products.html">Продукция</a>
+                    <a href="#">Документы</a>
+                    <a href="#">Инструкции</a>
+                    <a href="objects.html">Наши объекты</a>
+                    <a href="contact.html">Контакты</a>
+                  </div>
+                  <div class="network">
+                    <a href="#"><img src="icons/facebook.svg" alt=""></a>
+                    <a href="#"><img src="icons/instagram.svg" alt=""></a>
+                  </div>
+                </div>
+              </transition>
+        </div>
+      </header>
+
+      <section class="navigation">
+        <div class="container">
+          <a href="index.html">Главная</a> <i class="bi bi-chevron-right"></i> 
+          <span>Контакты</span>
+        </div>
+      </section>
+      
+      <section class="contact-page">
+        <div class="container">
+          <div class="content">
+            <div class="title">Контакты</div>
+            <div class="item">
+              <div class="icon"><img src="icons/call.svg" alt=""></div>
+              <div class="info">
+                <a href="tel:+7 777 011 0222">+7 777 011 0222</a>
+                <a href="tel:+7 705 444 5554">+7 705 444 5554</a>
+                <a href="tel:+7 778 082 2281">+7 778 082 2281</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon"><img src="icons/location.svg" alt=""></div>
+              <div class="info">
+                <div class="address">г.Нур-Султан, пр. Туран, зд.50 4 этаж, оф.№3</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon"><img src="icons/email.svg" alt=""></div>
+              <div class="info">
+                <a href="mailto:ttstoo17@gmail.com">ttstoo17@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <form action="">
+            <div class="contact-page-title">Получить консультацию</div>
+            <input class="input" type="text" placeholder="Ваше имя*" required>
+            <input class="input" type="text" id="phone" placeholder="Номер телефона*" required>
+            <input class="input" type="email" placeholder="Введите свой E-mail" required>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Я согласен на оброботку <a href="#">персональных данных</a>
+              </label>
+            </div>
+            <button type="submit" class="my-btn btn-gold-full">Получить консультацию</button>
+          </form>
+        </div>
+      </section>
+
+
+      <section class="contact-page-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10019.127153908028!2d71.40132635076864!3d51.11248611244162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42458695c93afaaf%3A0xef0ec94aac7cadb3!2z0L_RgNC-0YHQvy4g0KLRg9GA0LDQvSwg0J3Rg9GALdCh0YPQu9GC0LDQvSAwMjAwMDA!5e0!3m2!1sru!2skz!4v1631465986018!5m2!1sru!2skz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="content">
+              <label>Оставьте заявку для сотрудничества</label>
+              <form action="">
+                <input type="text" placeholder="Введите свой E-mail" required>
+                <button type="submit"><img src="icons/arrow.svg" alt=""></button>
+              </form>
+            </div>
+            <div class="content">
+              <a href="index.html" class="active">Главная</a>
+              <a href="company.html">О компании</a>
+              <a href="products.html">Продукция</a>
+            </div>
+            <div class="content">
+              <a href="#">Клиентам</a>
+              <a href="objects.html">Объекты</a>
+              <a href="contact.html">Контакты</a>
+            </div>
+            <div class="content">
+              <a class="phone" href="tel:+7 777 011 0222"><img src="icons/call.svg" alt="">+7 777 011 0222</a>
+              <a class="email" href="mailto:ttstoo17@gmail.com">ttstoo17@gmail.com</a>
+              <div class="network">
+                <a href="#"><img src="icons/facebook.svg" alt=""></a>
+                <a href="#"><img src="icons/instagram.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <p>© 2021 ТОО «ТД Qaz Fiber cement»</p>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#"><img src="img/logo-im.svg" alt=""></a>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+    <script src="js/carousel.js"></script>
+    <script src="js/masked.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

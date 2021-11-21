@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="images/logo.svg"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dar Rail</title>
+  </head>
+
+  <body>
+
+    <main id="app" ref="infoBox"> 
+      
+      <header class="header">
+        <div class="container">
+
+          <div class="toggle-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="bi bi-list"></i>
+          </div>
+
+          <div class="lang">
+            <div class="btn-group hover-show">
+              <div class="dropdown-toggle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                Рус
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <li><a class="dropdown-item" href="#">Рус</a></li>
+                <li><a class="dropdown-item" href="#">Каз</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <ul class="menu">
+            <li class="btn-group hover-show">
+              <a href="about.html" class="dropdown-toggle">
+                О компании
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <li><a class="dropdown-item" href="history.html">История компании</a></li>
+                <li><a class="dropdown-item" href="mission.html">Миссия и цели</a></li>
+                <li><a class="dropdown-item" href="management.html">Руководство</a></li>
+                <li><a class="dropdown-item" href="quality.html">Управление качеством</a></li>
+                <li><a class="dropdown-item" href="security.html">Безопасность</a></li>
+                <li><a class="dropdown-item" href="tcc.html">ЦУП</a></li>
+                <li><a class="dropdown-item" href="staff.html">Персонал</a></li>
+              </ul>
+            </li>
+            <li><a href="services.html" class="active">Услуги</a></li>
+            <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+
+          <div class="feedback">
+            <div class="icon">
+              <img src="images/icons/call.svg" alt="icon">
+            </div>
+            <a class="icon" href="tel:77172399989">
+              <img src="images/icons/call.svg" alt="icon">
+            </a>
+            <div class="buttons">
+              <a href="tel:77172399989">8 (7172) 3 999 89</a>
+              <a href="mailto:info@darrail.com">info@darrail.com</a>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+        </div>
+        <div class="offcanvas-body">
+
+          <div class="content">
+            <ul class="menu">
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="services.html" class="active">Услуги</a></li>
+              <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+  
+            <ul class="lang">
+              <li><a href="#" class="active">Рус</a></li>
+              <li><a href="#">Каз</a></li>
+            </ul>
+          </div>
+
+          <div class="feedback">
+            <div class="icon">
+              <img src="images/icons/call.svg" alt="icon">
+            </div>
+            <div class="buttons">
+              <a href="tel:77172399989">8 (7172) 3 999 89</a>
+              <a href="mailto:info@darrail.com">info@darrail.com</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- <section class="navigation">
+        <div class="container">
+          <div class="navbar">
+            <a href="index.html">Главная</a> <i class="bi bi-record-fill"></i>
+            <span>Услуги</span>
+          </div>
+          <div class="title-page">
+            <div class="title">Услуги компании</div>
+            <div class="title-hr"></div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="about-banner">
+        <div class="image">
+          <img src="images/bg-banner.jpg" alt="image">
+        </div>
+        <div class="title">
+          <span>Услуги</span>
+        </div>
+      </section>
+
+      <section class="services-page">
+        <div class="container">
+          <div class="text">
+            Клиентоориентированность одно из основных ценностей ТОО «DAR RAIL». 
+            <br><br>
+            Ведь именно благодаря надежным партнерским отношениям между людьми и компаниями, увеличивается эффект сотрудничества, объем и качество предоставляемых услуг. 
+            <br><br>
+            Вне зависимости от того, каким будет ваш запрос, - услуги по перевозки грузов, предоставление вагонов под перевозку или другое, вы всегда получите своевременный и профессиональный ответ и помощь в решении от специалистов нашей компании.
+          </div>
+
+          <div class="items">
+
+            <div class="item">
+              <div class="number">01</div>
+              <div class="info">
+                <div class="icon">
+                  <img src="images/icons/carriage.svg" alt="icon">
+                </div>
+                <div class="name">
+                  ПЕРЕВОЗКА ГРУЗОВ <br> ЖЕЛЕЗНОДОРОЖНЫМ ТРАСПОРТОМ
+                </div>
+                <div class="text">
+                  Перевозка грузов железнодорожным транспортом с обеспечением собственными локомотивами и собственными подвижным составом.
+                  <br><br>
+                  ТОО «DAR RAIL» является лицензированным железнодорожным перевозчиком в Республике Казахстан, ориентированным на перевозку массовых грузов, включая перевозки предприятий, входящих в ERG.
+                  <br><br>
+                  <ul>
+                    Перевозки DAR RAIL в цифрах:
+                    <li>перевезено за 2020 год – более 9 млн. тонн;</li>
+                    <li>планируемый объем на 2021 год – 22,5 млн. тонн;</li>
+                    <li>21.5 тыс. груженных вагонов перевозится ежемесячно. </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="image">
+                <img src="images/services.jpg" alt="image">
+              </div>
+            </div>
+            <div class="item">
+              <div class="number">02</div>
+              <div class="info">
+                <div class="icon">
+                  <img src="images/icons/trailer.svg" alt="icon">
+                </div>
+                <div class="name">
+                  ЭКСПЕДИРОВАНИЕ ГРУЗОВ, ПЕРЕВОЗИМЫХ <br> ЖЕЛЕЗНОДОРОЖНЫМ ТРАНСПОРТОМ
+                </div>
+                <div class="text">
+                  ТОО DAR RAIL предлагает своим клиентам гибкие и выгодные условия экспедирования грузов, перевозимых железнодорожным транспортом в необходимом клиенту объеме и направлении.
+                  <br><br>
+                  <ul>
+                    Экспедирование в цифрах:
+                    <li>за 2020 год организована перевозка – 79,5 тыс. вагонов (6,4 млн. тонн) и 19 тыс. контейнеров (TEU);</li>
+                    <li>в 2021 году планируется организовать перевозку – 93 тыс. вагонов и 20 тыс. контейнеров.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="image">
+                <img src="images/services.jpg" alt="image">
+              </div>
+            </div>
+            <div class="item">
+              <div class="number">03</div>
+              <div class="info">
+                <div class="icon">
+                  <img src="images/icons/carriage.svg" alt="icon">
+                </div>
+                <div class="name">
+                  ОРГАНИЗАЦИЯ МУЛЬТИМОДАЛЬНЫХ И КОНТЕЙНЕРНЫХ ПЕРЕВОЗОК, <br> ВКЛЮЧАЯ МЕЖДУНАРОДНЫЕ С ПЕРЕВАЛКОЙ В ИНОСТРАННЫХ ПОРТАХ
+                </div>
+                <div class="text">
+                  Компания предлагает клиентам сервис по доставке контейнеров по самым эффективным маршрутам с гибкой тарифной политикой, в том числе по маршрутам из Китая в Европу, из Китая в Среднюю Азию и в обратном направлении.
+                </div>
+              </div>
+              <div class="image">
+                <img src="images/services.jpg" alt="image">
+              </div>
+            </div>
+            <div class="item">
+              <div class="number">04</div>
+              <div class="info">
+                <div class="icon">
+                  <img src="images/icons/trailer.svg" alt="icon">
+                </div>
+                <div class="name">
+                  ПРЕДОСТАВЛЕНИЕ ЖЕЛЕЗНОДОРОЖНОГО <br> ПОДВИЖНОГО СОСТАВА ПОД ПЕРЕВОЗКУ
+                </div>
+                <div class="text">
+                  DAR RAIL наряду с предоставлением услуг по перевозкам грузов имеет возможность предоставлять дополнительную услугу - услуги по обеспечению перевозок необходимым количеством железнодорожного подвижного состава (полувагон, крытый вагон, платформа, специализированные вагоны).
+                </div>
+              </div>
+              <div class="image">
+                <img src="images/services.jpg" alt="image">
+              </div>
+            </div>
+            <div class="item">
+              <div class="number">05</div>
+              <div class="info">
+                <div class="icon">
+                  <img src="images/icons/carriage.svg" alt="icon">
+                </div>
+                <div class="name">
+                  ПРЕДОСТАВЛЕНИЕ УСЛУГ ЛОКОМОТИВНОЙ ТЯГИ
+                </div>
+                <div class="text">
+                  Наряду с предоставлением услуг по перевозкам грузов компания имеет возможность предоставлять дополнительную услугу - услуги локомотивной, имеющимся парком.
+                </div>
+              </div>
+              <div class="image">
+                <img src="images/services.jpg" alt="image">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+
+        <div class="container footer-top">
+          <div class="content">
+            <a href="index.html" class="logo">
+              <img src="images/logo-2.svg" alt="logo">
+            </a>
+            <ul class="menu">
+              
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="network">
+              <a href="#" class="icon">
+                <img src="images/icons/facebook.svg" alt="icon">
+              </a>
+              <a href="#" class="icon">
+                <img src="images/icons/instagram.svg" alt="icon">
+              </a>
+            </div>
+          </div>
+          <div class="content text">
+            Грузовые перевозки собственным парком локомотивной тяги
+          </div>
+        </div>
+        <div class="footer-hr"></div>
+        <div class="container footer-bottom">
+          <div class="text">
+            © 2021 ТОО «Dar Rail»
+          </div>
+          <a href="#">Политика обработки персональных данных</a>
+          <a href="#"><img src="images/logo-im.svg" alt="logo"></a>
+        </div>
+
+      </footer>
+
+      <div class="modal fade" id="modalClick" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              algo
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <div class="widget-whatsapp">
+        <a href="https://wa.me/87172399989">
+          <img src="images/widget-whatsapp.png" alt="whatsapp">
+        </a>
+      </div>
+      <!-- <div class="widget-call">
+        <a href="tel:87172399989">
+          <img src="images/widget-call.png" alt="whatsapp">
+        </a>
+      </div> -->
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/carousel.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script> 
+    <script src="js/script.js"></script>
+  </body>
+</html>

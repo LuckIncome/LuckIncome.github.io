@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>GO KZ</title>
+ 
+</head>
+
+<body>
+  <main id="app" ref="infoBox">
+<!-- Header start -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header__logo">
+        <a href="index.html"><img src="images/logo-header.svg" alt=""></a>
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item"> <a class="menu__list-link" href="about.html">О Федерации</a></li>
+          <li class="menu__list-item"> <a class="menu__list-link" href="event-page.html">Мероприятия</a></li>
+          <li class="menu__list-item"> <a class="menu__list-link" href="news.html">Новости</a></li>
+          <li class="menu__list-item"> <a class="menu__list-link" href="blogs.html">Блог</a></li>
+          <li class="menu__list-item"> <a class="menu__list-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="dropdown">
+        <div class="button" type="button" data-bs-toggle="dropdown">
+          Рус <img src="images/down.png" alt="">
+        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><img src="images/ru.png" alt="icon"> Рус</a></li>
+          <li><a class="dropdown-item" href="#"><img src="images/kz.png" alt="icon"> Каз</a></li>
+          <li><a class="dropdown-item" href="#"><img src="images/en.png" alt="icon"> Анг</a></li>
+        </ul>
+      </div>
+      <ul class="socials">
+        <li> <a href="" class="socials-icon"><img src="images/logo-vk.svg" alt="icon"></a></li>
+        <li> <a href="" class="socials-icon"><img src="images/logo-insta.svg" alt="icon"></a></li>
+        <li> <a href="" class="socials-icon"><img src="images/logo-telegram.svg" alt="icon"></a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<header class="header header__mobile">
+  <div class="container">
+    <div class="header-top">
+      <div class="header__logo">
+        <a href="index.html"><img src="images/logo-header.svg" alt=""></a>
+      </div>
+      <button @click="toggleMobile">
+        <transition name="fade" mode="out-in">
+          <div class="burger__icon" key="Open" v-if="!dropdown2">
+            <img src="images/burger.svg" alt="">
+          </div> 
+          <div class="burger__icon" key="Close" v-else=>
+            <img src="images/close.svg" alt="">
+          </div>     
+        </transition>
+      </button>       
+    </div>
+    <div class="header-bot">
+      <transition name="fade" mode="out-in">
+        <div class="dropdown2" v-if="dropdown2">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item"> <a class="menu__list-link" href="about.html">О Федерации</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="event-page.html">Мероприятия</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="news.html">Новости</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="blogs.html">Блог</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="socials__mob">
+            <li> <a href="#" class="socials-icon"><img src="images/logo-vk.svg" alt="icon"></a></li>
+            <li> <a href="#" class="socials-icon"><img src="images/logo-insta.svg" alt="icon"></a></li>
+            <li> <a href="#" class="socials-icon"><img src="images/logo-telegram.svg" alt="icon"></a></li>
+          </ul>
+          <ul class="dropdown-menu2">
+            <li><a class="dropdown-item" href="#"><img src="images/ru.png" alt="icon"> Рус</a></li>
+            <li><a class="dropdown-item" href="#"><img src="images/kz.png" alt="icon"> Каз</a></li>
+            <li><a class="dropdown-item" href="#"><img src="images/en.png" alt="icon"> Анг</a></li>
+          </ul>
+          
+        </div>
+    </transition>
+    </div>
+  </div>
+</header>
+<!-- Header end -->
+
+<div class="dark-wrapper"  :style="`height: ${height}`"></div>
+
+  <section class="breadcrumbs">
+      <div class="container">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                  <a href="index.html">Главная</a>
+              </li> 
+              <li class="breadcrumb-item active" aria-current="page">
+                  О федерации
+              </li>
+          </ol>
+      </div>
+  </section>
+
+  <section class="about">
+    <div class="about__banner"></div>
+    <div class="container">
+        <div class="about__title">Казахстанская Федерация Го</div>
+        <div class="about__top">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 
+            1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more 
+            recently with desktop publishing software like Aldus PageMaker including versions of
+            Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div class="about__bot">
+            <img src="images/about2.jpg" alt="image">
+            <div class="text__right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Duis id ultrices velit ut nibh. Turpis venenatis, tempor, cras id at. Lectus id 
+                odio amet magna felis phasellus. Sed fames integer interdum euismod tellus eget odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id ultrices velit ut nibh. 
+                Turpis venenatis, tempor, cras id at. Lectus id odio amet magna felis phasellus. Sed 
+                fames integer interdum euismod tellus eget odio. </div>
+        </div>
+    </div>
+  </section>
+
+<!-- Footer start -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer__logo">
+        <a href="index.html">
+          <img src="images/logo-footer.svg" alt="footer logo">
+        </a>
+      </div>
+      <div class="footer__content">
+        <div class="footer__menu">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item"> <a class="menu__list-link" href="about.html">О Федерации</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="event-page.html">Мероприятия</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="news.html">Новости</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="blogs.html">Блог</a></li>
+              <li class="menu__list-item"> <a class="menu__list-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__info">
+          <div class="contact-us">
+            <div class="phone-img">
+              <img src="images/logo-contacts.svg" alt="logo">
+            </div>
+            <div class="phone-info">
+              <a href="#">+ 7 (707) 777 77 77</a>
+              <a href="#">info@gofederation.ru</a>  
+            </div>  
+          </div>
+          <div class="address">
+            <div class="phone-img">
+              <img src="images/map.svg" alt="logo">
+            </div>
+              <div class="phone-info">
+                г. Алматы, <br>
+                ул. Назарбаева, 47
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__media">
+        <div class="media__title">Подписывайтесь на нас 
+          в соц.сетях:</div>
+        <ul class="socials">
+          <li> <a href="#" class="socials-icon"><img src="images/vk-logo-white.svg" alt="icon"></a></li>
+          <li> <a href="#" class="socials-icon"><img src="images/insta-logo-white.svg" alt="icon"></a></li>
+          <li> <a href="#" class="socials-icon"><img src="images/telegram-logo-white.svg" alt="icon"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2021  «Казахстанская Федерация Го». Все права защищены.</span>
+      <a href="#">Политика обработки персональных данных</a>
+      <div class="web-logo">
+        <a href="https://i-marketing.kz/"><img src="images/logo-WEB.png" alt=""></a> 
+      </div>
+    </div>
+  </div>
+</footer>
+
+<footer class="footer footer__mobile">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer__logo">
+        <a href="index.html">
+          <img src="images/logo-footer.svg" alt="footer logo">
+        </a>
+      </div>
+      <div class="footer__media">
+        <div class="media__title">Подписывайтесь на нас 
+          в соц.сетях:</div>
+        <ul class="socials">
+          <li> <a href="#" class="socials-icon"><img src="images/vk-logo-white.svg" alt="icon"></a></li>
+          <li> <a href="#" class="socials-icon"><img src="images/insta-logo-white.svg" alt="icon"></a></li>
+          <li> <a href="#" class="socials-icon"><img src="images/telegram-logo-white.svg" alt="icon"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__content">
+      <div class="footer__menu">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item"> <a class="menu__list-link" href="about.html">О Федерации</a></li>
+            <li class="menu__list-item"> <a class="menu__list-link" href="event-page.html">Мероприятия</a></li>
+            <li class="menu__list-item"> <a class="menu__list-link" href="news.html">Новости</a></li>
+            <li class="menu__list-item"> <a class="menu__list-link" href="blogs.html">Блог</a></li>
+            <li class="menu__list-item"> <a class="menu__list-link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__info">
+        <div class="contact-us">
+          <div class="phone-img">
+            <img src="images/logo-contacts.svg" alt="logo">
+          </div>
+          <div class="phone-info">
+            <a href="#">+ 7 (707) 777 77 77</a>
+            <a href="#">info@gofederation.ru</a>  
+          </div>  
+        </div>
+        <div class="address">
+          <div class="phone-img">
+            <img src="images/map.svg" alt="logo">
+          </div>
+            <div class="phone-info">
+              г. Алматы, <br>
+              ул. Назарбаева, 47
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2021  «Казахстанская Федерация Го». Все права защищены.</span>
+      <a href="#">Политика обработки персональных данных</a>
+      <div class="web-logo">
+        <a href="https://i-marketing.kz/"><img src="images/logo-WEB.png" alt=""></a> 
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer end -->
+
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html> 

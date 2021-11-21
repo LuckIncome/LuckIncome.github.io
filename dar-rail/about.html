@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="images/logo.svg"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dar Rail</title>
+  </head>
+
+  <body>
+
+    <main id="app" ref="infoBox"> 
+      
+      <header class="header">
+        <div class="container">
+
+          <div class="toggle-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="bi bi-list"></i>
+          </div>
+
+          <div class="lang">
+            <div class="btn-group hover-show">
+              <div class="dropdown-toggle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                Рус
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <li><a class="dropdown-item" href="#">Рус</a></li>
+                <li><a class="dropdown-item" href="#">Каз</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <ul class="menu">
+            <li class="btn-group hover-show">
+              <a href="about.html" class="dropdown-toggle active">
+                О компании
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <li><a class="dropdown-item" href="history.html">История компании</a></li>
+                <li><a class="dropdown-item" href="mission.html">Миссия и цели</a></li>
+                <li><a class="dropdown-item" href="management.html">Руководство</a></li>
+                <li><a class="dropdown-item" href="quality.html">Управление качеством</a></li>
+                <li><a class="dropdown-item" href="security.html">Безопасность</a></li>
+                <li><a class="dropdown-item" href="tcc.html">ЦУП</a></li>
+                <li><a class="dropdown-item" href="staff.html">Персонал</a></li>
+              </ul>
+            </li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+
+          <div class="feedback">
+            <div class="icon">
+              <img src="images/icons/call.svg" alt="icon">
+            </div>
+            <a class="icon" href="tel:77172399989">
+              <img src="images/icons/call.svg" alt="icon">
+            </a>
+            <div class="buttons">
+              <a href="tel:77172399989">8 (7172) 3 999 89</a>
+              <a href="mailto:info@darrail.com">info@darrail.com</a>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+        </div>
+        <div class="offcanvas-body">
+
+          <div class="content">
+            <ul class="menu">
+              <li><a href="about.html" class="active">О компании</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+  
+            <ul class="lang">
+              <li><a href="#" class="active">Рус</a></li>
+              <li><a href="#">Каз</a></li>
+            </ul>
+          </div>
+
+          <div class="feedback">
+            <div class="icon">
+              <img src="images/icons/call.svg" alt="icon">
+            </div>
+            <div class="buttons">
+              <a href="tel:77172399989">8 (7172) 3 999 89</a>
+              <a href="mailto:info@darrail.com">info@darrail.com</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- <section class="navigation">
+        <div class="container">
+          <div class="navbar">
+            <a href="index.html">Главная</a> <i class="bi bi-record-fill"></i>
+            <span>О компании</span>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="about-banner">
+        <div class="image">
+          <img src="images/about-bg.jpg" alt="image">
+        </div>
+        <div class="title">
+            <span>О компании</span>
+        </div>
+      </section>
+
+      <section class="about-page">
+        <div class="container">
+          <div class="navbar">
+            <a href="about.html" class="active">О компании</a>
+            <a href="history.html" class="">История компании</a>
+            <a href="mission.html" class="">Миссия и цели</a>
+            <a href="management.html" class="">Руководство</a>
+            <a href="quality.html" class="">Управление качеством</a>
+            <a href="security.html" class="">Безопасность</a>
+            <a href="tcc.html" class="">ЦУП</a>
+            <a href="staff.html" class="">Персонал</a>
+          </div>
+
+          <button class="navbarToggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-navbar" aria-controls="offcanvasExample-navbar">
+            <i class="bi bi-justify-left"></i>
+          </button>
+         
+          <div class="content-wrapper">
+            <div class="content">
+              <img src="images/lokomativ.png" class="image-block" alt="image">
+              <div class="name">
+                ТОО «DAR RAIL» является лицензированным железнодорожным Перевозчиком в Республике Казахстан
+              </div>
+              <div class="text mb-4">
+                Компания является одним из двух частных железнодорожных перевозчиком грузов в Республике Казахстан, имеющим доступ к услугам магистральной железнодорожной сети и осуществляющим перевозки грузов. 
+                <br><br>
+                В настоящее время услуги перевозки грузов с использованием собственных локомотивов предоставляются предприятиям горно-металлургического комплекса РК, перевозки осуществляются по 7 маршрутам. География перевозок охватывает. 
+                <br><br>
+                Павлодарскую и Костанайскую области Казахстана. Компания имеет возможность расширить свою перевозочную деятельность с использованием собственных локомотивов до 18 маршрутов.
+                <br><br>
+                Наряду с предоставлением услуг по перевозкам грузов компания имеет возможность предоставлять дополнительные услуги - услуги локомотивной тяги, имеющимся парком, экспедирование грузов, предоставление железнодорожного подвижного состава, мультимодальные и контейнерные перевозки. 
+                <br><br>
+                Услуги транспортно-экспедиционного обслуживания и организации мультимодальных и контейнерных перевозок предоставляются по всей сети колеи 1520 и в направлении портов Китая.
+                <br><br>
+                Подразделения компании расположены в городах Нур-Султан, Алматы, Павлодар, Экибастуз, Есиль и на станции Тобол.
+                <br><br>
+                92% процента персонала компании от общей численности Компании составляет производственный персонал, из которых 74% персонал локомотивных бригад.
+                <br><br>
+                Компания непрерывно исследует новые направления деятельности для качественной реализации всех видов услуг, в том числе активную работу для получения доступа и начала осуществления перевозок грузов собственными локомотивами в международном сообщении, через межгосударственные стыковые пункты. 
+                <br><br>
+                Компания активно участвует в процессах реформирования железнодорожной отрасли Республики Казахстан, предлагая новые инициативы и подходы в совершенствованию системы взаимоотношений участников перевозочного процесса.
+              </div>
+              <div class="name">
+                География перевозок
+              </div>
+              <div class="title-hr"></div>
+              <div class="maps">
+                <img src="images/about-maps.jpg" alt="maps">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample-navbar" aria-labelledby="offcanvasExample-navbarLabel">
+        <div class="offcanvas-header">
+          <a href="index.html" class="logo">
+            <img src="images/logo-2.svg" alt="logo">
+          </a>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+              <li><a href="about.html" class="active">О компании</a></li>
+              <li><a href="history.html" class="">История компании</a></li>
+              <li><a href="mission.html" class="">Миссия и цели</a></li>
+              <li><a href="management.html" class="">Руководство</a></li>
+              <li><a href="quality.html" class="">Управление качеством</a></li>
+              <li><a href="security.html" class="">Безопасность</a></li>
+              <li><a href="tcc.html" class="">ЦУП</a></li>
+              <li><a href="staff.html" class="">Персонал</a></li>
+            </ul>
+        </div>
+      </div>
+
+
+
+      <footer class="footer">
+
+        <div class="container footer-top">
+          <div class="content">
+            <a href="index.html" class="logo">
+              <img src="images/logo-2.svg" alt="logo">
+            </a>
+            <ul class="menu">
+              
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="network">
+              <a href="#" class="icon">
+                <img src="images/icons/facebook.svg" alt="icon">
+              </a>
+              <a href="#" class="icon">
+                <img src="images/icons/instagram.svg" alt="icon">
+              </a>
+            </div>
+          </div>
+          <div class="content text">
+            Грузовые перевозки собственным парком локомотивной тяги
+          </div>
+        </div>
+        <div class="footer-hr"></div>
+        <div class="container footer-bottom">
+          <div class="text">
+            © 2021 ТОО «Dar Rail»
+          </div>
+          <a href="#">Политика обработки персональных данных</a>
+          <a href="#"><img src="images/logo-im.svg" alt="logo"></a>
+        </div>
+
+      </footer>
+
+      <div class="modal fade" id="modalClick" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              algo
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="widget-whatsapp">
+        <a href="https://wa.me/87172399989">
+          <img src="images/widget-whatsapp.png" alt="whatsapp">
+        </a>
+      </div>
+      <!-- <div class="widget-call">
+        <a href="tel:87172399989">
+          <img src="images/widget-call.png" alt="whatsapp">
+        </a>
+      </div> -->
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/carousel.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script> 
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.pic {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.pic:hover {
+    box-shadow: 0 0 8px 4px #d8d8d8;
+}
+
+.pic img {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px #d8d8d8;
+}
+
+.thumbnails {
+    text-align: center;
+    padding: 5px;
+}
+
+.thumbnails img {
+}
+
+.thumbnails .prev {
+    cursor: pointer;
+}
+
+.thumbnails .next {
+    cursor: pointer;
+}
+
+.thumbnails .thumb {
+    width: 51px;
+    height: 51px;
+    cursor: pointer;
+    border: 5px solid #d8d8d8;
+    margin: 0 5px 5px 0;
+}
+
+.thumbnails .thumb:hover {
+    box-shadow: 0 0 5px 1px #d8d8d8;
+}

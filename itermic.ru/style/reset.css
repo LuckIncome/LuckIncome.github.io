@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Tornado Thin C';
+    src: url('TornadoThinC.eot');
+    src: url('TornadoThinC.eot?#iefix') format('embedded-opentype'),
+    url('TornadoThinC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, area {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    vertical-align: bottom;
+    outline: none;
+    color: #666666;
+}
+
+/*special cases for this site */
+a {
+    color: #39a6e1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f37736;
+    text-decoration: underline;
+}
+
+time {
+    background: #a3a3a3;
+    padding: 3px 5px;
+    font-size: 9pt;
+    color: #ffffff;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1;
+    color: #999;
+}
+
+/*h1 {font-family: 'Didact Gothic', sans-serif; font-weight: normal; font-size: 26pt; padding: 34px 0 14px 18px; line-height: 35px;}*/
+h1 {
+    font-family: 'Tornado Thin C', sans-serif;
+    font-weight: normal;
+    font-size: 26pt;
+    letter-spacing: -0.02em;
+    line-height: 100%;
+    padding: 36px 0 14px 32px;
+}
+
+input, textarea {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    background: url("../img/bg_top.png") top left repeat-x, url("../img/bg_bottom.png") bottom left repeat-x #646569;
+    height: 100%;
+
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+    display: block;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+}
+
+sub, sup {font-size: 0.75em;}
+sub {vertical-align: sub;}
+sup {vertical-align: super;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.lf {
+    clear: both;
+}
+
+.nobr {
+    white-space: nowrap;
+}

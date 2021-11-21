@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="images/logo.svg"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dar Rail</title>
+  </head>
+
+  <body>
+
+    <main id="app" ref="infoBox"> 
+
+
+      
+      <header class="header header-image">
+        <div class="container">
+
+          <div class="toggle-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="bi bi-list"></i>
+          </div>
+
+          <div class="lang">
+            <div class="btn-group hover-show">
+              <div class="dropdown-toggle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                Рус
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <li><a class="dropdown-item" href="#">Рус</a></li>
+                <li><a class="dropdown-item" href="#">Каз</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <ul class="menu">
+            <li class="btn-group hover-show">
+              <a href="about.html" class="dropdown-toggle">
+                О компании
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                <li><a class="dropdown-item" href="history.html">История компании</a></li>
+                <li><a class="dropdown-item" href="mission.html">Миссия и цели</a></li>
+                <li><a class="dropdown-item" href="management.html">Руководство</a></li>
+                <li><a class="dropdown-item" href="quality.html">Управление качеством</a></li>
+                <li><a class="dropdown-item" href="security.html">Безопасность</a></li>
+                <li><a class="dropdown-item" href="tcc.html">ЦУП</a></li>
+                <li><a class="dropdown-item" href="staff.html">Персонал</a></li>
+              </ul>
+            </li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+
+          <div class="feedback">
+            <div class="icon">
+              <img src="images/icons/call.svg" alt="icon">
+            </div>
+            <a class="icon" href="tel:77172399989">
+              <img src="images/icons/call.svg" alt="icon">
+            </a>
+            <div class="buttons">
+              <a href="tel:77172399989">8 (7172) 3 999 89</a>
+              <a href="mailto:info@darrail.com">info@darrail.com</a>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+        </div>
+        <div class="offcanvas-body">
+
+          <div class="content">
+            <ul class="menu">
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+  
+            <ul class="lang">
+              <li><a href="#" class="active">Рус</a></li>
+              <li><a href="#">Каз</a></li>
+            </ul>
+          </div>
+
+          <div class="feedback">
+            <div class="icon">
+              <img src="images/icons/call.svg" alt="icon">
+            </div>
+            <div class="buttons">
+              <a href="tel:77172399989">8 (7172) 3 999 89</a>
+              <a href="mailto:info@darrail.com">info@darrail.com</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <section class="banner">
+        <div class="banner-slider">
+          <img class="bg" src="images/bg-banner.jpg" alt="image">
+          <img class="bg" src="images/bg-banner.jpg" alt="image">
+        </div>
+        <div class="container">
+          <div class="title">
+            ТОО “DAR RAIL” - частный перевозчик грузов с собственным парком локомотивов
+          </div>
+          <div class="text">
+            Работаем по всему Казахстану!
+          </div>
+          <button href="#" class="btn">
+            Заказать перевозку
+          </button>
+        </div>
+        <div class="banner-slider-dots"></div>
+      </section>
+      
+      <section class="about">
+        <div class="container">
+          <div class="content">
+            <div class="title">
+              «DAR RAIL» - лицензированный железнодорожный перевозчик в Республике Казахстан, осуществляющий перевозки грузов собственными локомотивами
+            </div>
+            <div class="title-hr"></div>
+            <div class="text">
+              Компания образована в 2016 году в качестве оператора локомотивной тяги и в настоящее время преобразовалась в полноценного Перевозчика грузов, предоставляющего услуги по перевозки грузов собственным парком магистральных локомотивов.
+              <br><br>
+              Уникальность компании заключается в полной концентрации всех управленческих и операционных ресурсов на построение эффективной и безопасной организации перевозочного процесса, а также на предоставлении сопутствующих услуг.
+              <br><br>
+              В настоящее время география перевозок грузов, осуществляемых DAR RAIL с использованием собственных локомотивов, охватывает Павлодарскую и Костанайскую области Казахстана. Услуги транспортно-экспедиционного обслуживания и организации мультимодальных и контейнерных перевозок предоставляются по всей сети колеи 1520 и в направлении портов Китая.
+              <br><br>
+              Подразделения Компании расположены в г.Нур-Султан, Павлодарской, Костанайской, Акмолинской областях и г. Алматы.
+              <br>
+              <ul>
+                <li>Общая численность персонала более 400 человек</li>
+                <li>В том числе персонал локомотивных бригад - 330 человек</li>
+                <li>Более 40 единиц магистральных локомотивов</li>
+              </ul>
+            </div>
+            <a href="about.html" class="arrow-link">Подробнее <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="content">
+            <div class="images">
+              <img src="images/about-new.jpg" class="rellax" data-rellax-speed="0" alt="image">
+              <div class="shadow-img rellax" data-rellax-speed="5"></div>
+            </div>
+            <div class="items">
+              <div class="item">
+                <!-- <img class="icon" src="images/icons/geo.svg" alt="icon"> -->
+                <div class="icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="text">
+                  <ul>
+                    <li>Обширная численность персонала <span>более 400 человек</span></li>
+                    <li>В том числе персонал локомотивных бригад - <span>330 человек</span></li>
+                  </ul>
+                </div>
+              </div> 
+              <div class="item">
+                <div class="icon">
+                  <img src="images/icons/locomotiv.svg" alt="">
+                </div>
+                <div class="text">
+                  <ul>
+                    <li><span>Более 40 единиц</span> магистральных локомотивов</li>
+                  </ul>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <div class="center">
+            <div class="title">
+              Наши услуги
+            </div>
+            <div class="title-hr"></div>
+          </div>
+          <div class="items">
+
+            <div class="item rellax" data-rellax-speed="0">
+              <div class="number">
+                01
+              </div>
+              <div class="name">
+                Перевозка грузов железнодорожным транспортом
+              </div>
+              <div class="text">
+                Компания предоставляет клиентам услуги по перевозке грузов железнодорожным транспортом с использованием собственного парка локомотивов.
+              </div>
+              <a href="services.html" class="arrow-link">Подробнее <i class="bi bi-arrow-right"></i></a>
+              <div class="icon">
+                <img src="images/icons/carriage.svg" alt="icon">
+              </div>
+              <div class="hr"></div>
+            </div>
+
+            <div class="item rellax" data-rellax-speed="1">
+              <div class="number">
+                02
+              </div>
+              <div class="name">
+                Экспедирование грузов, перевозимых железнодорожным транспортом
+              </div>
+              <div class="text">
+                ТОО DAR RAIL предлагает своим клиентам гибкие и выгодные условия экспедирования грузов, перевозимых железнодорожным транспортом в необходимом клиенту объеме и направлении.
+              </div>
+              <a href="services.html" class="arrow-link">Подробнее <i class="bi bi-arrow-right"></i></a>
+              <div class="icon">
+                <img src="images/icons/trailer.svg" alt="icon">
+              </div>
+              <div class="hr"></div>
+            </div>
+
+            <div class="item rellax" data-rellax-speed="2">
+              <div class="number">
+                03
+              </div>
+              <div class="name">         
+                Организация мультимодальных и контейнерных перевозок
+              </div>
+              <div class="text">
+                Предлагаем клиентам сервис по организации отправок грузов в контейнерах, включая международные перевозки с перевалкой в иностранных портах.
+                Предлагаем клиентам сервис по организации отправок грузов в контейнерах, включая международные перевозки с перевалкой в иностранных портах.
+              </div>
+              <a href="services.html" class="arrow-link">Подробнее <i class="bi bi-arrow-right"></i></a>
+              <div class="icon">
+                <img src="images/icons/carriage.svg" alt="icon">
+              </div>
+              <div class="hr"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="advantage">
+        <div class="container">
+          <div class="title">
+            Наши преимущества
+          </div>
+          <div class="text">
+            ТОО «DAR RAIL» является одним из двух частных железнодорожных перевозчиком грузов в Республике Казахстан, имеющим доступ к услугам магистральной железнодорожной сети и осуществляющим перевозки грузов.
+            <br><br>
+            Наши конкурентные преимущества:
+          </div>
+          <div class="slider">
+            <div class="slider-box">
+              <div class="item">
+                <div class="info">
+                  <div class="item">
+                    <div class="icon">
+                      <img src="images/icons/maps.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                      Обширная география предоставления услуг
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="icon">
+                      <img src="images/icons/train.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                      Собственный парк магистральных локомотивов
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="icon">
+                      <img src="images/icons/timer.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                      Высокая скорость доставки груза
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="icon">
+                      <img src="images/icons/trailer.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                      Клиентоориентированность и широкий ассортимент предоставления услуг
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="icon">
+                      <img src="images/icons/metro.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                      Круглосуточная диспетчеризация перевозок
+                    </div>
+                  </div>
+                </div>
+                <div class="advantage-slider">
+                  <div class="image">
+                    <img src="images/about-2.jpg" alt="">
+                  </div>
+                  <div class="image">
+                    <img src="images/about-1.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="advantage-slider-arrows"></div>
+            <div class="shadow-item rellax" data-rellax-speed="2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container">
+          <div class="title mb-4">
+            Наши партнеры
+          </div>
+
+          <div class="text">
+            Компания осуществляет свою деятельность в партнерстве с крупнейшими промышленными <br> предприятиями, транспортными и сервисными компаниями Казахстана, России и Китая:
+          </div>
+
+        <div class="partners__slider">
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-1.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-2.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-3.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-4.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-5.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-6.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-7.png" alt="image">
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-6.png" alt="image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <img src="images/partners-7.png" alt="image">
+            </div>
+          </div>
+        </div>
+        <div class="partners__slider-arrows"></div>
+
+
+      </div>
+
+      </section>
+
+      <section class="participation">
+        <div class="container">
+          <div class="center">
+            <div class="title">
+              Участие в ассоциациях и отраслевых объединениях
+            </div>
+            <div class="title-hr"></div>
+          </div>
+          <div class="text">
+            Для обеспечения своих интересов и развития деятельности, а также участвуя в изменениях институциональной и регуляторной среды, проводимых в Казахстане, Компания состоит в ключевых отраслевых ассоциациях и объединениях, а также является одним из учредителей Объединения юридических лиц “Саморегулируемая организация “Ассоциация казахстанских грузовых железнодорожных перевозчиков”:
+            <ul>
+              <li>Национальная палата предпринимателей РК “Атамекен”, включая Комитет и подкомитет по логистике</li>
+              <li>ОЮЛ “Республиканская ассоциация горнодобывающих и горно-металлургических предприятий” (АГМП)</li>
+              <li>Казахстанская ассоциация перевозчиков и операторов вагонов (КАЗАПО)</li>
+              <li>Ассоциация Национальных Экспедиторов Республики Казахстан</li>
+              <li>Объединение юридических лиц “Саморегулируемая организация “Ассоциация казахстанских грузовых железнодородных перевозчиков”</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="container">
+          <div class="center">
+            <div class="title">
+              Последние новости
+            </div>
+            <div class="title-hr"></div>
+          </div>
+          
+          <div class="news-slider">
+
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="images/news.jpg" alt="image">
+              </div>
+              <div class="info">
+                <div class="date">
+                  11.05.2021
+                </div>
+                <div class="text">
+                  Первый контейнерный поезд с саморазрушающимися шприцами прибыл в Казахстан из Китая
+                </div>
+                <a href="news.html" class="arrow-link">Читать <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="center">
+            <div class="news-slider-dots"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10015.320236772357!2d71.458572!3d51.1300426!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424583fbecd17d25%3A0xc8b6a8361e2349cd!2sDowntown%20Business%20Center!5e0!3m2!1sru!2skz!4v1635768346474!5m2!1sru!2skz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="info rellax" data-rellax-speed="-2">
+            <div class="item">
+              <div class="icon">
+                <img src="images/icons/call.svg" alt="icon">
+              </div>
+              <div class="description">
+                <a href="tel:87172399989">8 (7172) 3 999 89</a>
+                <a href="tel:87172399988">8 (7172) 3 999 88</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="images/icons/email.svg" alt="icon">
+              </div>
+              <div class="description">
+                <a href="mailto:info@darrail.com">info@darrail.com</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="images/icons/geo.svg" alt="icon">
+              </div>
+              <div class="description">
+                Наш офис: РК 0100000, г. Нур - Султан район Алматы, пр. Рақымжана Қошқарбаева здание 1/5 блок «GENEVA»
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+
+        <div class="container footer-top">
+          <div class="content">
+            <a href="index.html" class="logo">
+              <img src="images/logo-2.svg" alt="logo">
+            </a>
+            <ul class="menu">
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a style="cursor: no-drop; opacity: .5;">Закупки</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="network">
+              <a href="#" class="icon">
+                <img src="images/icons/facebook.svg" alt="icon">
+              </a>
+              <a href="#" class="icon">
+                <img src="images/icons/instagram.svg" alt="icon">
+              </a>
+            </div>
+          </div>
+          <div class="content text">
+            Грузовые перевозки собственным парком локомотивной тяги
+          </div>
+        </div>
+        <div class="footer-hr"></div>
+        <div class="container footer-bottom">
+          <div class="text">
+            © 2021 ТОО «Dar Rail»
+          </div>
+          <a href="#">Политика обработки персональных данных</a>
+          <a href="#"><img src="images/logo-im.svg" alt="logo"></a>
+        </div>
+
+      </footer>
+
+      <div class="modal fade" id="modalClick" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              algo
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="widget-whatsapp">
+        <a href="https://wa.me/87172399989">
+          <img src="images/widget-whatsapp.png" alt="whatsapp">
+        </a>
+      </div>
+      <!-- <div class="widget-call">
+        <a href="tel:87172399989">
+          <img src="images/widget-call.png" alt="whatsapp">
+        </a>
+      </div> -->
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/carousel.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script> 
+    <script src="js/script.js"></script>
+  </body>
+</html>
