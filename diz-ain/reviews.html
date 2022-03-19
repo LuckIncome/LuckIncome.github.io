@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Diz Ain</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+        <div class="loader" :class="{'loader-done' : !isOnload}">
+            <img src="images/icons/logo-mini.svg" alt="logo">
+            <lottie-player class="loader-icon" src="https://assets1.lottiefiles.com/packages/lf20_gdjxdtr5.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+        </div>
+
+        <header class="header">
+            <div class="container">
+                <button class="header__toggle" @click="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/logo.svg" alt="logo">
+                </a>
+
+                <ul class="header__menu">
+                    <li><a href="about.html">О студии</a></li>
+                    <li class="header__menu-drop">
+                        <button>Услуги <div class="arrow"></div></button>
+                        <ul>
+                            <li><a href="service.html">Дизайн проекта</a></li>
+                            <li><a href="service.html">Комплектация</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="price.html">Прайс</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+
+                <div class="header__feedback">
+                    <a href="tel:+7 777 666 60 16">+7 777 666 60 16</a>
+                    <button @click="modalContactUs">Связаться с нами</button>
+                </div>
+
+                <a href="tel:+7 777 666 60 16" class="header__call">
+                    <img src="images/icons/calling.svg" alt="icon">
+                </a>
+
+            </div>
+        </header>
+
+        <main class="main" v-touch:swipe.right="toggleSidebar">
+
+            <section class="navigation">
+                <div class="container">
+                    <a href="index.html">Главная »</a>
+                    <span>Отзывы</span>
+                    <h1>Отзывы</h1>
+                </div>
+            </section>
+
+            <section class="reviews-page">
+                <div class="container">
+                    <div class="reviews-page__items">
+                        
+                        <div class="review" @click="valueModalReviews(1)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д1</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(2)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д2</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(3)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д3</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(1)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д1</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(2)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д2</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(3)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д3</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(1)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д1</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(2)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д2</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+                        <div class="review" @click="valueModalReviews(3)">
+                            <img src="images/review-1.jpg" class="review__image" alt="image">
+                            <div class="review__info">
+                                <h4>Айман Д3</h4>
+                                <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки ...</p>
+                                <span>Читать полный отзыв</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>         
+            
+            <section class="pagination">
+                <ul>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </section>
+
+            <section class="questions-new">
+                <img src="images/questions-1.jpg" class="questions-new__bg" alt="bg">
+                <div class="container">
+                    <div class="questions-new__info">
+                        <h2><span>Оставить</span> отзыв?</h2>
+                    </div>
+                    <form class="questions-new__form" action="">
+                        <input required type="text" placeholder="Ваше имя">
+                        <input required type="text"  v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']" placeholder="Ваш телефон">
+                        <input required type="text" placeholder="Проект">
+                        <textarea required placeholder="Текст отзыва"></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="address">
+                <div class="container">
+                    <div class="address__info">
+
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/calling.svg" alt="icon">
+                            </div>
+                            <div class="item__description">
+                                <a href="tel:+7 777 666 60 16">+7 777 666 60 16</a>
+                                <a href="tel:+7 717 277 97 77">+7 717 277 97 77</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/message.svg" alt="icon">
+                            </div>
+                            <div class="item__description">
+                                <a href="mailto:home@diz-ain.kz">home@diz-ain.kz</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/geo-2.svg" alt="icon">
+                            </div>
+                            <div class="item__description">
+                                <p>Ainur Assyl Studio
+                                    25-я улица, 9, Нур-Султан,
+                                    4 офис ЖК "Ремарк"</p>
+                            </div>
+                        </div>
+
+                        <div class="address__network">
+                            <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                            <a href="#"><img src="images/icons/insta.svg" alt="icon"></a>
+                            <a href="#"><img src="images/icons/youtube.svg" alt="icon"></a>
+                        </div>
+
+
+                    </div>
+                    
+                    
+                    
+                    <img src="images/icons/maps.svg" class="address__maps" alt="maps">
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="content">
+                        <a href="index.html" class="footer__logo">
+                            <img src="images/icons/logo.svg" alt="logo">
+                        </a>
+                        <p>© 2021 Студия интерьера «AinurAssyl»</p>
+                    </div>
+                    <ul class="footer__menu">
+                        <li><a href="about.html">О студии</a></li>
+                        <li><a href="reviews.html" class="active">Отзывы</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="articles.html">Блог</a></li>
+                        <li><a href="service.html">Дизайн проекта</a></li>
+                        <li><a href="price.html">Прайс</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="service.html">Комплектация</a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <a href="#">Политика обработки персональных данных</a>
+                    <a href="https://i-marketing.kz/">
+                        <img src="images/icons/im-logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar__show': isSidebar}" v-touch:swipe.left="toggleWrapper">
+            <div class="sidebar__head">
+
+                <a href="index.html" class="sidebar__logo">
+                    <img src="images/icons/logo.svg" alt="logo">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+
+            </div>
+
+            <ul class="sidebar__menu">
+                <li><a href="about.html">О студии</a></li>
+                <li class="sidebar__menu-drop" :class="{'sidebar__menu-show' : isSidebarMenuDrop}">
+                    <button @click="sidebarMenuDrop">Услуги <div class="arrow"></div></button>
+                    <ul>
+                        <li><a href="service.html">Дизайн проекта</a></li>
+                        <li><a href="service.html">Комплектация</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="price.html">Прайс</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+
+            <div class="sidebar__feedback">
+                <a href="tel:+7 777 666 60 16">+7 777 666 60 16</a>
+                <button @click="modalContactUs">Связаться с нами</button>
+            </div>
+
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+            <!-- Отзывы -->
+            <div class="modal modal-reviews" :class="{'modal__show': isModalReviews}">
+                <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+                <transition name="fade" mode="out-in">
+                    
+                    <div class="item" v-if="modalReviews == 1" key="1">
+                        <img src="images/review-1.jpg" alt="image">
+                        <a href="project.html">Посмотреть проект</a>
+                        <div class="item__info">
+                            <h4>Айман Д1</h4>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                        </div>
+                    </div>
+                    <div class="item" v-if="modalReviews == 2" key="2">
+                        <img src="images/review-1.jpg" alt="image">
+                        <a href="project.html">Посмотреть проект</a>
+                        <div class="item__info">
+                            <h4>Айман Д2</h4>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                        </div>
+                    </div>
+                    <div class="item" v-if="modalReviews == 3" key="3">
+                        <img src="images/review-1.jpg" alt="image">
+                        <a href="project.html">Посмотреть проект</a>
+                        <div class="item__info">
+                            <h4>Айман Д3</h4>
+                            <p>Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки Хочу поблагодарить Студию AinurAssyl за качественный дизайн проект. К ремонту квартиры готовились мы очень тщательно, и дизайнера выбирали долго, т.к. хотелось все качественно и в короткие сроки</p>
+                        </div>
+                    </div>
+    
+                </transition>
+            </div>
+                <!-- Связаться с нами -->
+            <div class="modal modal-contact-us" :class="{'modal__show': isModalContactUs}">
+                <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+    
+                <form action="">
+                    <h3>Онлайн заявка</h3>
+                    <input required type="text" placeholder="Ваше имя">
+                    <input required type="text" placeholder="Ваш телефон" v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+                <!-- Заказать дизайн интерьера -->
+            <div class="modal modal-order" :class="{'modal__show': isModalOrder}">
+                <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+                
+                <form action="">
+                    <h3>Онлайн заявка</h3>
+                    <input required type="text" placeholder="Ваше имя">
+                    <input required type="text" placeholder="Ваш телефон" v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                    <button type="submit">Отправить</button>
+                </form>
+            </div> 
+                <!-- Видео о нас -->
+            <div class="modal modal-about-video" :class="{'modal__show': isModalAboutVideo}">
+                <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+                
+                <h3>Видео-презентация о компании</h3>
+                <video src="video/oric4.webm" id="about-video" controls></video>
+            </div> 
+                <!-- Написать отзыв -->
+            <div class="modal modal-leave-feedback" :class="{'modal__show': isModalLeaveFeedback}">
+                <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+                
+                review
+            </div>
+            <!-- /Модалки -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper__show': isWrapper}" @click="toggleWrapper">
+        </div>
+        <!-- /Затемнение сайта -->
+    </vue>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

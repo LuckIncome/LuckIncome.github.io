@@ -1,0 +1,269 @@
+* {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+body {
+  padding-top: 50px;
+}
+main {
+  min-height: 400px;
+}
+.header.hide {
+  transform: translateY(-120px);
+}
+
+
+.info-block {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 31px -10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 26px 33px;
+  margin-bottom: 35px;
+  .description {
+      margin-bottom: 20px;
+      color: #414141;
+      font-weight: 600;
+  }
+  ul {
+      margin-left: 20px;
+      list-style:  url(../images/icons/check.svg) ;
+  }
+  li {
+      color: #4b4b4b;
+      margin-bottom: 6px;
+      font-size: 17px;
+  }
+  
+}
+
+.info-block__number {
+    position: relative;
+  ul {
+    list-style: none;
+    position: relative;
+    margin-left: 40px;
+  }
+  li {
+    counter-increment: li;
+    margin-bottom: 22px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  li::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    content: counter(li) " ";
+    background: #F16522;
+    position: absolute;
+    left: -40px;
+    margin-top: -3px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+
+.btn-orang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F16522;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 17px;
+  color: #FFFFFF;
+  transition: .4s;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0px 4px 15px rgba(241, 101, 34, 0.41);
+  &:hover {
+      background: #d1622f;
+      color: #FFFFFF;
+  }
+}
+// <button class="btn-orang">Узнать условия</button>
+.btn-orang-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F16522;
+  border-radius: 5px;
+  background: none;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 17px;
+  color: #414141;
+  transition: .4s;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+      background: #F16522;
+      color: #FFFFFF;
+  }
+}
+// <button class="btn-orang-out">Смотреть все страны</button>
+.link {
+  font-size: 17px;
+  border-bottom: 1px solid #F16522;
+  color: #F16522;
+  transition: .4s;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+      color: #F16522;
+  }
+}
+// <a href="#" class="link">Оставить заявку</a>
+.link-arrow {
+  font-size: 17px;
+  color: #F16522;
+  transition: .4s;
+  cursor: pointer;
+  user-select: none;
+  i {
+      transition: .4s;
+  }
+  &:hover {
+      color: #F16522;
+      i {
+          margin-left: 10px;
+      }
+  }
+}
+// <a href="#" class="link-arrow">Подробнее <i class="bi bi-arrow-right"></i></a>
+
+.slider-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #F16522;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  z-index: 1;
+  transition: .4s;
+  &:hover {
+    background: #f0f0f0;
+  }
+  &-left {
+    left: -40px;
+  }
+  &-right {
+    right: -40px;
+  }
+}
+// <div class="slider-arrow slider-arrow-left"><i class="bi bi-chevron-left"></i></div>
+// <div class="slider-arrow slider-arrow-right"><i class="bi bi-chevron-right"></i></div>
+
+
+.title-main {
+  font-size: 52px;
+  line-height: 52px;
+}
+.title {
+  font-size: 44px;
+  line-height: 44px;
+}
+.title-middle {
+  font-size: 36px;
+  line-height: 36px;
+}
+.title-mini {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.description-big {
+  font-size: 28px;
+  line-height: 28px;
+}
+.description-main {
+  font-size: 24px;
+  line-height: 24px;
+}
+.description {
+  font-size: 22px;
+  line-height: 22px;
+}
+.description-mini {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.text-main {
+  font-size: 19px;
+  line-height: 19px;
+}
+.text {
+  font-size: 17px;
+  line-height: 17px;
+  span {
+    font-weight: bold;
+  }
+}
+.text-mini {
+  font-size: 16px;
+  line-height: 16px;
+}

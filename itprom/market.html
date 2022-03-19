@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>IT Prom</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <vue id="app">
+        <header class="header">
+            <div class="container">
+                <button class="header__toggle" @click="toggleMenu">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/logo.svg" alt="logo">
+                </a>
+                <ul class="header__menu">
+                    <li>
+                        <div class="dropdown">
+                            <div class="dropdown__head">
+                                О Союзе
+                            </div>
+                            <ul class="dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <div class="dropdown__head">
+                                Аналитика
+                            </div>
+                            <ul class="dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Партнеры</a></li>
+                    <li><a href="#">Полезное</a></li>
+                    <li><a href="#">Электронная платформа</a></li>
+                </ul>
+                <ul class="header__lang">
+                    <li><a href="#">KAZ</a></li>
+                    <li><a href="#" class="active">RUS</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+                <div class="header__search" @click="toggleSearch">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="navigation">
+                <div class="container">
+                    <a href="index.html">Главная</a> <i class="bi bi-chevron-right"></i>
+                    <span>Рынок смартфонов в Казахстане</span>
+                </div>
+            </section>
+            
+            <section class="banner banner-mini">
+                <img src="images/analytics-bg.jpg" class="banner__background banner__background-dark" alt="bg">
+                <div class="container">
+                    <div class="banner__info banner__info-pages">
+                        <h1>Исследование-обзор рынка смартфонов в Казахстане</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interior">
+                <div class="container">
+
+                    <div class="content">
+                        <ul class="interior__menu">
+                            <li><a href="#" class="active">Отрасль сегодня</a></li>
+                            <li><a href="#">Мировые тренды</a></li>
+                            <li><a href="#">Члены Союза</a></li>
+                        </ul>
+                        <div class="interior__network">
+                            <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                            <a href="#"><img src="images/icons/facebook.svg" alt="icon"></a>
+                            <a href="#"><img src="images/icons/telegram.svg" alt="icon"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="editors">
+                            <p><strong>Исследование-обзор рынка смартфонов в Казахстане</strong></p>
+                            <p>Согласно базе данных Trade Map за последние 5 лет импорт сотовых телефонов в Казахстан возрос на 72% и составил по итогам 2020 года 670 млн. долл. США. </p>
+                            <p><strong>Объем импорта смартфонов в Казахстан 2016 -2020 гг., млн. долл. США</strong></p>
+                            <img src="images/editors-gp-1.svg" alt="image">
+                            <p>По данным IDC, казахстанский рынок мобильных телефонов вырос в 2020 году по сравнению с 2019 годом на 11%, достигнув 4,7 млн. единиц. </p>
+                            <p>Таким образом, на сегодня средняя цена за один смартфон составляет порядка 60 тыс. тенге. (без учета НДС и других платежей).</p>
+                            <p>Казахстан – рынок, ориентированный на смартфоны, и доля кнопочных телефонов составила всего 9,1% от общего объема продаж.</p>
+                            <p>Поставки смартфонов снизились в первой половине 2020 года вследствие первого локдауна с марта по май, а потом второго в июле-августе. Второй квартал был особенно слабым, поскольку розничные продажи перешли в онлайн. С возобновлением работы торговых центров и магазинов в конце лета продажи восстановились. </p>
+                            <p>В третьем квартале продажи выросли на 20,8% по сравнению с таким же периодом 2019 года. В четвертом квартале объем рынка остался на уровне 2019 года.</p>
+                            <p>Дефицит – это то слово, которым можно охарактеризовать 2020 год для рынка электроники и почти для всех игроков. </p>
+                            <p>С одной стороны, были сделаны негативные прогнозы в начале 2020 года, под них подстроились поставщики компонентов. </p>
+                            <p>Потом сыграли свою роль закупки Huawei, которые вымели с рынка компоненты и создали дополнительный дефицит. На этапе планирования и производства возникли проблемы, причем они коснулись всех компаний, которые не имеют вертикально ориентированного производства, то есть у них отсутствуют собственные ключевые компоненты. </p>
+                            <p>В качестве примера можно привести Apple, компания не купила заранее микросхемы питания для 12-ых iPhone, в итоге столкнулась с тем, что не смогла их приобрести, как это делала в предыдущие годы. Цена, которую в Apple были готовы платить за такую микросхему, оказалась ниже в несколько раз, чем в среднем на рынке. </p>
+                            <p>Среди вендоров самым большим изменением года стало падение доли Huawei. </p>
+                            <p>К четвертому кварталу 2020 года она снизилась до 2,8% с практически четверти рынка смартфонов в начале 2019 года, говорится в исследовании. Xiaomi удвоила свою долю за год, и поставки OPPO также продолжают быстро расти. </p>
+                            <p>Apple остается относительно небольшим игроком на рынке, и влияние линейки iPhone 12 с поддержкой 5G, выпущенной в ноябре, было ограниченным. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="interior__recommendations">
+                            <div class="interior__recommendations-title">
+                                Последние обзоры
+                            </div>
+                            <ul class="interior__recommendations-menu">
+                                <li><a href="#">Рынок смартфонов в Казахстане</a></li>
+                                <li><a href="#">Утилизация продукции ИКТ в Казахстане</a></li>
+                                <li><a href="#">Потенциал утилизации ВЭУ в Казахстане</a></li>
+                                <li><a href="#">Развитие ЦОД в Казахстане</a></li>
+                                <li><a href="#">Рынок видеокамер в Казахстане и мире</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="interior-info interior-info__dark">
+                <div class="container">
+
+                    <div class="editors">
+                        <h4>Топ-5 компаний-производителей смартфонов, объемы поставок (в миллионах штук) и доля рынка, Казахстан</h4>
+                        <img src="images/editors-gp-2.svg" alt="image">
+                        <p>IDC ожидает, что в текущем году рынок телефонов будет стабильным по сравнению с 2020 годом, и к последнему кварталу объемы 5G вырастут до одной шестой от общего количества смартфонов.</p>
+                        
+                        <div><hr></div>
+                        
+                        <h4>Ситуация в мире</h4>
+                        <img src="images/editors-gp-3.svg" alt="image">
+                        <span>Источник: IDC</span>
+                        <p>Более 50% рынка Казахстана приходится на один бренд – Samsung.</p>
+
+                        <div><hr></div>
+                        
+                        <h4>Ситуация в мире</h4>
+                        <p>Мировой рынок смартфонов в 2021 г. ожидает постепенное восстановление и даже некоторый рост – по мере привыкания пользователей к «новой норме» в условиях коронавирусной пандемии, отмечается в прогнозе аналитиков TrendForce.</p>
+                        <p>Топ-6 лидеров 2021 года, согласно прогнозу, расположится в следующей последовательности: Samsung, Apple, Xiaomi, OPPO, Vivo и Transsion. </p>
+                        <p>Вместе эти шесть компаний будут контролировать в 2021 году порядка 80% мирового рынка смартфонов.</p>
+                        <p>В связи с последствиями экспортных ограничений США и выделением бренда Honor в самостоятельную компанию, Huawei в 2021 г. ожидает падение с третьего места до седьмого в глобальном рейтинге поставщиков смартфонов. </p>
+
+                        <div><hr></div>
+                        
+                        <h4>Топ-7 мировых поставщиков смартфонов и их доля на рынке 5G. 2020-2021, млн штук</h4>
+                        <img src="images/editors-gp-4.svg" alt="image">
+                        <span>Источник: TrendForce</span>
+
+                        <div><hr></div>
+                        
+                        <h4>Что повлияет на развитие рынка смартфонов</h4>
+                        <p>Пандемия COVID-19 останется ключевым фактором неопределенности развития мирового рынка смартфонов, поскольку она еще длительное время будет оказывать значительное влияние на мировую экономику, отмечают в TrendForce.</p>
+                        <p>Среди других факторов, способствующих в 2021 г. неопределенности на этом рынке, аналитики также отмечают возможную геополитическую нестабильность и потенциальный дефицит современных производственных мощностей на рынке полупроводников.</p>
+                        <h4>Наступает глобальная эпоха 5G</h4>
+                        <p>Позитивное влияние на развитие рынка смартфонов будет оказывать постоянно растущий уровень проникновения сетей 5G, а также растущий ассортимент мобильных процессоров 5G начального и среднего уровня. 
+                        <br>В 2021 г. ожидается увеличение числа и емкости коммерческих мобильных сетей 5G по всему миру, а также выход на этот рынок новых стран.</p>
+                        <p>В TrendForce долю глобальных продаж смартфонов 5G по итогам 2021 года прогнозируют на уровне порядка 37% – до примерно 500 млн смартфонов в год.</p>>
+
+                        <div><hr></div>
+                        
+                        <h4>Себестоимость и прибыль самых популярных моделей смартфонов</h4>
+                        <p>Согласно данным TechWalls средняя маржа (прибыль) от продажи смартфонов составляет 60%. </p>
+                        <p>Далее представлена детальная информация о себестоимости с учетом всех спецификаций и сборки и полной розничной цене при запуске продаж, а также марже (прибыли) по отдельно взятой модели.</p>
+
+                        <h4>Себестоимость и прибыль популярных моделей телефонов</h4>
+                        <img src="images/editors-gp-5.svg" alt="image">
+                        <span>Источник: TechWalls </span>
+
+                        <div><hr></div>
+                        
+                        <h4>Технические спецификации популярных моделей</h4>
+                        <p>Существует множество рейтингов для оценки смартфонов. Понятие «лучший смартфон» можно толковать по-разному: для кого-то это топовый флагман, а для других — просто хороший аппарат за свои деньги.
+                        <br>В этой связи, в сети можно увидеть различное количество рейтингов. </p>
+
+                        <p><strong>К примеру:</strong></p> 
+                        <ul>
+                            <li>Топ от Business Insider</li>
+                            <li>лучший смартфон – iPhone 12;</li>
+                            <li>лучший Android-телефон – Samsung Galaxy S21;</li>
+                            <li>лучший телефон для фотографии – Samsung Galaxy S21 Ultra;</li>
+                            <li>лучший телефон по времени автономной работы – Motorola Moto G Power;</li>
+                            <li>лучший телефон для игр – Asus ROG 3;</li>
+                            <li>лучший телефон для детей – Google Pixel 4a;</li>
+                            <li>лучший телефон за меньшие деньги – iPhone SE 2020.</li>
+                        </ul>
+                        <ul>
+                            <li>Топ от top5.co.ua</li>
+                            <li>№ 1 Смартфон Apple iPhone - Выбор Редактора</li>
+                            <li>№ 2 Samsung Galaxy Note - Выбор Покупателя</li>
+                            <li>№ 3 Смартфон HONOR - Лучшие Отзывы</li>
+                            <li>№ 4Xiaomi Mi 10 Lite - Лучший Недорогой</li>
+                            <li>№ 5 Смартфон HUAWEI Y8P - Лучшие Камеры</li>
+                            <li>№ 6 Xiaomi Redmi 4X 32GB - Лучший Компактный</li>
+                            <li>№ 7 ZTE Blade A7 (2020) 3/64GB - Лучшие Камеры</li>
+                            <li>№ 8 Samsung Galaxy A20 - Лучший Бренд</li>
+                            <li>№ 9 vivo V17 Neo 128GB - Лучший Экран</li>
+                            <li>№ 10 HONOR 30 - Лучший Дизайн</li>
+                        </ul>
+                        <ul>
+                            <li>Топ от ТехноРейтинга</li>
+                            <li>Лучшие смартфоны в соотношении цена/качество</li>
+                            <li>Samsung A51 </li>
+                            <li>Xiaomi Redmi Note 8 Pro </li>
+                            <li>Samsung M31 </li>
+                            <li>Xiaomi Poсo X3 </li>
+                            <li>Realme 6 Pro </li>
+                            <li>Лучшие китайские смартфоны</li>
+                            <li>Honor 30 Pro+ </li>
+                            <li>Xiaomi Mi Note 10 Pro </li>
+                            <li>Huawei P40 Pro </li>
+                            <li>OnePlus 8 Pro </li>
+                            <li>Xiaomi Mi 10 Pro </li>
+                            <li>Лучшие брендовые смартфоны</li>
+                            <li>Google Pixel 5 </li>
+                            <li>Asus ROG Phone 3 </li>
+                            <li>Samsung Note 20 Ultra </li>
+                            <li>Apple iPhone 12 Pro Max </li>
+                            <li>Samsung Galaxy S21 Ultra </li>
+                        </ul>
+
+                        <p>Вместе с тем в выборе смартфонов есть опции, по которым совершаются те или иные покупки:</p>
+
+                        <p>1. Выбор ОС.
+                        <br>Android или iOS? Этот выбор зависит от личных предпочтений покупателя.</p>
+                        <p>2. Цель использования смартфона. 
+                        <br>Если пользователь геймер, то выбирается смартфон с мощным процессором. Если фотограф, то изучаются количество мегапикселей и мощность графического процессора. Также возможности вторичных сенсоров и т.д.</p>
+                        
+                        <p>Из технических характеристик в основной массе в учет берется: </p> 
+                        <ol>
+                            <li>Экран</li>
+                            <li>Камеры</li>
+                            <li>Процессор</li>
+                            <li>Оперативная память</li>
+                            <li>Память</li>
+                            <li>Аккумулятор</li>
+                        </ol>
+                        
+                        <p>Бонусы: </p>
+                        <ol>
+                            <li>Защита от воды;</li>
+                            <li>Адаптация к банковской карте и возможность бесконтактной оплаты;</li>
+                            <li>Поддержка одновременно двух SIM-карт, зарегистрированных у разных сотовых операторов; </li>
+                            <li>Быстрая беспроводная зарядка.</li>
+                        </ol>
+                        
+                        <p>Далее была сделана выборка из флагманов и бюджетных моделей для определения портрета оптимального смартфона. </p>
+
+                        <img src="images/editors-gp-6.svg" alt="image">
+                        <span>Источник: Chip
+                        <br>Расчеты: IT Prom</span>
+
+                        <div><hr></div>
+                        
+                        <p>Итак, исходя из полученных данных портрет оптимального смартфона выглядит следующим образом: </p>
+                        <p>Этот аппарат оснащен: экраном 6,6 дюймов, 4 камерами, процессорами Qualcomm Snapdragon или MediaTek Helio, объем оперативной памяти составляет 6 Гбайт, объем памяти составляет 128 Гбайт, емкость аккумулятора в пределах 4436 мАч.</p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="interior-info">
+                <div class="container">
+
+                    <div class="editors">
+                        <h4>Угрозы и тренды рынка</h4>
+                        <p>Согласно сообщению mydrivers.com, в мире на данный момент сложился кризис в поставках микросхем. </p>
+                        <p>Этот кризис затронул не только смартфоны, но и другие отрасли, включая автомобилестроение, компьютеры и игровые приставки. </p>
+                        <p>При этом производители смартфонов могут использовать данное обстоятельство для поднятия цен на свои флагманские модели.</p>
+                        <p>Mydrivers.com предполагает, что стоимость флагманов китайских брендов будет повышаться из-за нескольких факторов: </p>
+                        <p>- пандемия и кризис привели к росту продаж смартфонов, а значит глобальный рынок имеет достаточный и даже избыточный спрос.</p>
+                        <p>- цены конкурентов значительно выше, то и повышение стоимости смартфонов от китайских брендов позволит им сохранять позиции на рынке и получить больше прибыли, тот факт, что наиболее усовершенствованные модели (флагманы) имеют характеристики, часто не уступающие дорогим брендам, позволяет компаниям повышать цены. </p>
+                        <p>Это создает для их товара образ бренда высшего класса. В результате, используя кризис производства в качестве основы для роста цен, разработчики смартфонов в Китае могут постепенно повышать стоимость своих смартфонов. </p>
+
+                        <h4>Последние знаковые события отрасли</h4>
+                        <p>- LG полностью прекращает разработку и производство смартфонов. Их выпуск будет свернут 31 июля 2021 г. – компания не выдержала конкуренции со стороны Samsung, Apple, Xiaomi и других сильных игроков. LG сосредоточится на других сферах деятельности, включая интернет вещей, искусственный интеллект и технологии для электромобилей.</p>
+                        <p>- Huawei вдвое сокращает производство смартфонов. 2021 год станет одним из худших в истории Huawei в плане поставок смартфонов. Компания сокращает производство и это только начало. Продажи смартфонов Huawei пошли на спад после того, как из-за американских санкций компании пришлось убрать из своих устройств мобильные сервисы Google. </p>
+                        <p>Повлияло на продажи и решение властей США ввести запрет на работу с Huawei всем компаниями, использующим американские технологии, из-за чего производитель лишился доступа к большинству своих поставщиков, в числе которых Qualcomm, TSMC и Samsung. В результате Huawei, которая до этого занимала второе место на мировом мобильном рынке после Samsung, по итогам 2020 года не смогла войти и в пятёрку ведущих производителей смартфонов. Кроме того, Huawei в конце прошлого года была вынуждена продать свой успешный суббренд Honor, чтобы вывести его из-под удара американских санкций.</p>
+
+                        <h4>Выводы:</h4>
+                        <p>- Устойчивость рынка. Рынок смартфонов Казахстана имеет большой потенциал ввиду постоянного стабильного спроса. 
+                        <br>За последние 5 лет импорт сотовых телефонов в Казахстан возрос на 72%.</p>
+                        <p>- Коронавирус не смог остановить рост рынка смартфонов. Отечественный рынок мобильных телефонов вырос в 2020 году по сравнению с 2019 годом на 11%.</p>
+                        <p>- Бюджето-ориентированность клиента. Средняя цена за один смартфон составляет 60 тыс. тенге. (без учета НДС и других платежей).</p>
+                        <p>- Засилье одного бренда. Бренд Samsung занимает более 50% рынка смартфонов в Казахстане. </p>
+                        <p>- Инвестиционная привлекательность сектора. Согласно данным TechWalls средняя маржа (прибыль) от продажи смартфонов составляет 60%. </p>
+                        <p>- Портрет оптимального смартфона: экран 6,6 дюймов, 4 камеры, процессоры Qualcomm Snapdragon или MediaTek Helio, объем оперативной памяти 6 Гбайт, объем памяти 128 Гбайт, емкость аккумулятора в пределах 4436 мАч.</p>
+                        <p>- Отсутствие гарантий для производителя. Даже мировые игроки со славной историей уходят с рынка. LG полностью прекращает разработку и производство смартфонов с 31 июля 2021 года.</p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="articles">
+                <div class="container">
+                    <div class="articles__title">СТАТЬИ ПО ТЕМЕ</div>
+                    <div class="articles__items">
+
+                        <a href="#" class="article">
+                            <div class="article__image">
+                                <img src="images/article-1.jpg" alt="image">
+                            </div>
+                            <div class="article__info">
+                                <div class="article__name">Статья</div>
+                                <div class="article__title">
+                                    Как компания Telkomsel изменилась, чтобы привлечь потребителей, ориентированных прежде всего на цифровые технологии
+                                </div>
+                                <div class="article__text">
+                                    23 сентября 2021 г. - 26-летний специалист в области телекоммуникаций ухватился за возможность заново изобрести себя и привлечь новое поколение клиентов.
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="article">
+                            <div class="article__image">
+                                <img src="images/article-2.jpg" alt="image">
+                            </div>
+                            <div class="article__info">
+                                <div class="article__name">Статья</div>
+                                <div class="article__title">
+                                    Полет над морем, управляемый искусственным интеллектом
+                                </div>
+                                <div class="article__text">
+                                    17 марта 2021 г. - Чтобы помочь команде Emirates Team New Zealand успешно защитить свой титул чемпиона Америки, мы познакомили их с новым моряком: AI-ботом, созданным McKinsey.
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="article">
+                            <div class="article__image">
+                                <img src="images/article-3.jpg" alt="image">
+                            </div>
+                            <div class="article__info">
+                                <div class="article__name">Статья</div>
+                                <div class="article__title">
+                                    Как сталелитейный завод в Индии использовал данные и завоевал мировое признание
+                                </div>
+                                <div class="article__text">
+                                    8 марта 2021 г. - Повышая квалификацию сотрудников и внедряя инновации с помощью аналитики, завод Tata Steel в Калинганагаре, Индия, добился повышения производительности, что принесло ему признание Всемирного экономического форума как ведущего цифрового предприятия.
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="content">
+                        <a href="#" class="logo">
+                            <img src="images/icons/logo-2.svg" alt="logo">
+                        </a>
+                        <p>
+                            Союз производителей инфотехнологий и субъектов инфокоммуникаций
+                        </p>
+                    </div>
+
+
+                    <div class="content">
+                        <a href="#" class="link">Связаться с нами</a>
+                        <div class="messenger">
+                            <a href="#" class="email">info@itprom.info</a>
+                            <div class="network">
+                                <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                                <a href="#"><img src="images/icons/facebook.svg" alt="icon"></a>
+                                <a href="#"><img src="images/icons/instagram.svg" alt="icon"></a>
+                                <a href="#"><img src="images/icons/telegram.svg" alt="icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2021 IT Prom.</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <div class="content">
+                        <p>Разработано</p>
+                        <a href="#"> <img src="images/icons/logo-im.svg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="wrapper" :class="{'wrapper__show': isWrapper}" @click="toggleWrapper">
+        </div>
+
+        <div class="search" :class="[{'search__show': isSearch}, {'search__show search__show-solo': isSearchSolo}]">
+            <div class="container">
+                <a href="index.html" class="search__logo" v-if="isMenu">
+                    <img src="images/icons/logo.svg" alt="logo">
+                </a>
+                <form action="" method="">
+                    <input type="text" placeholder="Поиск">
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <div @click="toggleWrapper">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="sidebar" :class="{'sidebar__show': isSidebar}">
+            <ul class="sidebar__menu">
+                <li><button @click="toggleMenuTab(1)" :class="{'active': menuTabValue == 1}">О Союзе</button></li>
+                <li><button @click="toggleMenuTab(2)" :class="{'active': menuTabValue == 2}">Вступить в Союз</button>
+                </li>
+                <li><button @click="toggleMenuTab(3)" :class="{'active': menuTabValue == 3}">Аналитика</button></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Полезное</a></li>
+                <li><a href="#">Электронная платформа</a></li>
+
+                <ul class="sidebar__lang">
+                    <li><a href="#">KAZ</a></li>
+                    <li><a href="#" class="active">RUS</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+            </ul>
+            <div class="sidebar__tabs">
+                <transition name="fade" mode="out-in" key="open">
+                    <div class="tab" v-if="menuTabValue == 1" key="menuTabValue-1">
+                        <h3>О Союзе</h3>
+                        <ul class="links">
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab" v-if="menuTabValue == 2" key="menuTabValue-2">
+                        <h3>Вступить в Союз</h3>
+                        <ul class="links">
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab" v-if="menuTabValue == 3" key="menuTabValue-3">
+                        <h3>Аналитика</h3>
+                        <ul class="links">
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                        </ul>
+                    </div>
+                </transition>
+            </div>
+            <div class="sidebar__wrapper" @click="toggleWrapper"></div>
+        </div>
+
+        <div class="sidebar-mobile" :class="{'sidebar-mobile__show': isSidebar}">
+            <a href="index.html" class="sidebar-mobile__logo">
+                <img src="images/icons/logo.svg" alt="logo">
+            </a>
+            <ul class="sidebar-mobile__menu">
+                <li>
+                    <dropdown inline-template>
+                        <div class="sidebar-dropdown">
+                            <div class="sidebar-dropdown__head" :class="{'sidebar-dropdown__head-show' : isShow}" @click="dropdownToggle">О Союзе</div>
+                            <ul v-if="isShow" class="sidebar-dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </dropdown>
+                </li>
+                <li>
+                    <dropdown inline-template>
+                        <div class="sidebar-dropdown">
+                            <div class="sidebar-dropdown__head" :class="{'sidebar-dropdown__head-show' : isShow}" @click="dropdownToggle">Вступить в Союз</div>
+                            <ul v-if="isShow" class="sidebar-dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </dropdown>
+                </li>
+                <li>
+                    <dropdown inline-template>
+                        <div class="sidebar-dropdown">
+                            <div class="sidebar-dropdown__head" :class="{'sidebar-dropdown__head-show' : isShow}" @click="dropdownToggle">Аналитика</div>
+                            <ul v-if="isShow" class="sidebar-dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </dropdown>
+                </li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Полезное</a></li>
+                <li><a href="#">Электронная платформа</a></li>
+            </ul>
+            <ul class="sidebar-mobile__lang">
+                <li><a href="#">KAZ</a></li>
+                <li><a href="#" class="active">RUS</a></li>
+                <li><a href="#">ENG</a></li>
+            </ul>
+        </div>
+
+    </vue>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/component-vue/slider.js"></script>
+    <script src="js/component-vue/dropdown.js"></script>
+    <script src="js/vivus.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

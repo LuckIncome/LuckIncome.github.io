@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Duende</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-ellipse-progress/dist/vue-ellipse-progress.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <div class="loader" :class="{'loader-done' : !isOnload}">
+            <loader></loader>
+        </div>
+
+        <div class="preview">
+            <loader></loader>
+            <a href="#header"><img src="images/icons/muse.svg" alt="icon"></a>
+            <div class="anim"></div>
+        </div>
+
+        <header class="header" id="header" :class="{'header-index' : isIndex}">
+            <div class="container">
+                <button class="header__toggle" @click="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                
+                <ul class="header__menu">                             
+                    <li><a href="/" class="active">ABOUT US</a></li>
+                    <li><a href="/#projects">PROJECTS</a></li>
+                    <li><a href="/#services">SERVICES</a></li>
+                    <li><a href="/#contact">CONTACTS</a></li>
+                </ul>
+                <ul class="header__lang">                             
+                    <li><a href="#">RUS</a></li>
+                    <li><a href="#" class="active">ENG</a></li>
+                </ul>
+            </div>  
+        </header>
+
+        <main class="main" :class="{'main-index' : isIndex}">
+
+            <section class="banner">
+                <img src="images/icons/figure-1.png" class="figure" alt="icon">
+                <div class="container">
+                    <h2 class="title"><img src="images/icons/about-text.svg" alt="icon"></h2>
+                    <div class="text">Слово <h1>DUENDE</h1> испанское и означает «Произведение искусства, способное затронуть душу
+                        человека» . С этой философией наша команда по сей день трудится над вашими
+                        проектами, воплощая ваши идеи в реальность.<img src="images/icons/quotes.svg" alt="quotes"></div>
+                    <div class="mikkelange">
+                        <img src="images/mikkelange.png" alt="img">
+                        <transition name="fade">
+                            <img src="images/mikkelange-animation.png" class="img" v-if="isToggle" alt="img">
+                        </transition>
+                    </div>
+                </div>
+            </section>
+
+            <section class="advantages">
+                <div class="container">
+                    <div class="advantage">
+                        <myprogress num="10" prog="490" up1="10" up2="60" ref="childComponent1"></myprogress>
+                        <p>Лет опыта</p>     
+                    </div>
+                    <div class="advantage">
+                        <myprogress num="407" prog="520" up1="10" up2="8" ref="childComponent2"></myprogress>
+                        <p>Успешных проектов</p>      
+                    </div>
+                    <div class="advantage">
+                        <myprogress num="19" prog="490" up1="10" up2="40" ref="childComponent3"></myprogress>
+                        <p>Проектов за рубежом</p>      
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects" id="projects">
+                <img src="images/icons/figure-2.svg" class="figure" alt="icon">
+                <div class="container">
+                    <!-- <h2 class="title">PROJECTS</h2> -->
+                    <h2 class="title"><img src="images/icons/projects-text.svg" alt="icon"></h2>
+                    <div class="items">
+                        <a href="projects.html">
+                            <img src="images/projects-new-1.jpg" alt="img">
+                            <span>РАЗРАБОТКА лОГОТИПА</span>
+                        </a>
+                        <a href="projects.html">
+                            <img src="images/projects-new-2.jpg" alt="img">
+                            <span>РАЗРАБОТКА лОГОТИПА</span>
+                        </a>
+                        <a href="projects.html">
+                            <img src="images/projects-new-3.jpg" alt="img">
+                            <span>РАЗРАБОТКА лОГОТИПА</span>
+                        </a>
+                        <a href="projects.html">
+                            <img src="images/projects-new-4.jpg" alt="img">
+                            <span>РАЗРАБОТКА лОГОТИПА</span>
+                        </a>
+                        <a href="projects.html">
+                            <img src="images/projects-new-5.jpg" alt="img">
+                            <span>РАЗРАБОТКА лОГОТИПА</span>
+                        </a>
+                        <div>
+                            <a href="projects.html">
+                                <img src="images/projects-new-6.jpg" alt="img">
+                                <span>РАЗРАБОТКА лОГОТИПА</span>
+                            </a>
+                            <a href="form.html">ОСТАВИТЬ ЗАЯВКУ</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services" id="services">
+                <div class="container">
+                    <!-- <h2 class="title">services</h2> -->
+                    <h2 class="title"><img src="images/icons/services-text.svg" alt="icon"></h2>
+                    <div class="items">
+                        <a href="design.html" class="item wow">
+                            <div class="images">
+                                <img src="images/services-1.png" class="img" alt="img">
+                            </div>
+                            <h3>#DESIGN</h3>
+                        </a>
+                        <a href="event.html" class="item wow">
+                            <div class="images">
+                                <img src="images/services-2.png" class="img" alt="img">
+                            </div>
+                            <h3>#EVENT</h3>
+                        </a>
+                        <a href="trademarketing.html" class="item wow">
+                            <div class="images">
+                                <img src="images/services-3.png" class="img" alt="img">
+                            </div>
+                            <h3>#TRADEMARKETING</h3>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                </div>
+            </section>
+
+            <section class="partners">
+                <div class="container">
+                    <div class="partners__wrapper">
+
+                        <div class="partners-slider">
+                            <a href="#">
+                                <img src="images/partners-1-w.svg" alt="img">
+                                <img src="images/partners-1.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-2-w.svg" alt="img">
+                                <img src="images/partners-2.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-3-w.svg" alt="img">
+                                <img src="images/partners-3.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-4-w.svg" alt="img">
+                                <img src="images/partners-4.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-5-w.svg" alt="img">
+                                <img src="images/partners-5.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-6-w.svg" alt="img">
+                                <img src="images/partners-6.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-7-w.svg" alt="img">
+                                <img src="images/partners-7.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-8-w.svg" alt="img">
+                                <img src="images/partners-8.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-9-w.svg" alt="img">
+                                <img src="images/partners-9.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-10-w.svg" alt="img">
+                                <img src="images/partners-10.svg" alt="img">
+                            </a>
+                            <a href="#">
+                                <img src="images/partners-11-w.svg" alt="img">
+                                <img src="images/partners-11.svg" alt="img">
+                            </a>
+                        </div>
+
+                        <div class="partners__arrows-wrapper">
+                            <button class="partners__arrows partners__arrows-left">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="partners__arrows partners__arrows-right">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                        
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <img src="images/icons/figure-3.svg" class="figure" alt="icon">
+                <div class="container">
+                    <!-- <h2 class="title">contact</h2> -->
+                    <h2 class="title"><img src="images/icons/contact-text.svg" alt="icon"></h2>
+                    <maps></maps>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="cities">
+                    <div class="town">
+                        <h3>КАЗАХСТАН</h3>
+                        <p>Алматы</p>
+                        <a href="tel:77272360480">+7 727 236 04 80</a>
+                        <a href="tel:77753715546">+7 775 371 55 46</a>
+                        <a href="mailto:studio@duende.kz">studio@duende.kz</a>
+                        <a target="_blank" href="https://2gis.kz/almaty/search/%D0%91%D0%A6%20%C2%ABEvolution%C2%BB%20%2C%20%D1%83%D0%BB.%20%D0%91%D1%83%D1%85%D0%B0%D1%80%20%D0%96%D1%8B%D1%80%D0%B0%D1%83%20%2026%2F1%2C%20%20%D0%BE%D1%84.%2061?m=76.968027%2C43.208102%2F13.25">БЦ «Evolution» , ул. Бухар Жырау  26/1,  оф. 61</a>
+                    </div>
+                </div>
+                <div class="network">
+                    <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                    <a href="#"><img src="images/icons/instagram.svg" alt="icon"></a>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}">
+            <div class="sidebar__head">
+                <a href="/">
+                    <img src="images/icons/favicon.svg" alt="img">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <ul class="sidebar__menu">                             
+                <li><a href="/" class="active">ABOUT US</a></li>
+                <li><a href="/#projects" @click="toggleWrapper">PROJECTS</a></li>
+                <li><a href="/#services" @click="toggleWrapper">SERVICES</a></li>
+                <li><a href="/#contact" @click="toggleWrapper">CONTACTS</a></li>
+            </ul>
+            <div class="sidebar__network">
+                <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                <a href="#"><img src="images/icons/instagram.svg" alt="icon"></a>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        
+        <!-- /Модалки -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" @click="toggleWrapper" :class="{'wrapper-show': isWrapper}">
+        </div>
+        <!-- /Затемнение сайта -->
+    </vue>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

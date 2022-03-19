@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>IT Prom</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <vue id="app">
+        <header class="header">
+            <div class="container">
+                <button class="header__toggle" @click="toggleMenu">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/logo.svg" alt="logo">
+                </a>
+                <ul class="header__menu">
+                    <li>
+                        <div class="dropdown">
+                            <div class="dropdown__head">
+                                О Союзе
+                            </div>
+                            <ul class="dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <div class="dropdown__head">
+                                Аналитика
+                            </div>
+                            <ul class="dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Партнеры</a></li>
+                    <li><a href="#">Полезное</a></li>
+                    <li><a href="#">Электронная платформа</a></li>
+                </ul>
+                <ul class="header__lang">
+                    <li><a href="#">KAZ</a></li>
+                    <li><a href="#" class="active">RUS</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+                <div class="header__search" @click="toggleSearch">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="navigation">
+                <div class="container">
+                    <a href="index.html">Главная</a> <i class="bi bi-chevron-right"></i>
+                    <span>Аналитика</span>
+                </div>
+            </section>
+            
+            <section class="banner banner-mini">
+                <img src="images/analytics-bg.jpg" class="banner__background banner__background-dark" alt="bg">
+                <div class="container">
+                    <div class="banner__info banner__info-pages">
+                        <h1>Аналитика</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interior">
+                <div class="container">
+
+                    <div class="content">
+                        <ul class="interior__menu">
+                            <li><a href="#" class="active">Отрасль сегодня</a></li>
+                            <li><a href="#">Мировые тренды</a></li>
+                            <li><a href="#">Члены Союза</a></li>
+                        </ul>
+                        <div class="interior__network">
+                            <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                            <a href="#"><img src="images/icons/facebook.svg" alt="icon"></a>
+                            <a href="#"><img src="images/icons/telegram.svg" alt="icon"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="editors">
+                            <p>По итогам 2020 года объем производства приборов для контроля прочих физических величин составил 9 519 ед., что на 3,6% меньше аналогичного периода предыдущего года. Снижение объемов производства было обусловлено сокращением спроса вследствие…   </p>
+                            <img src="images/editors-gp-1.png" alt="image">
+                            <p><strong>Обзор производства оборудования ИКТ в Казахстане</strong></p> 
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="interior__recommendations">
+                            <div class="interior__recommendations-title">
+                                Последние обзоры
+                            </div>
+                            <ul class="interior__recommendations-menu">
+                                <li><a href="#">Рынок смартфонов в Казахстане</a></li>
+                                <li><a href="#">Утилизация продукции ИКТ в Казахстане</a></li>
+                                <li><a href="#">Потенциал утилизации ВЭУ в Казахстане</a></li>
+                                <li><a href="#">Развитие ЦОД в Казахстане</a></li>
+                                <li><a href="#">Рынок видеокамер в Казахстане и мире</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="interior-block">
+                <div class="container">
+                    <div class="editors">
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="images/analytics-1.svg" alt="image">
+                    </div>
+                </div>
+            </section>
+
+            <section class="interior">
+                <div class="container">
+
+                    <div class="content" style="border: none;">
+                        <div class="interior__image">
+                            <img src="images/analytics-2.svg" alt="image">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="editors">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div>
+                    </div>
+                    <div class="content" style="border: none; padding: 0;">
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="articles">
+                <div class="container">
+                    <div class="articles__title">СТАТЬИ ПО ТЕМЕ</div>
+                    <div class="articles__items">
+
+                        <a href="#" class="article">
+                            <div class="article__image">
+                                <img src="images/article-1.jpg" alt="image">
+                            </div>
+                            <div class="article__info">
+                                <div class="article__name">Статья</div>
+                                <div class="article__title">
+                                    Как компания Telkomsel изменилась, чтобы привлечь потребителей, ориентированных прежде всего на цифровые технологии
+                                </div>
+                                <div class="article__text">
+                                    23 сентября 2021 г. - 26-летний специалист в области телекоммуникаций ухватился за возможность заново изобрести себя и привлечь новое поколение клиентов.
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="article">
+                            <div class="article__image">
+                                <img src="images/article-2.jpg" alt="image">
+                            </div>
+                            <div class="article__info">
+                                <div class="article__name">Статья</div>
+                                <div class="article__title">
+                                    Полет над морем, управляемый искусственным интеллектом
+                                </div>
+                                <div class="article__text">
+                                    17 марта 2021 г. - Чтобы помочь команде Emirates Team New Zealand успешно защитить свой титул чемпиона Америки, мы познакомили их с новым моряком: AI-ботом, созданным McKinsey.
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="article">
+                            <div class="article__image">
+                                <img src="images/article-3.jpg" alt="image">
+                            </div>
+                            <div class="article__info">
+                                <div class="article__name">Статья</div>
+                                <div class="article__title">
+                                    Как сталелитейный завод в Индии использовал данные и завоевал мировое признание
+                                </div>
+                                <div class="article__text">
+                                    8 марта 2021 г. - Повышая квалификацию сотрудников и внедряя инновации с помощью аналитики, завод Tata Steel в Калинганагаре, Индия, добился повышения производительности, что принесло ему признание Всемирного экономического форума как ведущего цифрового предприятия.
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="content">
+                        <a href="#" class="logo">
+                            <img src="images/icons/logo-2.svg" alt="logo">
+                        </a>
+                        <p>
+                            Союз производителей инфотехнологий и субъектов инфокоммуникаций
+                        </p>
+                    </div>
+
+
+                    <div class="content">
+                        <a href="#" class="link">Связаться с нами</a>
+                        <div class="messenger">
+                            <a href="#" class="email">info@itprom.info</a>
+                            <div class="network">
+                                <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                                <a href="#"><img src="images/icons/facebook.svg" alt="icon"></a>
+                                <a href="#"><img src="images/icons/instagram.svg" alt="icon"></a>
+                                <a href="#"><img src="images/icons/telegram.svg" alt="icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2021 IT Prom.</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <div class="content">
+                        <p>Разработано</p>
+                        <a href="#"> <img src="images/icons/logo-im.svg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="wrapper" :class="{'wrapper__show': isWrapper}" @click="toggleWrapper">
+        </div>
+
+        <div class="search" :class="[{'search__show': isSearch}, {'search__show search__show-solo': isSearchSolo}]">
+            <div class="container">
+                <a href="index.html" class="search__logo" v-if="isMenu">
+                    <img src="images/icons/logo.svg" alt="logo">
+                </a>
+                <form action="" method="">
+                    <input type="text" placeholder="Поиск">
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <div @click="toggleWrapper">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="sidebar" :class="{'sidebar__show': isSidebar}">
+            <ul class="sidebar__menu">
+                <li><button @click="toggleMenuTab(1)" :class="{'active': menuTabValue == 1}">О Союзе</button></li>
+                <li><button @click="toggleMenuTab(2)" :class="{'active': menuTabValue == 2}">Вступить в Союз</button>
+                </li>
+                <li><button @click="toggleMenuTab(3)" :class="{'active': menuTabValue == 3}">Аналитика</button></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Полезное</a></li>
+                <li><a href="#">Электронная платформа</a></li>
+
+                <ul class="sidebar__lang">
+                    <li><a href="#">KAZ</a></li>
+                    <li><a href="#" class="active">RUS</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+            </ul>
+            <div class="sidebar__tabs">
+                <transition name="fade" mode="out-in" key="open">
+                    <div class="tab" v-if="menuTabValue == 1" key="menuTabValue-1">
+                        <h3>О Союзе</h3>
+                        <ul class="links">
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab" v-if="menuTabValue == 2" key="menuTabValue-2">
+                        <h3>Вступить в Союз</h3>
+                        <ul class="links">
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab" v-if="menuTabValue == 3" key="menuTabValue-3">
+                        <h3>Аналитика</h3>
+                        <ul class="links">
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                            <li><a href="#">Page link ...</a></li>
+                        </ul>
+                    </div>
+                </transition>
+            </div>
+            <div class="sidebar__wrapper" @click="toggleWrapper"></div>
+        </div>
+
+        <div class="sidebar-mobile" :class="{'sidebar-mobile__show': isSidebar}">
+            <a href="index.html" class="sidebar-mobile__logo">
+                <img src="images/icons/logo.svg" alt="logo">
+            </a>
+            <ul class="sidebar-mobile__menu">
+                <li>
+                    <dropdown inline-template>
+                        <div class="sidebar-dropdown">
+                            <div class="sidebar-dropdown__head" :class="{'sidebar-dropdown__head-show' : isShow}" @click="dropdownToggle">О Союзе</div>
+                            <ul v-if="isShow" class="sidebar-dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </dropdown>
+                </li>
+                <li>
+                    <dropdown inline-template>
+                        <div class="sidebar-dropdown">
+                            <div class="sidebar-dropdown__head" :class="{'sidebar-dropdown__head-show' : isShow}" @click="dropdownToggle">Вступить в Союз</div>
+                            <ul v-if="isShow" class="sidebar-dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </dropdown>
+                </li>
+                <li>
+                    <dropdown inline-template>
+                        <div class="sidebar-dropdown">
+                            <div class="sidebar-dropdown__head" :class="{'sidebar-dropdown__head-show' : isShow}" @click="dropdownToggle">Аналитика</div>
+                            <ul v-if="isShow" class="sidebar-dropdown__body">
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                                <li><a href="#">Page link ...</a></li>
+                            </ul>
+                        </div>
+                    </dropdown>
+                </li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Полезное</a></li>
+                <li><a href="#">Электронная платформа</a></li>
+            </ul>
+            <ul class="sidebar-mobile__lang">
+                <li><a href="#">KAZ</a></li>
+                <li><a href="#" class="active">RUS</a></li>
+                <li><a href="#">ENG</a></li>
+            </ul>
+        </div>
+
+    </vue>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/component-vue/slider.js"></script>
+    <script src="js/component-vue/dropdown.js"></script>
+    <script src="js/vivus.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

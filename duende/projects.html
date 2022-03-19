@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Duende</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-ellipse-progress/dist/vue-ellipse-progress.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <div class="loader" :class="{'loader-done' : !isOnload}">
+            <loader></loader>
+        </div>
+
+        
+        <header class="header" id="header" :class="{'header-index' : isIndex}">
+            <div class="container">
+                <button class="header__toggle" @click="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                
+                <ul class="header__menu">                             
+                    <li><a href="/" class="active">ABOUT US</a></li>
+                    <li><a href="/#projects">PROJECTS</a></li>
+                    <li><a href="/#services">SERVICES</a></li>
+                    <li><a href="/#contact">CONTACTS</a></li>
+                </ul>
+                <ul class="header__lang">                             
+                    <li><a href="#">RUS</a></li>
+                    <li><a href="#" class="active">ENG</a></li>
+                </ul>
+            </div>  
+        </header>
+
+        <main class="main">
+
+            <section class="navigation">
+                <div class="container">
+                    <h1>#PROJECT</h1>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="container">
+                    <p>Открой вкус удачи</p>
+                    <div class="gallery-items">
+                        <a href="images/gallery-1.jpg">
+                            <img src="images/gallery-1.jpg" alt="img">
+                            <!-- <span>РАЗРАБОТКА лОГОТИПА</span> -->
+                        </a>
+                        <a href="images/gallery-7.jpg">
+                            <img src="images/gallery-7.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-2.jpg">
+                            <img src="images/gallery-2.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-3.jpg">
+                            <img src="images/gallery-3.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-4.jpg">
+                            <img src="images/gallery-4.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-5.jpg">
+                            <img src="images/gallery-5.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-6.jpg">
+                            <img src="images/gallery-6.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-8.jpg">
+                            <img src="images/gallery-8.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-9.jpg">
+                            <img src="images/gallery-9.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-10.jpg">
+                            <img src="images/gallery-10.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-11.jpg">
+                            <img src="images/gallery-11.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-12.jpg">
+                            <img src="images/gallery-12.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-1.jpg">
+                            <img src="images/gallery-1.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-2.jpg">
+                            <img src="images/gallery-2.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-3.jpg">
+                            <img src="images/gallery-3.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-4.jpg">
+                            <img src="images/gallery-4.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-5.jpg">
+                            <img src="images/gallery-5.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-6.jpg">
+                            <img src="images/gallery-6.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-7.jpg">
+                            <img src="images/gallery-7.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-8.jpg">
+                            <img src="images/gallery-8.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-9.jpg">
+                            <img src="images/gallery-9.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-10.jpg">
+                            <img src="images/gallery-10.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-11.jpg">
+                            <img src="images/gallery-11.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-12.jpg">
+                            <img src="images/gallery-12.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-1.jpg">
+                            <img src="images/gallery-1.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-2.jpg">
+                            <img src="images/gallery-2.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-3.jpg">
+                            <img src="images/gallery-3.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-4.jpg">
+                            <img src="images/gallery-4.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-5.jpg">
+                            <img src="images/gallery-5.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-6.jpg">
+                            <img src="images/gallery-6.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-7.jpg">
+                            <img src="images/gallery-7.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-8.jpg">
+                            <img src="images/gallery-8.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-9.jpg">
+                            <img src="images/gallery-9.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-10.jpg">
+                            <img src="images/gallery-10.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-11.jpg">
+                            <img src="images/gallery-11.jpg" alt="img">
+                        </a>
+                        <a href="images/gallery-12.jpg">
+                            <img src="images/gallery-12.jpg" alt="img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="cities">
+                    <div class="town">
+                        <h3>КАЗАХСТАН</h3>
+                        <p>Алматы</p>
+                        <a href="tel:+7 727 236 04 80">+7 727 236 04 80</a>
+                        <a href="tel:+7 775 371 55 46">+7 775 371 55 46</a>
+                        <a href="mailto:studio@duende.kz">studio@duende.kz</a>
+                        <p>БЦ «Evolution» , ул. Бухар Жырау  26/1,  оф. 61</p>
+
+                    </div>
+                    <div class="town">
+                        <h3>КАЗАХСТАН</h3>
+                        <p>Нур-Султан</p>
+                        <a href="tel:+7 (7172) 76 82 63">+7 (7172) 76 82 63</a>
+                        <a href="mailto:studio@duende.kz">studio@duende.kz</a>
+                        <p>ул. Шевченко 10, оф. 11</p>
+                    </div>
+                </div>
+                <div class="network">
+                    <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                    <a href="#"><img src="images/icons/instagram.svg" alt="icon"></a>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}">
+            <div class="sidebar__head">
+                <a href="/">
+                    <img src="images/icons/favicon.svg" alt="img">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <ul class="sidebar__menu">                             
+                <li><a href="/" class="active">ABOUT US</a></li>
+                <li><a href="/#projects">PROJECTS</a></li>
+                <li><a href="/#services" @click="toggleWrapper">SERVICES</a></li>
+                <li><a href="/#contact" @click="toggleWrapper">CONTACTS</a></li>
+            </ul>
+            <div class="sidebar__network">
+                <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                <a href="#"><img src="images/icons/instagram.svg" alt="icon"></a>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        
+        <!-- /Модалки -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper__show': isWrapper}">
+        </div>
+        <!-- /Затемнение сайта -->
+    </vue>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

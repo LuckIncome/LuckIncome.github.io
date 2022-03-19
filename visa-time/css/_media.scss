@@ -1,0 +1,916 @@
+@media (max-width: 1400px) { 
+    .header {
+        &__content {
+            .logo {
+                margin-right: 60px;
+            }
+        }
+    }
+    .footer {
+        &__city {
+            .content:nth-child(1) {
+                order: 1;
+            }
+            .content:nth-child(2) {
+                order: 4;
+                display: flex;            
+            }
+            .content:nth-child(3) {
+                order: 2;
+            }
+            .content:nth-child(4) {
+                order: 3;
+            }
+        }
+    }
+    .working {
+        .wrapper {
+            padding: 0 150px;
+            width: 2500px;
+        }
+    }
+    .visa-get {
+        .content {
+            width: 47%;
+        }
+    }
+    .reviews-items {
+        .items {
+            .review {
+                margin: 0 0 30px 0;
+                width: 100%;
+            }
+        }
+    }
+    .blog-info { 
+        .blog-box {
+            width: 90%;
+        }  
+    }
+}   
+@media (max-width: 1200px) { 
+    .header {
+        &__menu {
+            .menu {
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+        &__content {
+            .logo {
+                margin-right: 30px;
+            }
+            .item {
+                margin-right: 30px;
+            }
+        }
+    }
+    .footer {
+        &__city {
+            justify-content: flex-start;
+            .content:nth-child(1) {
+                order: 1;
+            }
+            .content:nth-child(2) {
+                order: 4;
+                display: flex; 
+                flex-direction: column;           
+            }
+            .content:nth-child(3) {
+                order: 2;
+            }
+            .content:nth-child(4) {
+                order: 3;
+            }
+        }
+    }
+    .country {
+        .info {
+            padding: 20px;
+        }
+    }
+    .about {
+        padding: 86px 0 0 0;
+    }
+    .questions {
+        .items {
+            width: 100%;
+        }
+        .content {
+            flex-direction: column;
+        }
+        .feedback {
+            margin-top: 50px;
+            width: 100%;
+            min-height: 310px;
+        }
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        input {
+            width: 55%;
+        }
+        .btn-orang {
+            width: 40%;
+        }
+    }
+    .visa-get {
+        .container {
+            flex-direction: column;
+        }
+        .content {
+            width: 100%;
+        }
+        .icon {
+            width: 44px;
+        }
+    }
+    .visa-advantage {
+        .container {
+            flex-wrap: wrap;
+        }
+        .item {
+            margin-bottom: 20px;
+        }
+    }
+    .visa-info {
+        .container {
+            flex-direction: column;
+        }
+        .content {
+            width: 100%;
+        }
+        .images {
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .info-pages {
+        .container {
+            flex-direction: column;
+        }
+        .content {
+            width: 100%;
+        }
+        .images {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            img {
+                width: 35%;
+                &:nth-child(1) {
+                    width: 35%;
+                }
+            }
+        }
+    }
+
+
+    .title-main {
+        font-size: 48px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .title-middle {
+        font-size: 32px;
+    }
+    .title-mini {
+        font-size: 26px;
+    }
+    .description-big {
+        font-size: 24px;
+    }
+    .description-main {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 18px;
+    }
+    .description-mini {
+        font-size: 16px;
+    }
+    .text-main {
+        font-size: 17px;
+    }
+    .text,.link,.link-arrow,.btn-orang,.btn-orang-out,.info-block li,.info-pages .main-ul li {
+        font-size: 16px;
+    }
+    .text-mini,.question .accordion-body {
+        font-size: 15px;
+    }
+    .about {
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .bg {
+            position: relative;
+            right: auto;
+            top: -50px;
+            width: 100%;
+        }
+        .text {
+            width: 70%;
+        }
+    }
+    .visa-info {
+        .images {
+            img {
+                width: 30%;
+            }
+        }
+    }
+    .visa-price {
+        .rwd-table { 
+            th, td {
+                font-size: 15px;
+            }
+            th {
+                padding: 12px 12px;
+            }
+            td {
+                padding: 10px 12px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) { 
+    .header {
+        height: auto;
+        &__menu {
+            display: none;
+        }
+        &__content {
+            .item {
+                display: none;
+            }
+            .feedback {
+                display: none;
+            }
+        }
+        .menuToggle {
+            display: block;
+            i {
+                font-size: 30px;
+            }
+        }
+        .mobile-feedback {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #F16522;
+            animation: header-ani 1.5s 0s ease-out infinite;
+        }
+        .mobile-feedback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes header-ani {
+            0% {box-shadow: 0 0 0px 0px #F16522, 0 0 0px 0px rgba(49, 139, 86, 0), 0 0 0 0 #F16522;}
+            100% {box-shadow: 0 0 8px 6px rgba(0,176,103, 0), 0 0 0 40px rgba(43, 197, 68, 0), 0 0 0 10px rgba(16, 187, 116, 0);}
+        }
+    }
+    .footer {
+        &__top {
+            flex-direction: column;
+        }
+    }
+    .advantage {
+        .container {
+            justify-content: space-around;
+        }
+        .item {
+            margin: 0 5px;
+            margin-bottom: 15px;
+        }
+    }
+    .country {
+        flex-direction: column-reverse;
+        height: auto;
+        width: 42%;
+        .info {
+            width: 100%;
+            min-height: 165px;
+        }
+        .image {
+            width: 100%;
+        }
+    }
+    .help {
+        .bg {
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+        }
+    }
+    .working {
+        .scroll {
+            position: relative;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .outer-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: none;
+            transform-origin: top left;
+            overflow-y: auto;
+            overflow-x: auto;
+                scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .slide {
+            width: 100%;
+            width: 380px;
+            padding: 20px 0;
+            padding-left: 32px;
+            padding-right: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            border-left: 2px solid #F16522;
+        }
+        .wrapper {
+            padding: 0 0 0 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transform: none;
+            transform-origin: top left;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .line {
+            display: none;
+        }
+        .marker {
+            position: absolute;
+            top: 45px;
+            left: -9px;
+        }
+        .description-mini {
+            text-align: left;
+            padding: 0;
+        }
+        .text {
+            text-align: left;
+            padding: 0;
+        }
+    }
+    .review {
+        .images-slider {
+            width: 255px;
+            height: 255px;
+            margin: 0 20px 10px 0;
+            iframe { 
+                width: 255px;
+                height: 255px;
+            }
+            .slider-arrow {
+                display: flex !important;
+            }
+        }
+    }
+    body {
+        padding-top: 70px;
+    }
+    .countries-visa {
+        .item {
+            width: 100%;
+        }
+    }
+    .navigation {
+        margin-top: 50px;
+    }
+    .visa-price {
+        .rwd-table {
+            tbody {
+                tr {
+                    td:first-child {
+                        padding-top: 15px;
+                    }
+                    td:last-child {
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-items {
+        .items {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .contact-page {
+        .box {
+            width: 345px;
+            margin-right: 39px;
+        }
+    }
+    .blog-info { 
+        .blog-box {
+            width: 100%;
+        }  
+    }
+}
+@media (max-width: 768px) { 
+    .footer {
+        &__top {
+            ul {
+                display: none !important;
+            }
+        }
+        &__city {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .logo {
+                position: relative;
+                right: auto;
+            }
+            a {
+                margin-top: 10px;
+            }
+        }
+    }
+    .help {
+        button {
+            margin-top: 0;
+        }
+        input {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .about {
+        .text {
+            width: 100%;
+        }
+    }
+    .partners {
+        .items {
+            img {
+                margin: 0 10px 20px;
+            }
+        }
+    }
+    .slider-arrow {
+        display: none !important;
+    }
+    .questions {
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        input {
+            width: 100%;
+        }
+        .btn-orang {
+            width: 100%;
+        }
+    }
+    .visa-banner {
+        .title-main {
+            width: 100%;
+        }
+    }
+    .review {
+        .images-slider {
+            width: 100%;
+            height: 255px;
+            margin: 0 0 20px 0;
+            float: none;
+            iframe, img { 
+                width: 100%;
+                height: 255px;
+            }
+        }
+    }
+    .blog-items {
+        .items {
+            grid-template-columns: 1fr;
+            .blog {
+                width: 350px;
+                margin: 0;
+            }
+        }
+    }
+    .contact-page {
+        .container {
+            flex-direction: column;
+        }
+        .box {
+            width: 100%;
+        }
+    }
+
+    .title-main {
+        font-size: 44px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .title-middle {
+        font-size: 28px;
+    }
+    .title-mini {
+        font-size: 22px;
+    }
+    .description-big {
+        font-size: 20px;
+    }
+    .description-main {
+        font-size: 18px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .description-mini {
+        font-size: 14px;
+    }
+    .text-main {
+        font-size: 15px;
+    }
+    .text,.link,.link-arrow,.btn-orang,.btn-orang-out,.info-block li,.info-pages .main-ul li {
+        font-size: 14px;
+    }
+    .text-mini,.question .accordion-body {
+        font-size: 13px;
+    }
+    .visa-get__accordion li {
+        color: #414141;
+        font-size: 14px;
+    }
+    .visa-price {
+        .rwd-table { 
+            th, td {
+                color: #414141;
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .offcanvas-start {
+        width: 100%;
+    }
+    .banner {
+        height: 420px;
+        .container {
+            padding-top: 50px;
+        }
+        .buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .select-dropdown {
+            margin-bottom: 10px;
+            margin-right: 0;
+            height: 50px;
+        }
+        button {
+            height: 50px;
+        }
+        .title-main {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 34px;
+        }
+        .description-main {
+            margin-bottom: 35px;
+        }
+    }
+    .visa-banner {
+        height: 420px;
+        .container {
+            padding-top: 50px;
+        }
+        .btn-orang {
+            height: 50px;
+        }
+        .navigation-visa {
+            margin-bottom: 35px;
+        }
+        .title-main {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 34px;
+        }
+    }
+    .visa-timing {
+        margin-bottom: 0;
+    }
+    .visa-advantage {
+        margin-bottom: 40px;
+    }
+    .advantage {
+        .container {
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+        .item {
+            width: 50%;
+            margin: 0 0;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .country {
+        width: 100%;
+        flex-direction: row;
+        .info {
+            width: 120%;
+        }
+    }
+    .countries {
+        margin-bottom: 50px;
+        .items {
+            margin-bottom: 25px;
+        }
+        button {
+            height: 50px;
+            width: 100%;
+        }
+    }
+    .help {
+        padding: 50px 0;
+        width: 100%;
+        position: relative;
+        margin-bottom: 25px;
+        .title-middle {
+            width: 79%;
+            text-align: center;
+            display: -webkit-box;
+            .icon {
+                margin-right: 0;
+            }
+        }
+        .description {
+            width: 100%;
+            text-align: center;
+        }
+        button, input {
+            height: 50px;
+            margin-right: 0;
+            width: 100%;
+        }
+        // .bg {
+        //     position: absolute;
+        //     right: auto;
+        //     top: auto;
+        //     bottom: 0;
+        //     width: 100%;
+        //     display: block;
+        //     transform: rotate(90deg);
+        // }
+    }
+    .about {
+        padding: 50px 0 10px;
+        .bg {
+            top: 0;
+        }
+    }
+    .partners {
+        margin-bottom: 25px;
+        .items {
+            img {
+                width: 60%;
+            }
+        }
+    }
+    .working {
+        padding: 45px 0 50px 0;
+        .scroll {
+            max-width: 100%;
+            width: 100%;
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .wrapper {
+            padding: 0 0 0 15px;
+            max-width: 100%;
+            width: 100%;
+        }
+        .slide {
+            width: 100%;
+        }
+        button {
+            width: 100%;
+            height: 50px;
+        }
+        .description {
+            margin-bottom: 25px;
+        }
+    }
+    .services {
+        .description {
+            margin-bottom: 0;
+        }
+        .services-slider {
+            margin-top: 0;
+        }
+    }
+    .service {
+        min-height: 215px;
+    }
+    .reviews, .blogs {
+        padding: 50px 0;
+        .link {
+            right: 15px;
+        }
+    }
+    .questions {
+        padding: 50px 0;
+        input, .btn-orang {
+            width: 100%;
+            margin-right: 0;
+            height: 50px;
+        }
+    }
+    .questions-page {
+        padding: 0 0 50px 0;
+    }
+    .question {
+        margin: 10px 0;
+    }
+    .countries-visa {
+        .info { 
+            padding: 10px 45px;
+            flex-direction: column;
+            &-item {
+                margin: 10px 0;
+            }
+        }
+        .item {
+            .accordion-button {
+                padding: 15px 1.25rem;
+                border: none;
+            }
+        }
+        .buttons {
+            flex-direction: column;
+            button {
+                margin-top: 15px;
+            }
+        }
+    }
+    .visa-timing {
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+    .info-pages {
+        margin-bottom: 30px;
+        .text {
+            margin-bottom: 25px;
+        }
+        .info-block {
+            margin-bottom: 20px;
+        }
+        .images {
+            margin-bottom: 25px;
+            img {
+                width: 45%;
+                &:nth-child(1) {
+                    width: 45%;
+                }
+            }
+        }
+    }
+    .info-block,.info-pages .info-block-2 {
+        padding: 20px;
+    }
+    .info-pages .info-block-2 .icon {
+        margin-right: 20px;
+    }
+    .about-contact {
+        .box {
+            width: 100%;
+        }
+        button {
+            height: 50px;
+        } 
+    }
+    .blog-items {
+        margin-bottom: 30px;
+        .items {
+            .blog {
+                width: 80%;
+            }
+        }
+        .description-main {
+            margin: 10px 10px 10px 0;
+            .icon {
+                margin-right: 6px;
+            }
+        }
+        .btn-orang-out {
+            height: 50px;
+            margin: 30px 0;
+        }
+        .items {
+            margin-bottom: 30px;
+        }
+    }
+    .paginat {
+        .slider-arrow {
+            display: flex !important;
+        }
+        li {
+            margin: 0 12px;
+        }
+    }
+    .navigation-link {
+        flex-wrap: wrap;
+    }
+    .blog-info {
+        margin-bottom: 35px;
+    }
+    .modal-body {
+        .close {
+            top: -35px;
+            right: 0px;
+        }
+        .btn-orang, input {
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .banner {
+        .title-main {
+            font-size: 30px;
+        }
+        .select-dropdown {
+            width: 100%;
+        }
+    }
+    .title {
+        font-size: 30px;
+    }
+    .title-middle {
+        font-size: 22px;
+    }
+    .title-mini {
+        font-size: 18px;
+    }
+    .description-big {
+        font-size: 16px;
+    }
+    .description-main {
+        font-size: 14px;
+    }
+    .description {
+        font-size: 13px;
+    }
+    .description-mini {
+        font-size: 12px;
+    }
+    .text-main {
+        font-size: 13px;
+    }
+    .text,.link,.link-arrow,.btn-orang,.btn-orang-out,.info-block li,.info-pages .main-ul li {
+        font-size: 12px;
+    }
+    .text-mini,.question .accordion-body {
+        font-size: 11px;
+    }
+    .visa-price {
+        .rwd-table { 
+            th, td {
+                color: #414141;
+                font-size: 12px;
+            }
+        }
+    }
+}

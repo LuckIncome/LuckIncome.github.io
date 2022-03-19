@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="images/logo.svg"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-touch-events@3.2.2/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Visa Time</title>
+  </head>
+
+  <body>
+    <vue id="app" ref="infoBox"> 
+      <header class="header">
+        <div class="header__menu">
+          <div class="container">
+            <ul class="menu">
+              <li><a href="countries.html">Визы</a></li>
+              <li><a href="countries.html">Шенгенская виза</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Услуги
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="insurance.html">Страхование</a></li>
+                  <li><a class="dropdown-item" href="photo.html">Фото на визу</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="agency.html">Агенствам</a></li>
+              <li><a href="blogs.html">Блог</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+              <li><a href="faq.html">Частые вопросы</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="container">
+
+            <button class="menuToggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <i class="bi bi-list"></i>
+            </button>
+
+            <div class="content">
+              <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="logo">
+              </a>
+
+              <div class="item">
+                <div class="icon">
+                  <img src="images/icons/online.svg" alt="icon">
+                </div>
+                <div class="info">
+                  <div class="header-text">В любом городе Казахстана Online</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <img src="images/icons/geo.svg" alt="icon">
+                </div>
+                <div class="info">
+                  <div class="header-name">Мы находимся:</div>
+                  <div class="header-text">г. Алматы</div>
+                  <a href="contact.html#maps" class="toggleModal">Схема проезда</a>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="feedback">
+              <div class="icon">
+                <img src="images/icons/call-msg.svg" alt="icon">
+              </div>
+              <div class="info">
+                <div class="header-name">Наш номер:</div>
+                <a href="tel:+7 (705) 842-42-16" class="header-text">+7 (705) 842-42-16</a>
+                <div class="toggleModal" data-bs-toggle="modal" data-bs-target="#feedbackModal">Перезвоните мне</div>
+              </div>
+            </div>
+
+
+            <a href="tel:+7 (705) 842-42-16" class="mobile-feedback">
+              <img src="images/icons/call-msg.svg" alt="icon">
+            </a>
+
+          </div>
+        </div>
+      </header>
+      
+      <header class="header-mobile offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+
+          <div class="item">
+            <div class="icon">
+              <img src="images/icons/online-white.svg" class="online-white" alt="icon">
+            </div>
+            <div class="info">
+              <div class="header-text">В любом городе Казахстана Online</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <img src="images/icons/geo-white.svg" alt="icon">
+            </div>
+            <div class="info">
+              <div class="header-name">Мы находимся:</div>
+              <div class="header-text">г. Алматы</div>
+              <a href="contact.html#maps" class="toggleModal">Схема проезда</a>
+            </div>
+          </div>
+
+          <ul class="menu">
+            <li><a href="countries.html">Визы</a></li>
+            <li><a href="countries.html">Шенгенская виза</a></li>
+            <li><a href="insurance.html">Страхование</a></li>
+            <li><a href="photo.html">Фото на визу</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="agency.html">Агенствам</a></li>
+            <li><a href="blogs.html">Блог</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="faq.html">Частые вопросы</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+
+          <div class="item">
+            <div class="icon">
+              <img src="images/icons/call-msg.svg" alt="icon">
+            </div>
+            <div class="info">
+              <div class="header-name">Наш номер:</div>
+              <a class="header-text" href="tel:+7 (705) 842-42-16">+7 (705) 842-42-16</a>
+              <div class="toggleModal" data-bs-toggle="modal" data-bs-target="#feedbackModal">Перезвоните мне</div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <main>
+        <section class="navigation">
+          <div class="container">
+            <div class="navigation-link">
+              <a href="index.html">Главная</a> <i class="bi bi-chevron-right"></i>
+              <a href="blogs.html">Блог</a> <i class="bi bi-chevron-right"></i>
+              <span>Правила въезда в Черног...</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="blog-info">
+          <div class="container">
+            <div class="blog-box">
+              <img src="images/blog.jpg" class="image" alt="image">
+
+              <h1 class="title">
+                Правила въезда в Черногорию
+              </h1>
+
+              <div class="text-main">
+                Черногория – популярное место отдыха российских туристов. В год страну посещает порядка полумиллиона граждан РФ. Комфортному времяпрепровождению способствует благоприятный климат, развитая инфраструктура, насыщенная культурная жизнь курортов. Страна считается лучшим местом для семейного отпуска.
+              </div>
+
+              <div class="description">
+                Нужна ли виза в Черногорию
+              </div>
+
+              <div class="text">
+                Новость о том, что местное правительство упрощает правила въезда в Черногорию была воспринята с особой радостью нашими соотечественниками. В период пандемии власти Республики продемонстрировали высокую эффективность профилактических мер. На середину июня 2021 года здесь зарегистрировано всего около 400 заболевших.
+                <br><br>
+                Падение туристического рынка, напротив, негативно сказалось на экономическом положении страны, для которой доход от иностранных вливаний является одним из основных. Уже весной этого года правительство инициировало открытие границ и всячески способствует повышению интереса туристов к отдыху на побережье Адриатического моря.
+                <br><br>
+                Правила въезда в Черногорию для россиян становятся все более мягкими, что резко контрастирует с остальными странами-участниками индустрии туризма. Многие, наоборот, требуют от иностранцев множество гарантий защиты от коронавирусной инфекции.
+                <br><br>
+                Новость о том, что местное правительство упрощает правила въезда в Черногорию была воспринята с особой радостью нашими соотечественниками. В период пандемии власти Республики продемонстрировали высокую эффективность профилактических мер. На середину июня 2021 года здесь зарегистрировано всего около 400 заболевших.
+                <br><br>
+                Падение туристического рынка, напротив, негативно сказалось на экономическом положении страны, для которой доход от иностранных вливаний является одним из основных. Уже весной этого года правительство инициировало открытие границ и всячески способствует повышению интереса туристов к отдыху на побережье Адриатического моря.
+                <br><br>
+                Правила въезда в Черногорию для россиян становятся все более мягкими, что резко контрастирует с остальными странами-участниками индустрии туризма. Многие, наоборот, требуют от иностранцев множество гарантий защиты от коронавирусной инфекции.
+              </div>
+
+
+              <div class="network">
+                <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte,facebook,telegram,twitter,whatsapp"></div>
+                <!-- <a href="#"><img src="images/icons/vk.svg" alt="icon"></a>
+                <a href="#"><img src="images/icons/facebook.svg" alt="icon"></a>
+                <a href="#"><img src="images/icons/whatsapp.svg" alt="icon"></a>
+                <a href="#"><img src="images/icons/twitter.svg" alt="icon"></a>
+                <a href="#"><img src="images/icons/telegram.svg" alt="icon"></a> -->
+              </div>
+
+              <div class="avtor">
+                <div class="description-main">Автор статьи: Инна Пронина</div>
+                <div class="description-main">Генеральный директор</div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <section class="help mb-0">
+          <img class="bg" src="images/help-bg.jpg" alt="bg">
+          <div class="container">
+            <div class="title-middle">
+              <div class="icon">
+                <img src="images/icons/call-msg.svg" alt="icon">
+              </div>
+              Нужна помощь в оформлении визы?
+            </div>
+            <div class="description">
+              Оставьте заявку и получите бесплатную консультацию нашего специалиста
+            </div>
+            <form action="">
+              <input type="text" placeholder="Ваше имя*" required>
+              <input type="text" placeholder="Номер телефона*" name="phone" required>
+              <button type="submit" class="btn-orang">Перезвоните мне</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="blogs">
+          <div class="container">
+            <div class="title">Смотрите также</div>
+
+            <div class="blogs-slider">
+
+              <div class="blog">
+                <img src="images/blogs.jpg" class="image" alt="image">
+                <div class="info">
+                  <div class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's... 
+                  </div>
+                  <a href="#" class="link-arrow">Читать полностью <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="blog">
+                <img src="images/blogs.jpg" class="image" alt="image">
+                <div class="info">
+                  <div class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's... 
+                  </div>
+                  <a href="#" class="link-arrow">Читать полностью <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="blog">
+                <img src="images/blogs.jpg" class="image" alt="image">
+                <div class="info">
+                  <div class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's... 
+                  </div>
+                  <a href="#" class="link-arrow">Читать полностью <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="blog">
+                <img src="images/blogs.jpg" class="image" alt="image">
+                <div class="info">
+                  <div class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's... 
+                  </div>
+                  <a href="#" class="link-arrow">Читать полностью <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="blog">
+                <img src="images/blogs.jpg" class="image" alt="image">
+                <div class="info">
+                  <div class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's... 
+                  </div>
+                  <a href="#" class="link-arrow">Читать полностью <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="blog">
+                <img src="images/blogs.jpg" class="image" alt="image">
+                <div class="info">
+                  <div class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's... 
+                  </div>
+                  <a href="#" class="link-arrow">Читать полностью <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+        </section>
+      </main>
+      
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__city">
+              <div class="big-content content">
+                <a href="#" class="footer__name">Шенген виза</a>
+                <ul>
+                  <li><a href="#">Австрия</a></li>
+                  <li><a href="#">Польша</a></li>
+                  <li><a href="#">Бельгия</a></li>
+                  <li><a href="#">Португалия</a></li>
+                  <li><a href="#">Венгрия</a></li>
+                  <li><a href="#">Словакия</a></li>
+                  <li><a href="#">Германия</a></li>
+                  <li><a href="#">Финляндия</a></li>
+                  <li><a href="#">Греция</a></li>
+                  <li><a href="#">Франция</a></li>
+                  <li><a href="#">Исландия</a></li>
+                  <li><a href="#">Чехия</a></li>
+                  <li><a href="#">Испания</a></li>
+                  <li><a href="#">Швейцария</a></li>
+                  <li><a href="#">Италия</a></li>
+                  <li><a href="#">Швеция</a></li>
+                  <li><a href="#">Латвия</a></li>
+                  <li><a href="#">Эстония</a></li>
+                  <li><a href="#">Литва</a></li>
+                  <li><a href="#">Дания</a></li>
+                  <li><a href="#">Нидерланды</a></li>
+                  <li><a href="#">Словения</a></li>
+                  <li><a href="#">Норвегия</a></li>
+                </ul>
+              </div>
+              <div class="content">
+                <div class="content-item">
+                  <a href="#" class="footer__name">Виза в америку</a>
+                  <ul>
+                    <li><a href="#">Виза в Канаду</a></li>
+                    <li><a href="#">Виза в Мексику</a></li>
+                    <li><a href="#">Виза в США</a></li>
+                  </ul>
+                </div>
+                <div class="content-item">
+                  <a href="#" class="footer__name">Виза в африку</a>
+                  <ul>
+                    <li><a href="#">Виза в Марокко</a></li>
+                    <li><a href="#">Виза в ЮАР</a></li>
+                  </ul>
+                </div>
+                <div class="content-item">
+                  <a href="#" class="footer__name">Виза в Океанию</a>
+                  <ul>
+                    <li><a href="#">Виза в Австралия</a></li>
+                    <li><a href="#">Виза в Доминикану</a></li>
+                    <li><a href="#">Виза в Новую Зеландию</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="footer__name">Виза в европу</a>
+                <ul>
+                  <li><a href="#">Виза в Ирландию</a></li>
+                  <li><a href="#">Виза на Кипр</a></li>
+                  <li><a href="#">Виза в Хорватию</a></li>
+                  <li><a href="#">Виза на Мальту</a></li>
+                  <li><a href="#">Виза в Болгарию</a></li>
+                  <li><a href="#">Виза в Черногорию</a></li>
+                  <li><a href="#">Виза в Румынию</a></li>
+                  <li><a href="#">Виза в Великобританию</a></li>
+                  <li><a href="#">Виза в Турцию</a></li>
+                </ul>
+              </div>
+              <div class="content">
+                <a href="#" class="footer__name">Виза в азию</a>
+                <ul>
+                  <li><a href="#">Виза в Индию</a></li>
+                  <li><a href="#">Виза в Тайвань</a></li>
+                  <li><a href="#">Виза в Японию</a></li>
+                  <li><a href="#">Виза в Сингапур</a></li>
+                  <li><a href="#">Виза в ОАЭ</a></li>
+                  <li><a href="#">Виза в Израиль</a></li>
+                  <li><a href="#">Виза в Тайланд</a></li>
+                  <li><a href="#">Виза в Китай</a></li>
+                  <li><a href="#">Виза в Корею</a></li>
+                  <li><a href="#">Виза во Вьетнам</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="footer__name">
+                контактная информация
+              </div>
+              <div class="item">
+                <div class="footer__description">
+                  Телефон:
+                </div>
+                <a href="tel:+7 (705) 842-42-16" class="footer__text">
+                  +7 (705) 842-42-16
+                </a>
+              </div>
+              <div class="item">
+                <div class="footer__description">
+                  Адрес:
+                </div>
+                <div class="footer__text">
+                  Алматы, ул.Маркова 61/1,
+                  уг. ул. Попова, блок 3, 1 этаж,
+                  102 кабинет
+                </div>
+              </div>
+              <div class="item">
+                <div class="footer__description">
+                  E-mail:
+                </div>
+                <a href="mailto:visahelp.kz@mail.ru" class="footer__text">
+                  visahelp.kz@mail.ru
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer-text">
+              © «VisaTime.kz». 2021, Все права защищены
+            </div>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#" class="logo">
+              <img src="images/logo-im.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </footer>
+
+      <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+              <div class="feedback">
+                <div class="description-big">
+                  <div>
+                    <div class="icon">
+                      <img src="images/icons/call-msg.svg" alt="icon">
+                    </div>
+                  </div>
+                  Оставить заявку
+                </div>
+                <div class="text">
+                  Оставьте свой номер и наш менеджер перезвонит вам в течение часа и ответит на все волнующие вас вопросы.
+                </div>
+                <form action="">
+                  <input type="text" placeholder="Номер телефона*" name="phone" required>
+                  <button class="btn-orang">Перезвоните мне</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </vue>
+    <script src="https://yastatic.net/share2/share.js"></script>
+    <script src="js/carousel.js"></script> 
+    <script src="js/masked.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script> 
+    <script src="js/script.js"></script>
+  </body>
+</html>
