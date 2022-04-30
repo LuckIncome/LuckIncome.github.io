@@ -1,0 +1,13 @@
+<svg width="57" height="114" viewBox="0 0 57 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow-right" clip-path="url(#clip0_42_8)">
+<g id="arrow">
+<circle id="Ellipse 18" cx="57" cy="57" r="56.5" stroke="white"/>
+<path id="Vector 33" d="M22.5 57C24.5 57 45 57 45 57M45 57L39 63M45 57L39 51" stroke="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_42_8">
+<rect width="57" height="114" fill="white" transform="translate(57 114) rotate(-180)"/>
+</clipPath>
+</defs>
+</svg>

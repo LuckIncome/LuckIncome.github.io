@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Resident</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <button class="header__toggle" @click="toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    
+                    <a href="index.html" class="header__logo">
+                        <img src="images/icons/logo.svg" alt="logo">
+                    </a>
+                    
+                    <ul class="header__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="partnership.html">Партнерство</a></li>
+                        <li><a href="/#questions">Частые вопросы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    
+                    <div class="header__feedback">
+                        <a href="tel:77078547045"><img src="images/icons/whatsapp.svg" alt="img"> +7 707 854 70 45</a>
+                        <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+                    </div>
+                    
+                    <a href="tel:77078547045" class="header__call">
+                        <img src="images/icons/call-2.svg" alt="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <ul>
+                        <li class="header__drop">
+                            <a href="articles.html">Гражданство <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__drop">
+                            <a href="articles.html">Резидентство <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="residency.html">Резидентство</a></li>
+                                <li><a href="residency.html">Резидентство</a></li>
+                                <li><a href="residency.html">Резидентство</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__drop">
+                            <a href="articles.html">Налоговые статусы <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="work.html">Работа</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="services.html">Доп услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <main class="main">
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__menu">
+                        <a href="index.html">Главная <i class="bi bi-chevron-right"></i></a>
+                        <span>Налоговые статусы Мальты CDI</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="article-page">
+                <div class="container">
+                    <div class="article-page__head">
+                        <div>
+                            <h1>Malta Global Residency Program (вид на жительство и особый налоговый статус).</h1>
+                            <div class="description">Республика Мальта является членом Европейского Союза, начиная с 2004 года и входит в Шенгенскую зону, начиная с 2007 года. Особенностью этого региона является постоянный экономический рост и отсутствие каких-либо политических волнений, что делает Мальту политически и экономически стабильной страной, что безусловно создаёт благоприятный климат для инвестиций и бизнеса. На данный момент ВНЖ Мальты это наиболее привлекательный вариант для предпринимателей.</div>
+                        </div>
+                        <img src="images/flag.jpg" alt="icon">
+                    </div>
+                    <div class="editors">
+                        <p>Особый налоговый статус является одним из основных факторов привлекающих предпринимателей со всего мира. Его преимущества — это отсутствие налогов на доходы полученные за пределами Республики Мальта, а также наличие большого количества Соглашений об избежании двойного налогообложения. Статус сохраняется без прямой необходимости проживания на территории Республики Мальта определённое количество времени. </p>
+                    </div>
+                </div>
+                <img src="images/article-1.jpg" class="article-page__main-img" alt="img">
+            </section>
+
+            <section class="benefit">
+                <div class="container">
+                    <h2 class="title">Что дает гражданство Мальты? </h2>
+                    <div class="benefit__items">
+                        <div class="benefit__item">
+                            <h3>Вид на жительство Мальты</h3>
+                            <p>Вид на жительство Мальтыпозволяет не только постоянно проживать на Мальте, но и без виз и ограничений перемещаться и пребывать в странах Шенгенского соглашения и Европейского Союза.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Особый налоговый статус.</h3>
+                            <p>Помимо вышеперечисленных преимуществ есть еще одно. У вас есть уникальная возможность передавать статус по наследству. Таким образом вы передаете своим наследникам все те привилегии, которые получили с приобретением мальтийского вида на жительство.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Отсутствие двойного налогообложения.</h3>
+                            <p>Мальта имеет договора об избежании двойного налогообложения с большинством стран мира.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Не требуется проживание на Мальте определенное количество времени.</h3>
+                            <p>Для сохранения статуса резидента и особого налогового статуса не требуется проживание на Мальте определенное количество времени, но пребывание в любой одной другой стране не должно превышать 183 дня.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <div class="container">
+                    <h2 class="title">Кто может учавствовать в программе?</h2>
+                    <div class="block__items">
+                        <div class="block__item">
+                            <div class="block__info">
+                                <div class="editors">
+                                    <ol>
+                                        <li>Заявитель должен быть гражданином страны, которая не входит ЕС, ЕЭС, а также Швейцарии.</li>
+                                        <li>Наличие недвижимости на Мальте: 1) собственная недвижимость стоимостью от 220/275 тыс. евро ИЛИ 2) арендная недвижимость стоимостью не менее 8.750/9.600 евро/год.</li>
+                                        <li>Наличие  подтвержденного стабильного постоянного дохода.</li>
+                                        <li>Минимальное владение любым официальным языком Мальты (английский, мальтийский).</li>
+                                        <li>Соответствие требованиям благонадежности.</li>
+                                        <li>Наличие полиса медицинского страхования.</li>
+                                        <li>Не принимать гражданство Мальты, стран ЕС, ЕЭС или Швейцарии.</li>
+                                        <li>Постоянное наличие недвижимости (собственность или аренда).</li>
+                                        <li>Не получать статус постоянного резидента Мальты.</li>
+                                        <li>Максимальный срок пребывания в одной другой стране не более 183 дней в году.</li>
+                                        <li>Ежегодная подача налоговой отчетности.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-2.jpg" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="block__item">
+                            <div class="block__info">
+                                <h2 class="title">Необходимые документы:</h2>
+                                <div class="editors">
+                                    <p><strong>Уже на первой консультации наши специалисты предложат вам ознакомиться с основными требованиями к претендентам и первичным списком необходимых документов. </strong></p>
+                                </div>
+                                <button>Заказать консультацию</button>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-3.jpg" alt="img">
+                            </div>
+                        </div>
+                        
+                        <div class="block__item">
+                            <div class="block__info">
+                                <h2 class="title">Процесс подачи:</h2>
+                                <div class="editors">
+                                    <p><strong>Вы можете рассчитывать на подробный и понятный алгоритм действий уже на перовой консультации.  Многолетний опыт наших специалистов гарантирует безошибочный план действий для каждого клиента.</strong></p>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-9.jpg" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="consultation">
+                <div class="consultation__wrapper">
+                </div>
+                <div class="container">
+                    <div class="consultation__info">
+                        <h2>Нужна консультация?</h2>
+                        <p>Оставьте свой номер и наш эксперт перезвонит Вам в ближайшее время и ответит на все волнующие Вас вопросы.</p>
+                        <button>Заказать консультацию</button>
+                        <div class="items">
+                            <a href="tel:77078547045"><img src="images/icons/call.svg" alt="icon"> +7 707 854 70 45</a>
+                            <a href="mailto:rimmc@inbox.ru"><img src="images/icons/email.svg" alt="icon"> rimmc@inbox.ru</a>
+                        </div>
+                    </div>
+                    <div class="consultation__content">
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                        
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__info">
+                        <a href="index.html" class="footer__logo">
+                            <img src="images/icons/logo.svg" alt="logo">
+                        </a>
+                        <p>Иммиграция в страны дальнего зарубежья</p>
+                    </div>
+                    <ul class="footer__menu">
+                        <li><a href="articles.html">Гражданство Мальты</a></li>
+                        <li><a href="articles.html">Резидентство</a></li>
+                        <li><a href="articles.html">Налоговые статусы</a></li>
+                        <li><a href="work.html">Работа</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="services.html">Доп услуги</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="partnership.html">Партнерство</a></li>
+                        <li><a href="/#questions">Частые вопросы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <div class="footer__contact">
+                        <div class="item">
+                            <div><img src="images/icons/call-2.svg" alt="icon"></div>
+                            <a href="tel:77078547045">+7 707 854 70 45</a>
+                        </div>
+                        <div class="item">
+                            <div><img src="images/icons/geo.svg" alt="icon"></div>
+                            <a href="#">
+                                Казахстан, 
+                                г. Караганда,
+                                БЦ POINT, пр-т Бухар-Жырау 75/3 Офис 501
+                            </a>
+                        </div>
+                        <div class="item">
+                            <div><img src="images/icons/email-2.svg" alt="icon"></div>
+                            <a href="mailto:rimmc@inbox.ru">rimmc@inbox.ru</a>
+                        </div>
+                        <div class="networck">
+                            <a href="#"><whatsapp2></whatsapp2></a>
+                            <a href="#"><instagram></instagram></a>
+                            <a href="#"><telegram></telegram></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Иммиграционный Центр «RESIDENT».</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="logo"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}" v-touch:swipe.left="toggleWrapper">
+            <div class="sidebar__head">
+                <a href="#" class="sidebar__logo">
+                    <img src="images/icons/favicon.svg" alt="logo">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <ul class="sidebar__menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="partnership.html">Партнерство</a></li>
+                <li><a href="/#questions">Частые вопросы</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="sidebar__menu">
+                <li><a href="work.html">Работа</a></li>
+                <li><a href="education.html">Образование</a></li>
+                <li><a href="services.html">Доп услуги</a></li>
+                <li><a href="articles.html">Гражданство</a></li>
+                <li><a href="articles.html">Резидентство</a></li>
+                <li><a href="articles.html">Налоговые статусы</a></li>
+                <!-- <li :class="{'sidebar__menu-show' : valueSidebar == 1}">
+                    <span @click="toggleSidebarDrop(1)">Гражданство <i class="bi bi-caret-down-fill"></i></span>
+                    <transition name="fade">
+                        <ul v-if="valueSidebar == 1">
+                            <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                            <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                        </ul>
+                    </transition>
+                </li> -->
+            </ul>
+
+            <div class="sidebar__feedback">
+                <a href="tel:77078547045">+7 707 854 70 45</a>
+                <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        <div class="modal modal-leave-feedback" :class="{'modal-show': isModalLeaveFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Заказать консультацию</h3>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Имя*" required>
+                        <label>Как к вам обращаться?</label>
+                    </div>
+                    <div>
+                        <input required type="text" @click="phoneValue(event)" placeholder="+7 (___) __-__-___ " v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                        <label>Номер телефона</label>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-reviews" :class="{'modal-show': isModalReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Оставьте Ваш честный отзыв!</h3>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Имя*" required>
+                        <label>Как к вам обращаться?</label>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="example@mail.ru*" required>
+                        <label>Ваш E-mail</label>
+                    </div>
+                    <label>Ваш отзыв</label>
+                    <textarea readonly></textarea>
+                    <button type="submit">отправить</button>
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Спасибо!</h3>
+                <h4>Ваша заявка принята. </h4>
+                <h4>Наш эксперт свяжется с Вами в ближайшее время! </h4>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Благодарим за Ваш честный отзыв! </h3>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <!-- vue.toggleModalSuccessFeedback() -->
+        <!-- vue.toggleModalSuccessReviews() -->
+        <!-- /Модалки -->
+
+        <!-- Загрузка сайта -->
+        <!-- <div class="loader" :class="{'loader-done' : !isOnload}"></div> -->
+        <!-- /Загрузка сайта -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper-show': isWrapper}" @click="toggleWrapper">
+        </div>
+        <!-- /Затемнение сайта -->
+        
+    </vue>
+
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/vivus.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

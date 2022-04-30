@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Resident</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <button class="header__toggle" @click="toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    
+                    <a href="index.html" class="header__logo">
+                        <img src="images/icons/logo.svg" alt="logo">
+                    </a>
+                    
+                    <ul class="header__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="partnership.html">Партнерство</a></li>
+                        <li><a href="/#questions">Частые вопросы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    
+                    <div class="header__feedback">
+                        <a href="tel:77078547045"><img src="images/icons/whatsapp.svg" alt="img"> +7 707 854 70 45</a>
+                        <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+                    </div>
+                    
+                    <a href="tel:77078547045" class="header__call">
+                        <img src="images/icons/call-2.svg" alt="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <ul>
+                        <li class="header__drop">
+                            <a href="articles.html">Гражданство <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__drop">
+                            <a href="articles.html">Резидентство <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="residency.html">Резидентство</a></li>
+                                <li><a href="residency.html">Резидентство</a></li>
+                                <li><a href="residency.html">Резидентство</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__drop">
+                            <a href="articles.html">Налоговые статусы <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="work.html">Работа</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="services.html">Доп услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <main class="main">
+
+            <section class="navigation">
+                <div class="container">
+                    <div class="navigation__menu">
+                        <a href="index.html">Главная <i class="bi bi-chevron-right"></i></a>
+                        <span>Гражданство Мальты CDI</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="article-page">
+                <div class="container">
+                    <div class="article-page__head">
+                        <div>
+                            <h1>Гражданство Мальты (за прямые инвестиции)</h1>
+                            <div class="description">Если при выборе программы второго гражданства в мире вы руководствуетесь такими критериями, как респектабельность и безопасность, то инвестиционная программа Мальты (Мальта CDI), наиболее подходящий вариант! Одновременно вы становитесь гражданином ЕС и гражданином Британского Содружества (Содружества Наций).</div>
+                        </div>
+                        <img src="images/flag.jpg" alt="icon">
+                    </div>
+                    <div class="editors">
+                        <p>В одно и то же время Мальта входит в Европейский Союз, Шенгенскую зону и Британское Содружество. С точки зрения политической и экономической стабильности Мальта находится в списке лидеров среди европейский государств. Безупречный кредитный рейтинг страны всегда имеет только позитивные прогнозы.</p>
+                        <p>Если вы готовы внести существенный вклад в экономику страны, то программа получения мальтийского гражданства за прямые инвестиции, как нельзя лучше подойдёт вам. В ответ на это вы можете рассчитывать на то, что члены вашей семьи также получат гражданство Мальты. Главным условием в процессе является успешное прохождение тщательной проверки самих заявителей и истории формирования их общего благосостояния.</p>
+                    </div>
+                </div>
+                <img src="images/article-1.jpg" class="article-page__main-img" alt="img">
+            </section>
+
+            <section class="benefit">
+                <div class="container">
+                    <h2 class="title">Что дает гражданство Мальты? </h2>
+                    <div class="benefit__items">
+                        <div class="benefit__item">
+                            <h3>Свобода передвижения практически по всему миру для Вас и для Вашей семьи.</h3>
+                            <p>С паспортом Мальты Вы сможете свободно передвигаться по всем странам ЕС, США, Канада, Австралия, Новая Зеландия, Япония и т. д.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>«Запасной аэродром» в Европе.</h3>
+                            <p>С паспортом Мальты, как гражданин ЕС, Вы имеете право неограниченное количество времени проживать в любой стране ЕС.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Отсутствие персональных налогов.</h3>
+                            <p>Для тех, кто проживает на Мальте менее 183 дней в году и получает доходы с зарубежных источников на зарубежные банковские счета.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Спокойствие и уверенность в завтрашнем дне.</h3>
+                            <p>Полный набор прав гражданина ЕС – экономическая и политическая стабильность, социальные гарантии.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Удобные сроки.</h3>
+                            <p>Ускоренный процесс получения гражданства до 36 месяцев (далее опция V1), или стандартный процесс получения гражданства за 36 месяцев + (далее опция V2).</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Пожизненный статус.</h3>
+                            <p>Получение пожизненного статуса гражданства сразу всеми членами семьи, включая родителей и прародителей.</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Нет обязательств к проживанию.</h3>
+                            <p>Отсутствие обязательств к проживанию на Мальте (исключением является выполнение условий резидентства, то есть демонстрация прочной связи со страной на протяжении 36 месяцев или менее 36 месяцев – в зависимости от выбранной опции).</p>
+                        </div>
+                        <div class="benefit__item">
+                            <h3>Стоимость.</h3>
+                            <p>Невысокаястоимостьоформления.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <div class="container">
+                    <h2 class="title">Кто может учавствовать в программе?</h2>
+                    <div class="block__items">
+
+                        <div class="block__item">
+                            <div class="block__info">
+                                <div class="editors">
+                                    <p>Финансово – независимые лица и члены их семей. Программа предусматривает получение гражданства Мальты непосредственно для самого инвестора, а также его супруги (а), детей инвестора, родителей и прародителей. Это делает программу уникальной в своем роде.</p>
+                                </div>
+
+                                <div class="block__down" :class="{'block__down-active' :  valueBlock == 1}">
+                                    <button @click="toggleBlock(1)">основной заявитель  <i class="bi bi-caret-down-fill"></i></button>
+                                    <div class="editors">
+                                        <p>Чтобы претендовать на гражданство Мальты за инвестиции, основной заявитель должен быть в возрасте от 18 лет и соответствовать требованиям подачи заявления, изложенным ниже.</p>
+                                    </div>
+                                </div>
+                                <div class="block__down" :class="{'block__down-active' :  valueBlock == 2}">
+                                    <button @click="toggleBlock(2)">НЕСОВЕРШЕННОЛЕТНИЕ ДЕТИ   <i class="bi bi-caret-down-fill"></i></button>
+                                    <div class="editors">
+                                        <p>Чтобы претендовать на гражданство Мальты за инвестиции, основной заявитель должен быть в возрасте от 18 лет и соответствовать требованиям подачи заявления, изложенным ниже.</p>
+                                    </div>
+                                </div>
+                                <div class="block__down" :class="{'block__down-active' :  valueBlock == 3}">
+                                    <button @click="toggleBlock(3)">супруг(А)  <i class="bi bi-caret-down-fill"></i></button>
+                                    <div class="editors">
+                                        <p>Чтобы претендовать на гражданство Мальты за инвестиции, основной заявитель должен быть в возрасте от 18 лет и соответствовать требованиям подачи заявления, изложенным ниже.</p>
+                                    </div>
+                                </div>
+                                <div class="block__down" :class="{'block__down-active' :  valueBlock == 4}">
+                                    <button @click="toggleBlock(4)">Родители заявителя  <i class="bi bi-caret-down-fill"></i></button>
+                                    <div class="editors">
+                                        <p>Чтобы претендовать на гражданство Мальты за инвестиции, основной заявитель должен быть в возрасте от 18 лет и соответствовать требованиям подачи заявления, изложенным ниже.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-2.jpg" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="block__item">
+                            <div class="block__info">
+                                <h2 class="title">Необходимые документы:</h2>
+                                <div class="editors">
+                                    <p><strong>Участнику программы получения гражданства Мальты за инвестиции, необходимо будет предъявить подтверждающие документы о выполнении следующих условий программы:</strong></p>
+                                    <ol>
+                                        <li>Оплата в Фонд национального и социального развития Мальты суммы в размере €750 000 (опция V1) или €600 000 (опция V2).</li>
+                                        <li>Покупка недвижимости на Мальте стоимостью от €700 000 сроком не менее чем на 5 лет, либоАренда недвижимости на Мальте за €16 000 в год на 5 лет.</li>
+                                        <li>Пожертвования в размерене менее €10 000 в любую местную благотворительную организацию, которая зарегистрирована Комиссаром по благотворительным организациям Мальты.</li>
+                                        <li>Оформление международной медицинской страховки с покрытием от €50 000.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-3.jpg" alt="img">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="block block-new">
+                <div class="container">
+                    <div class="block__items">
+
+                        <div class="block__item">
+                            <h2 class="title">Этап резидентства</h2>
+                            <div class="block__info">
+                                <div class="editors">
+                                    <ul>
+                                        <li>Подача заявления на этап резидентства.</li>
+                                        <li>Взнос €10 000 в Фонд национального и социального развития Мальты.</li>
+                                        <li>Оплата в Malta Community Agency сбора за рассмотрение и обработку заявления на резидентство.
+                                            <ol>
+                                                <li>Основной заявитель: €5 000.</li>
+                                                <li>Каждый дополнительный заявитель: €1 000.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Оплата по €27,50 за печать каждой резидентской карточки, которая будет выдана на 36 месяцев).</li>
+                                        <li>Все заявители должны оставаться резидентами Мальты на протяжении 36 месяцев либо менее 36 месяцев (в зависимости от выбранной опции) с момента получения резидентских карточек.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-4.jpg" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="block__item">
+                            <h2 class="title">Этап правомочности</h2>
+                            <div class="block__info">
+                                <div class="editors">
+                                    <ul>
+                                        <li>Подача пакета подтверждающих документов на стадию Eligibility не позднее чем через 12 месяцев. Если документы не будут поданы в пределах указанного срока, государственное агентство обязано отозвать резидентский статус.</li>
+                                        <li>Оплата Eligibility Payment Request Voucher (EPRV) в Malta Community Agency за рассмотрение и обработку заявления на стадии Eligibility.
+                                            <ol>
+                                                <li>Due Diligence основного заявителя: €15 000.</li>
+                                                <li>Due Diligence каждого доп. заявителя: €10 000.</li>
+                                                <li>Benefactor Due Diligence: €15 000.</li>
+                                                <li>Административный сбор (за каждого заявителя): €1 000.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Трехуровневая проверка заявителя, членов его семьи и финансовых активов.</li>
+                                        <li>Предварительное решение по результатам проверки принимается профильным министром на протяжении 120-150 дней с момента осуществления платежей EPRV.</li>
+                                        <li>Предварительное решение профильного министра.</li>
+                                        <li>В результате положительного решения заявление получает Letter of Approval for Eligibility.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-5.jpg" alt="img">
+                            </div>
+                        </div>
+
+
+                        <div class="block__item">
+                            <h2 class="title">Этап гражданства</h2>
+                            <div class="block__info">
+                                <div class="editors">
+                                    <ul>
+                                        <li>
+                                            Этап гражданства Подача заявления на этап гражданства. <br>
+                                            Для V1 – через 12 месяцев. <br>
+                                            Для V2 – через 36 месяцев <br>
+                                        </li>
+                                        <li>В случае корректно сформированного пакета требуемых документов заявление может быть повторно рассмотрено.</li>
+                                        <li>После завершения повторного рассмотрения и второй фазы 3-уровневой проверки, Malta Community Agency выдает Investment Request Voucher (IRV) для оплаты инвестиций и остатков обязательных платежей.
+                                            <ol>   
+                                                <li>Прямые инвестиции основного заявителя: €740 000 (опция V1) / €590 000 (опция V2)</li>
+                                                <li>Прямые инвестиции каждого дополнительного заявителя: €50 000</li>
+                                                <li>Административный сбор за основного заявителя: €5 000</li>
+                                                <li>Административный сбор за каждого дополнительного заявителя: €1 000</li>
+                                            </ol>
+                                        </li>
+                                        <li>Letter of Approval in Principle.</li>
+                                        <li>Подача в Malta Community Agency в течении 4 месяцев доказательств выполнения требований программы:
+                                            <ol>
+                                                <li>доказательства прочной связи со страной на протяжении 12 или 36 месяцев;</li>
+                                                <li>копию договора аренды/договора купли-продажи недвижимости стоимостью €16 000 в год/ €700 000 соответственно + заявление основного заявителя, подтверждающее понимание им обязанности сохранять в аренде/собственности указанную недвижимость на протяжении следующих 5 лет;</li>
+                                                <li>заключение мальтийского архитектора о соответствии заявленной стоимости реальной рыночной стоимости;</li>
+                                                <li>подтверждение оплаты полной суммы Investment Request Voucher (IRV);</li>
+                                                <li>подтверждение оплаты пожертвования в размере не менее €10 000 в любую местную благотворительную организацию, которая зарегистрирована Комиссаром по благотворительным организациям Мальты.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Финальная проверка в Malta Community Agency (5 дней). Приглашение на присягу от Malta Community Agency (действует 6 месяцев с даты выдачи Letter of Approval in Principle и касается заявителей от 18 лет).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-6.jpg" alt="img">
+                                <img src="images/article-7.jpg" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="block__item">
+                            <h2 class="title">Присяга</h2>
+                            <div class="block__info">
+                                <div class="editors">
+                                    <ul>
+                                        <li>После присяги и выполнения оставшихся нормативных процедур, основной заявитель получает сертификат о натурализации, включающий всех участников его заявления.</li>
+                                        <li>Оплата Eligibility Payment Request Voucher (EPRV) в Malta Community Agency за рассмотрение и обработку заявления на стадии Eligibility.</li>
+                                    </ul>
+                                    <h2>Ежегодный мониторинг</h2>
+                                    <ul>
+                                        <li>На протяжении первых 5 лет агент, сопровождающий заявление, обязан ежегодно подавать Annual Compliance Form по лицам, участвующим в заявлении.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block__images">
+                                <img src="images/article-8.jpg" alt="img">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="consultation">
+                <div class="consultation__wrapper">
+                </div>
+                <div class="container">
+                    <div class="consultation__info">
+                        <h2>Нужна консультация?</h2>
+                        <p>Оставьте свой номер и наш эксперт перезвонит Вам в ближайшее время и ответит на все волнующие Вас вопросы.</p>
+                        <button>Заказать консультацию</button>
+                        <div class="items">
+                            <a href="tel:77078547045"><img src="images/icons/call.svg" alt="icon"> +7 707 854 70 45</a>
+                            <a href="mailto:rimmc@inbox.ru"><img src="images/icons/email.svg" alt="icon"> rimmc@inbox.ru</a>
+                        </div>
+                    </div>
+                    <div class="consultation__content">
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                        
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__info">
+                        <a href="index.html" class="footer__logo">
+                            <img src="images/icons/logo.svg" alt="logo">
+                        </a>
+                        <p>Иммиграция в страны дальнего зарубежья</p>
+                    </div>
+                    <ul class="footer__menu">
+                        <li><a href="articles.html">Гражданство Мальты</a></li>
+                        <li><a href="articles.html">Резидентство</a></li>
+                        <li><a href="articles.html">Налоговые статусы</a></li>
+                        <li><a href="work.html">Работа</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="services.html">Доп услуги</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="partnership.html">Партнерство</a></li>
+                        <li><a href="/#questions">Частые вопросы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <div class="footer__contact">
+                        <div class="item">
+                            <div><img src="images/icons/call-2.svg" alt="icon"></div>
+                            <a href="tel:77078547045">+7 707 854 70 45</a>
+                        </div>
+                        <div class="item">
+                            <div><img src="images/icons/geo.svg" alt="icon"></div>
+                            <a href="#">
+                                Казахстан, 
+                                г. Караганда,
+                                БЦ POINT, пр-т Бухар-Жырау 75/3 Офис 501
+                            </a>
+                        </div>
+                        <div class="item">
+                            <div><img src="images/icons/email-2.svg" alt="icon"></div>
+                            <a href="mailto:rimmc@inbox.ru">rimmc@inbox.ru</a>
+                        </div>
+                        <div class="networck">
+                            <a href="#"><whatsapp2></whatsapp2></a>
+                            <a href="#"><instagram></instagram></a>
+                            <a href="#"><telegram></telegram></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Иммиграционный Центр «RESIDENT».</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="logo"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}" v-touch:swipe.left="toggleWrapper">
+            <div class="sidebar__head">
+                <a href="#" class="sidebar__logo">
+                    <img src="images/icons/favicon.svg" alt="logo">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <ul class="sidebar__menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="partnership.html">Партнерство</a></li>
+                <li><a href="/#questions">Частые вопросы</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="sidebar__menu">
+                <li><a href="work.html">Работа</a></li>
+                <li><a href="education.html">Образование</a></li>
+                <li><a href="services.html">Доп услуги</a></li>
+                <li><a href="articles.html">Гражданство</a></li>
+                <li><a href="articles.html">Резидентство</a></li>
+                <li><a href="articles.html">Налоговые статусы</a></li>
+                <!-- <li :class="{'sidebar__menu-show' : valueSidebar == 1}">
+                    <span @click="toggleSidebarDrop(1)">Гражданство <i class="bi bi-caret-down-fill"></i></span>
+                    <transition name="fade">
+                        <ul v-if="valueSidebar == 1">
+                            <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                            <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                        </ul>
+                    </transition>
+                </li> -->
+            </ul>
+
+            <div class="sidebar__feedback">
+                <a href="tel:77078547045">+7 707 854 70 45</a>
+                <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        <div class="modal modal-leave-feedback" :class="{'modal-show': isModalLeaveFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Заказать консультацию</h3>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Имя*" required>
+                        <label>Как к вам обращаться?</label>
+                    </div>
+                    <div>
+                        <input required type="text" @click="phoneValue(event)" placeholder="+7 (___) __-__-___ " v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                        <label>Номер телефона</label>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-reviews" :class="{'modal-show': isModalReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Оставьте Ваш честный отзыв!</h3>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Имя*" required>
+                        <label>Как к вам обращаться?</label>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="example@mail.ru*" required>
+                        <label>Ваш E-mail</label>
+                    </div>
+                    <label>Ваш отзыв</label>
+                    <textarea readonly></textarea>
+                    <button type="submit">отправить</button>
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Спасибо!</h3>
+                <h4>Ваша заявка принята. </h4>
+                <h4>Наш эксперт свяжется с Вами в ближайшее время! </h4>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Благодарим за Ваш честный отзыв! </h3>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <!-- vue.toggleModalSuccessFeedback() -->
+        <!-- vue.toggleModalSuccessReviews() -->
+        <!-- /Модалки -->
+
+        <!-- Загрузка сайта -->
+        <!-- <div class="loader" :class="{'loader-done' : !isOnload}"></div> -->
+        <!-- /Загрузка сайта -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper-show': isWrapper}" @click="toggleWrapper">
+        </div>
+        <!-- /Затемнение сайта -->
+        
+    </vue>
+
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/vivus.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

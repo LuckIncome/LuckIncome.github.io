@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Resident</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <button class="header__toggle" @click="toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    
+                    <a href="index.html" class="header__logo">
+                        <img src="images/icons/logo.svg" alt="logo">
+                    </a>
+                    
+                    <ul class="header__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="partnership.html">Партнерство</a></li>
+                        <li><a href="/#questions">Частые вопросы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    
+                    <div class="header__feedback">
+                        <a href="tel:77078547045"><img src="images/icons/whatsapp.svg" alt="img"> +7 707 854 70 45</a>
+                        <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+                    </div>
+                    
+                    <a href="tel:77078547045" class="header__call">
+                        <img src="images/icons/call-2.svg" alt="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <ul>
+                        <li class="header__drop">
+                            <a href="articles.html">Гражданство <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                                <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__drop">
+                            <a href="articles.html">Резидентство <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="residency.html">Резидентство</a></li>
+                                <li><a href="residency.html">Резидентство</a></li>
+                                <li><a href="residency.html">Резидентство</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__drop">
+                            <a href="articles.html">Налоговые статусы <i class="bi bi-caret-down-fill"></i></a>
+                            <ul>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                                <li><a href="status.html">Налоговые статусы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="work.html">Работа</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="services.html">Доп услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <main class="main">
+    
+            <section class="banner">
+                <div class="banner__slider">
+                    <div class="banner__item">
+                        <img src="images/banner-1.jpg" alt="img">
+                        <div class="container">
+                            <h2>Иммиграционная <br> виза в США</h2>
+                            <p>Гарантирует:</p>
+                            <ul>
+                                <li>Трудоустройство в филиалах компаний- партнеров</li>
+                                <li>Возможность открыть собственный бизнес </li>
+                                <li>Получить вид на жительство для всей семьи (грин кард).</li>
+                            </ul>
+                            <a href="#">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="banner__item">
+                        <img src="images/banner-2.jpg" alt="img">
+                        <div class="container">
+                            <h2>Работа за рубежом</h2>
+                            <p>Гарантирует:</p>
+                            <ul>
+                                <li>Трудоустройство в филиалах компаний- партнеров</li>
+                                <li>Возможность открыть собственный бизнес </li>
+                                <li>Получить вид на жительство для всей семьи (грин кард).</li>
+                            </ul>
+                            <a href="#">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="banner__item">
+                        <img src="images/banner-3.jpg" alt="img">
+                        <div class="container">
+                            <h2>Иммиграция в <br> Канаду</h2>
+                            <p>Гарантирует:</p>
+                            <ul>
+                                <li>Трудоустройство в филиалах компаний- партнеров</li>
+                                <li>Возможность открыть собственный бизнес </li>
+                                <li>Получить вид на жительство для всей семьи (грин кард).</li>
+                            </ul>
+                            <a href="#">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner__buttons">
+                    <button @mouseover="mouseScriptLeft" class="banner__arrow banner__arrow-left">
+                        <bannerarrowleft></bannerarrowleft>
+                    </button>
+                    <div class="banner__dots"></div>
+                    <button @mouseover="mouseScriptRight" class="banner__arrow banner__arrow-right">
+                        <bannerarrowright></bannerarrowright>
+                    </button>
+                </div>
+            </section>
+
+            <section class="advantage">
+                <div class="container">
+                    <div class="advantage__item">
+                        <img src="images/icons/advantage-1.svg" alt="icon">
+                        <h4>15 лет опыта</h4>
+                        <p>работы нашей команды</p>
+                    </div>
+                    <div class="advantage__item">
+                        <img src="images/icons/advantage-2.svg" alt="icon">
+                        <h4>Юридическая</h4>
+                        <p>чистота сделок</p>
+                    </div>
+                    <div class="advantage__item">
+                        <img src="images/icons/advantage-3.svg" alt="icon">
+                        <h4>Гарантии</h4>
+                        <p>на большинство услуг</p>
+                    </div>
+                    <div class="advantage__item">
+                        <img src="images/icons/advantage-4.svg" alt="icon">
+                        <h4>Уникальные решения</h4>
+                        <p>для иммиграции</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="container">
+                    <div class="about__info">
+                        <h1 class="title">Иммиграционный Центр «RESIDENT» </h1>
+                        <p>
+                            – это команда
+                            профессионалов, которая работает одновременно в
+                            12 странах мира. 
+                            Все наши сотрудники – это
+                            высококвалифицированные специалисты в сфере
+                            иммиграции и консалтинга. Мы следим за
+                            обновлениями в мировой иммиграционной
+                            политике, поэтому предлагаем нашим клиентам
+                            наилучшие стратегии получения ВНЖ, ПМЖ и
+                            гражданства.
+                        </p>
+                        <a href="#">Подробнее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="about__image">
+                        <img src="images/about-1.jpg" alt="img">
+                    </div>
+                    <div class="about__logo">
+                        <img src="images/icons/logo-text.svg" alt="logo">
+                    </div>
+                </div>
+            </section>
+
+            <section class="articles">
+                <div class="container">
+                    <h2 class="title">Гражданство</h2>
+                    <div class="articles__items">
+                        <a href="#" class="country">
+                            <img src="images/country-1.jpg" alt="img">
+                            <span>Гражданство  канады</span>
+                        </a>
+                        <a href="#" class="country">
+                            <img src="images/country-2.jpg" alt="img">
+                            <span>Гражданство  турции</span>
+                        </a>
+                        <a href="#" class="country">
+                            <img src="images/country-3.jpg" alt="img">
+                            <span>Гражданство  чили</span>
+                        </a>
+                        <a href="#" class="country">
+                            <img src="images/country-4.jpg" alt="img">
+                            <span>Гражданство  израиля</span>
+                        </a>
+                    </div>
+                    <a href="#" class="articles__link">Смотреть все страны <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </section>
+
+            <section class="reviews">
+                <div class="container">
+                    <h2 class="title">Отзывы наших клиентов</h2>
+                    <div class="reviews__slider">
+
+                        <div class="review">
+                            <div class="review__head">
+                                <img src="images/icons/people.svg" alt="icon">
+                                <div>
+                                    <h4>Ахмед Шакиров</h4>
+                                    <p>25 Февраля 2022</p>
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry's text ever since.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review__head">
+                                <img src="images/icons/people.svg" alt="icon">
+                                <div>
+                                    <h4>Ахмед Шакиров</h4>
+                                    <p>25 Февраля 2022</p>
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesettingever since. Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesettingever since</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review__head">
+                                <img src="images/icons/people.svg" alt="icon">
+                                <div>
+                                    <h4>Ахмед Шакиров</h4>
+                                    <p>25 Февраля 2022</p>
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry's text ever since.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review__head">
+                                <img src="images/icons/people.svg" alt="icon">
+                                <div>
+                                    <h4>Ахмед Шакиров</h4>
+                                    <p>25 Февраля 2022</p>
+                                </div>
+                            </div>
+                            <div class="review__body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesettingever since. Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesettingever since</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="reviews__arrow reviews__arrow-left">
+                        <arrowleft2></arrowleft2>
+                    </button>
+                    <button class="reviews__arrow reviews__arrow-right">
+                        <arrowright2></arrowright2>
+                    </button>
+
+                    <a href="#" class="reviews__link">Читать все отзывы <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </section>
+
+            <section class="questions" id="questions">
+                <div class="container">
+                    <h2 class="title">Частые вопросы</h2>
+                    <div class="questions__items">
+
+                        <div class="questions__item">
+                            <button @click="toggleQuestions(1)" :class="{'questions-show':valueQuestions == 1}">
+                                Можно ли оформиться в рассрочку?
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <transition name="fade">
+                                <div class="questions__body" v-if="valueQuestions == 1">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                </div>
+                            </transition>
+                        </div>
+                        <div class="questions__item">
+                            <button @click="toggleQuestions(2)" :class="{'questions-show':valueQuestions == 2}">
+                                Есть ли у вас лицензия?
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <transition name="fade">
+                                <div class="questions__body" v-if="valueQuestions == 2">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                </div>
+                            </transition>
+                        </div>
+                        <div class="questions__item">
+                            <button @click="toggleQuestions(3)" :class="{'questions-show':valueQuestions == 3}">
+                                Возможно ли оплатить после переезда или получения виз?
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <transition name="fade">
+                                <div class="questions__body" v-if="valueQuestions == 3">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                </div>
+                            </transition>
+                        </div>
+                        <div class="questions__item">
+                            <button @click="toggleQuestions(4)" :class="{'questions-show':valueQuestions == 4}">
+                                Работаете ли вы с лицами без гражданства (ЛБГ)?
+                                <i class="bi bi-caret-down-fill"></i>
+                            </button>
+                            <transition name="fade">
+                                <div class="questions__body" v-if="valueQuestions == 4">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                </div>
+                            </transition>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <section class="consultation">
+                <div class="consultation__wrapper">
+                </div>
+                <div class="container">
+                    <div class="consultation__info">
+                        <h2>Нужна консультация?</h2>
+                        <p>Оставьте свой номер и наш эксперт перезвонит Вам в ближайшее время и ответит на все волнующие Вас вопросы.</p>
+                        <button>Заказать консультацию</button>
+                        <div class="items">
+                            <a href="tel:77078547045"><img src="images/icons/call.svg" alt="icon"> +7 707 854 70 45</a>
+                            <a href="mailto:rimmc@inbox.ru"><img src="images/icons/email.svg" alt="icon"> rimmc@inbox.ru</a>
+                        </div>
+                    </div>
+                    <div class="consultation__content">
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                        
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+
+                        <h3>Заголовок под SEO</h3>
+                        <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                        <h3>Lorem Ipsum не только успешно пережил </h3>
+                        <p>без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__info">
+                        <a href="index.html" class="footer__logo">
+                            <img src="images/icons/logo.svg" alt="logo">
+                        </a>
+                        <p>Иммиграция в страны дальнего зарубежья</p>
+                    </div>
+                    <ul class="footer__menu">
+                        <li><a href="articles.html">Гражданство Мальты</a></li>
+                        <li><a href="articles.html">Резидентство</a></li>
+                        <li><a href="articles.html">Налоговые статусы</a></li>
+                        <li><a href="work.html">Работа</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="services.html">Доп услуги</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="partnership.html">Партнерство</a></li>
+                        <li><a href="/#questions">Частые вопросы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <div class="footer__contact">
+                        <div class="item">
+                            <div><img src="images/icons/call-2.svg" alt="icon"></div>
+                            <a href="tel:77078547045">+7 707 854 70 45</a>
+                        </div>
+                        <div class="item">
+                            <div><img src="images/icons/geo.svg" alt="icon"></div>
+                            <a href="#">
+                                Казахстан, 
+                                г. Караганда,
+                                БЦ POINT, пр-т Бухар-Жырау 75/3 Офис 501
+                            </a>
+                        </div>
+                        <div class="item">
+                            <div><img src="images/icons/email-2.svg" alt="icon"></div>
+                            <a href="mailto:rimmc@inbox.ru">rimmc@inbox.ru</a>
+                        </div>
+                        <div class="networck">
+                            <a href="#"><whatsapp2></whatsapp2></a>
+                            <a href="#"><instagram></instagram></a>
+                            <a href="#"><telegram></telegram></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Иммиграционный Центр «RESIDENT».</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="logo"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}" v-touch:swipe.left="toggleWrapper">
+            <div class="sidebar__head">
+                <a href="#" class="sidebar__logo">
+                    <img src="images/icons/favicon.svg" alt="logo">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <ul class="sidebar__menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="partnership.html">Партнерство</a></li>
+                <li><a href="/#questions">Частые вопросы</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="sidebar__menu">
+                <li><a href="work.html">Работа</a></li>
+                <li><a href="education.html">Образование</a></li>
+                <li><a href="services.html">Доп услуги</a></li>
+                <li><a href="articles.html">Гражданство</a></li>
+                <li><a href="articles.html">Резидентство</a></li>
+                <li><a href="articles.html">Налоговые статусы</a></li>
+                <!-- <li :class="{'sidebar__menu-show' : valueSidebar == 1}">
+                    <span @click="toggleSidebarDrop(1)">Гражданство <i class="bi bi-caret-down-fill"></i></span>
+                    <transition name="fade">
+                        <ul v-if="valueSidebar == 1">
+                            <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                            <li><a href="citizenship.html">Гражданство Мальты</a></li>
+                        </ul>
+                    </transition>
+                </li> -->
+            </ul>
+
+            <div class="sidebar__feedback">
+                <a href="tel:77078547045">+7 707 854 70 45</a>
+                <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        <div class="modal modal-leave-feedback" :class="{'modal-show': isModalLeaveFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Заказать консультацию</h3>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Имя*" required>
+                        <label>Как к вам обращаться?</label>
+                    </div>
+                    <div>
+                        <input required type="text" @click="phoneValue(event)" placeholder="+7 (___) __-__-___ " v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                        <label>Номер телефона</label>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-reviews" :class="{'modal-show': isModalReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Оставьте Ваш честный отзыв!</h3>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Имя*" required>
+                        <label>Как к вам обращаться?</label>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="example@mail.ru*" required>
+                        <label>Ваш E-mail</label>
+                    </div>
+                    <label>Ваш отзыв</label>
+                    <textarea readonly></textarea>
+                    <button type="submit">отправить</button>
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Спасибо!</h3>
+                <h4>Ваша заявка принята. </h4>
+                <h4>Наш эксперт свяжется с Вами в ближайшее время! </h4>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Благодарим за Ваш честный отзыв! </h3>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <!-- vue.toggleModalSuccessFeedback() -->
+        <!-- vue.toggleModalSuccessReviews() -->
+        <!-- /Модалки -->
+
+        <!-- Загрузка сайта -->
+        <!-- <div class="loader" :class="{'loader-done' : !isOnload}"></div> -->
+        <!-- /Загрузка сайта -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper-show': isWrapper}" @click="toggleWrapper">
+        </div>
+        <!-- /Затемнение сайта -->
+        
+    </vue>
+
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/vivus.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>
+
+
