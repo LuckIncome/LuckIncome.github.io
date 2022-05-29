@@ -1,0 +1,59 @@
+.editors {
+    ul, ol {
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+    ul {
+        li {
+            list-style-type: disc;
+            line-height: 188.9%;
+        }
+    }
+    ol {
+        li {
+            list-style-type: decimal;
+        }
+    }
+    strong {
+        font-weight: 600;
+    }
+    em {
+        font-style: italic;
+    }
+    li {
+        font-weight: 400;
+        font-size: 17px;
+    }
+    p {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 168.9%;
+        color: #000000;
+        margin-bottom: 25px;
+    }
+    img {
+        object-fit: contain;
+        margin-bottom: 25px;
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 17px;
+    }
+    @media (max-width: 576px) {
+        p {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        img {
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        li {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Сourt expert</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <header class="header" :class="{'header-home':isIndex}">
+            <div class="container">
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/favicon.svg" alt="img">
+                </a>
+
+                <button class="header__toggle" @click="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="header__lang header__lang-active">
+                    <span>Рус</span>
+                    <ul>
+                        <li><a href="#">Рус</a></li>
+                        <li><a href="#">Каз</a></li>
+                        <li><a href="#">Инг</a></li>
+                    </ul>
+                </div>
+                <ul class="header__menu">
+                    <li class="header__menu-drop">
+                        <a href="services.html" class="drop">Услуги</a>
+                        <ul>
+                            <li><a href="service.html">Автороведческая</a></li>
+                            <li><a href="service.html">Бухгалтерская</a></li>
+                            <li><a href="service.html">Почерка и подписи</a></li>
+                            <li><a href="service.html">Психологическая</a></li>
+                            <li><a href="service.html">Психолого-криминалистическая</a></li>
+                            <li><a href="service.html">Психолого-филологическая</a></li>
+                            <li><a href="service.html">Религиоведческая</a></li>
+                            <li><a href="service.html">Религиоведческо-политологическая</a></li>
+                            <li><a href="service.html">Средств компьютерных технологий</a></li>
+                            <li><a href="service.html">Финансово-бюджетная</a></li>
+                            <li><a href="service.html">Хозяйственных операций в рамках экономики</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-drop">
+                        <a href="about.html" class="drop">О нас</a>
+                        <ul>
+                            <li><a href="act.html">Page</a></li>
+                            <li><a href="act.html">Page</a></li>
+                            <li><a href="act.html">Page</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="acts.html">НПА</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="header__feedback">
+                    <a href="tel:77714518133">+7 771 451 81 33</a>
+                    <button @click="toggleModalLeaveFeedback">Получить консультацию</button>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main" :class="{'main-home':isIndex}">
+     
+            <section class="banner">
+                <img src="images/banner-1.jpg" class="banner__bg" alt="img">
+                <div class="container">
+                    <h1>Производство судебных экспертиз и специализированных исследований</h1>
+                    <p>в рамках всех видов судопроизводства, а также по запросам госорганов, физических и юридических лиц</p>
+                    <form>
+                        <input type="text" v-model="selectValue" class="inputFace"> <!-- select передает данные inputy -->
+                        <div class="select">
+                            <select class="select-opt" id="sel-opt">
+                                <option>Вид деятельности</option> <!-- в Js -->
+                                <option>Вид 1</option>
+                                <option>Вид 2</option>
+                                <option>Вид 3</option>
+                            </select>
+                        </div>
+                        <button>Заказать экспертизу</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="expertise">
+                <div class="container">
+                    <h2 class="title">Виды <span>экспертиз</span></h2>
+                </div>
+                <div class="expertise__wrapper">
+                    <div class="container">
+                        <div class="expertise__items">
+
+                            <a href="#" class="active">
+                                <img src="images/icons/expertise-1.svg" alt="img">
+                                <span>Автороведческая </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-2.svg" alt="img">
+                                <span>Бухгалтерская </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-3.svg" alt="img">
+                                <span>Почерка и подписи </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-4.svg" alt="img">
+                                <span>Психологическая </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-5.svg" alt="img">
+                                <span>Психолого- криминалистическая </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-6.svg" alt="img">
+                                <span>Психолого- филологическая </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-7.svg" alt="img">
+                                <span>Религиоведческая </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-8.svg" alt="img">
+                                <span>Религиоведческо- политологическая </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-9.svg" alt="img">
+                                <span>Средств компьютерных технологий </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-10.svg" alt="img">
+                                <span>Финансово-бюджетная </span>
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/expertise-11.svg" alt="img">
+                                <span>Хозяйственных операций в рамках экономики </span>
+                            </a>
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="container">
+                    <div class="about__content">
+                        <div class="about__info">
+                            <img src="images/icons/logo.svg" alt="img">
+                            <h2 class="title">О компании <span>Судебные Эксперты №1</span></h2>
+                            <p>Текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.</p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="about__images">
+                            <img src="images/about-1.jpg" alt="img">
+                            <img src="images/about-2.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="about__advantages">
+                        <div class="about__item">
+                            <img src="images/icons/advantages-1.svg" alt="img">
+                            <p>Высококвалифицированные специалисты</p>
+                        </div>
+                        <div class="about__item">
+                            <img src="images/icons/advantages-2.svg" alt="img">
+                            <p>Большой опыт судебно-экспертной деятельности</p>
+                        </div>
+                        <div class="about__item">
+                            <img src="images/icons/advantages-3.svg" alt="img">
+                            <p>Широкий спектр услуг</p>
+                        </div>
+                        <div class="about__item">
+                            <img src="images/icons/advantages-4.svg" alt="img">
+                            <p>Оперативность, мобильность, высокий уровень сервиса</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experts">
+                <div class="container">
+                    <h2 class="title">Наши эксперты</h2>
+                    <div class="experts__items">
+                        <button class="experts__arrows experts__arrows-left">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <div class="experts__slider">
+                            <div class="experts__item">
+                                <img src="images/experts-1.jpg" alt="img">
+                                <h3>Фамилия Имя Отчество</h3>
+                                <p>
+                                    Должность <br>
+                                    Стаж: 8 лет
+                                </p>
+                            </div>
+                            <div class="experts__item">
+                                <img src="images/experts-1.jpg" alt="img">
+                                <h3>Фамилия Имя Отчество</h3>
+                                <p>
+                                    Должность <br>
+                                    Стаж: 8 лет
+                                </p>
+                            </div>
+                            <div class="experts__item">
+                                <img src="images/experts-1.jpg" alt="img">
+                                <h3>Фамилия Имя Отчество</h3>
+                                <p>
+                                    Должность <br>
+                                    Стаж: 8 лет
+                                </p>
+                            </div>
+                            <div class="experts__item">
+                                <img src="images/experts-1.jpg" alt="img">
+                                <h3>Фамилия Имя Отчество</h3>
+                                <p>
+                                    Должность <br>
+                                    Стаж: 8 лет
+                                </p>
+                            </div>
+                            <div class="experts__item">
+                                <img src="images/experts-1.jpg" alt="img">
+                                <h3>Фамилия Имя Отчество</h3>
+                                <p>
+                                    Должность <br>
+                                    Стаж: 8 лет
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="experts__arrows experts__arrows-right">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="acts">
+                <div class="container">
+                    <h2 class="title">Нормативно-правовые акты</h2>
+
+                    <div class="acts__items">
+                        <button class="acts__arrows acts__arrows-left">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <div class="acts__slider">
+                            <a class="acts-item" href="#">
+                                <img src="images/acts-1.jpg" alt="img">
+                                <div>15.11.2021</div>
+                                <h3>Текст рыба, часто используемый в печати и веб-дизайне. Lorem Ipsum является стандартной "рыбой" .</h3>
+                                <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                            </a>
+                            <a class="acts-item" href="#">
+                                <img src="images/acts-1.jpg" alt="img">
+                                <div>15.11.2021</div>
+                                <h3>Текст рыба, часто используемый в печати и веб-дизайне. Lorem Ipsum является стандартной "рыбой" .</h3>
+                                <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                            </a>
+                            <a class="acts-item" href="#">
+                                <img src="images/acts-1.jpg" alt="img">
+                                <div>15.11.2021</div>
+                                <h3>Текст рыба, часто используемый в печати и веб-дизайне. Lorem Ipsum является стандартной "рыбой" .</h3>
+                                <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                            </a>
+                            <a class="acts-item" href="#">
+                                <img src="images/acts-1.jpg" alt="img">
+                                <div>15.11.2021</div>
+                                <h3>Текст рыба, часто используемый в печати и веб-дизайне. Lorem Ipsum является стандартной "рыбой" .</h3>
+                                <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
+                            </a>
+                        </div>
+
+                        <button class="acts__arrows acts__arrows-right">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="acts__button">Смотреть ещё</a>
+                </div>
+            </section>
+    
+            <section class="reviews">
+                <div class="container">
+                    <h2 class="title">Отзывы наших клиентов</h2>
+
+                    <div class="reviews__items">
+                        <button class="reviews__arrows reviews__arrows-left">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <div class="reviews__slider">
+                            <div class="reviews__item">
+                                <img src="images/reviews-1.jpg" alt="img">
+                                <div>
+                                    <p>
+                                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  
+                                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  
+                                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  
+                                    </p>
+                                    <h3>Иван Иванов</h3>
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <div>
+                                    <p>
+                                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  
+                                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  
+                                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  
+                                    </p>
+                                    <h3>Иван Иванов</h3>
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <img src="images/reviews-1.jpg" alt="img">
+                                <div>
+                                    <p>В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.  </p>
+                                    <h3>Иван Иванов</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="reviews__arrows reviews__arrows-right">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="reviews__button">Смотреть все отзывы</a>
+                </div>
+            </section>
+
+            <section class="questions">
+                <div class="container">
+                    <h2 class="title">Частые вопросы</h2>
+                    <div class="questions__content">
+                        <div class="questions__info">
+                            <div class="questions__items">
+
+                                <div class="questions__item">
+                                    <button @click="toggleQuestions(1)" :class="{'questions-show':valueQuestions == 1}">
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s?</span>
+                                        <i class="arrow"></i>
+                                    </button>
+                                    <transition name="fade">
+                                        <div class="questions__body" v-if="valueQuestions == 1">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                        </div>
+                                    </transition>
+                                </div>
+                                <div class="questions__item">
+                                    <button @click="toggleQuestions(2)" :class="{'questions-show':valueQuestions == 2}">
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s?</span>
+                                        <i class="arrow"></i>
+                                    </button>
+                                    <transition name="fade">
+                                        <div class="questions__body" v-if="valueQuestions == 2">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                        </div>
+                                    </transition>
+                                </div>
+                                <div class="questions__item">
+                                    <button @click="toggleQuestions(3)" :class="{'questions-show':valueQuestions == 3}">
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s?</span>
+                                        <i class="arrow"></i>
+                                    </button>
+                                    <transition name="fade">
+                                        <div class="questions__body" v-if="valueQuestions == 3">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                        </div>
+                                    </transition>
+                                </div>
+                                <div class="questions__item">
+                                    <button @click="toggleQuestions(4)" :class="{'questions-show':valueQuestions == 4}">
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s?</span>
+                                        <i class="arrow"></i>
+                                    </button>
+                                    <transition name="fade">
+                                        <div class="questions__body" v-if="valueQuestions == 4">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum molestias eius culpa dolorum placeat quis autem tempora doloribus, aliquid numquam doloremque quaerat amet, accusamus molestiae assumenda ipsum ipsa architecto.
+                                        </div>
+                                    </transition>
+                                </div>
+
+                            </div>
+                            <a href="#">Смотреть все</a>
+                        </div>
+                        <form>
+                            <h3>Нужна консультация?</h3>
+                            <label>Оставьте свой номер и наш эксперт перезвонит вам в ближайшее время и ответит на все волнующие вас вопросы.</label>
+                            <input required type="text" @click="phoneValue(event)" placeholder="Номер телефона*" v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                            <button>Перезвоните мне</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__info">
+                        <a href="#">
+                            <img src="images/icons/favicon.svg" alt="img">
+                        </a>
+                        <p>
+                            Производство судебных экспертиз и
+                            специализированных исследований
+                            в рамках всех видов судопроизводства, 
+                            а также по запросам госорганов, 
+                            физических и юридических лиц
+                        </p>
+                    </div>
+                    <div class="footer__expertise">
+                        <h3>виды экспертиз</h3>
+                        <ul>
+                            <li><a href="#">Автороведческая</a></li>
+                            <li><a href="#">Бухгалтерская</a></li>
+                            <li><a href="#">Почерка и подписи</a></li>
+                            <li><a href="#">Психологическая</a></li>
+                            <li><a href="#">Психолого-криминалистическая</a></li>
+                            <li><a href="#">Психолого-филологическая</a></li>
+                            <li><a href="#">Религиоведческая</a></li>
+                            <li><a href="#">Религиоведческо-политологическая</a></li>
+                            <li><a href="#">Средств компьютерных технологий</a></li>
+                            <li><a href="#">Финансово-бюджетная</a></li>
+                            <li><a href="#">Хозяйственных операций в рамках экономики</a></li>
+                        </ul>
+                    </div>
+                    <ul class="footer__menu">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Сотрудничество</a></li>
+                        <li><a href="acts.html">НПА</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="#">Частые вопросы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <div class="footer__contact">
+                        <div class="footer__item">
+                            <img src="images/icons/call-2.svg" alt="img">
+                            <div>
+                                <a href="tel:77714518133">+7 771 451 81 33</a>
+                                <br>
+                                <button>Заказать звонок</button>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <img src="images/icons/geo.svg" alt="img">
+                            <div>
+                                <p>Казахстан, 
+                                    050060, г. Алматы,
+                                    пр-т Аль-Фараби, 99, 
+                                    кв/офис 147</p>
+                            </div>
+                        </div>
+                        <div class="footer__item">
+                            <img src="images/icons/email.svg" alt="img">
+                            <div>
+                                <a href="mailto:info@sudexpert1.kz">info@sudexpert1.kz</a>
+                            </div>
+                        </div>
+                        <ul class="footer__network">
+                            <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                            <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Судебные эксперты №1.</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/im-logo.svg" alt="img"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Сайд-бар -->
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}">
+            <div class="sidebar__head">
+                <a href="index.html" class="sidebar__logo">
+                    <img src="images/icons/favicon.svg" alt="img">
+                </a>
+                <button class="sidebar__toggle" @click="toggleWrapper">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="sidebar__body">
+                <ul class="sidebar__menu">
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <ul>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                    </ul>
+                    <li><a href="acts.html">НПА</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="sidebar__lang">
+                    <li><a href="#" class="active">Рус</a></li>
+                    <li><a href="#">Каз</a></li>
+                    <li><a href="#">Инг</a></li>
+                </ul>
+                <div class="sidebar__feedback">
+                    <a href="tel:77714518133">+7 771 451 81 33</a>
+                    <button>Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+         <!-- Модалки -->
+         <div class="modal modal-leave-feedback" :class="{'modal-show': isModalLeaveFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Нужна консультация?</h3>
+                <p>Оставьте свой номер и наш эксперт перезвонит вам в ближайшее время и ответит на все волнующие вас вопросы.</p>
+                <form>
+                    <input required type="text" @click="phoneValue(event)" placeholder="Номер телефона*" v-maska="['+7 (###) ##-##-##', '+7 (###) ###-##-##']">
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-reviews" :class="{'modal-show': isModalReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Оставьте Ваш честный отзыв!</h3>
+                <form>
+                    <div>
+                        <label>Как к вам обращаться?</label>
+                        <input type="text" placeholder="Имя*" required>
+                    </div>
+                    <div>
+                        <label>Ваш E-mail</label>
+                        <input type="email" placeholder="example@mail.ru*" required>
+                    </div>
+                    <label>Ваш отзыв</label>
+                    <textarea readonly></textarea>
+                    
+                    <div class="buttons">
+                        <button type="submit">Отправить</button>
+                        <label class="upload" for="upload-photo"><img src="images/icons/attached.svg" alt="icon"> Прикрепить файл</label>
+                        <input type="file" name="photo" class="file" id="upload-photo" />
+                    </div>
+
+                    <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Спасибо!</h3>
+                <h4>Ваша заявка принята. </h4>
+                <h4>Наш эксперт свяжется с Вами в ближайшее время! </h4>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <div class="modal modal-success-feedback" :class="{'modal-show': isModalSuccessReviews}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                <h3>Благодарим за Ваш честный отзыв! </h3>
+                <a href="#">Перейти на главную</a>
+            </div>
+        </div>
+        <!-- vue.toggleModalSuccessFeedback() -->
+        <!-- vue.toggleModalSuccessReviews() -->
+        <!-- /Модалки -->
+
+        <!-- Загрузка сайта -->
+        <!-- <div class="loader" :class="{'loader-done' : !isOnload}">
+            <img src="images/icons/favicon.svg" alt="img">
+        </divservice.html -->
+        <!-- /Загрузка сайта -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper-show': isWrapper}" @click="toggleWrapper">
+        </div>
+        <!-- /Затемнение сайта -->
+        
+    </vue>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

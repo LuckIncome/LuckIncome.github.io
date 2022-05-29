@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/logo.svg">
+    <title>Rivoli</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header class="header header-error">
+            <div class="container">
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/logo-white.svg" alt="img">
+                </a>
+                <ul class="header__menu">
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="header__lang">
+                    <span>рус <i></i></span>
+                    <ul>
+                        <li><a href="#">каз</a></li>
+                        <li><a href="#">ингл</a></li>
+                    </ul>
+                </div>
+                <ul class="header__feedback">
+                    <li><a href="#"><img src="images/icons/instagram-white.svg" alt="img"></a></li>
+                    <li><a href="#"><img src="images/icons/whatsapp-white.svg" alt="img"></a></li>
+                    <li><a href="tel:+77021120066">+7 702 112 00 66</a></li>
+                </ul>
+                <a href="tel:+77021120066" class="header__call">
+                    <img src="images/icons/call-2-white.svg" alt="img">
+                </a>
+                <button class="header__toggle" onclick="vue.sidebarToggle()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+    
+        <main class="main">
+    
+            <section class="error">
+                <div class="container">
+                    <img src="images/icons/404.svg" alt="img">
+                    <h2 class="title">К сожалению страница не найдена.</h2>
+                    <a href="index.html" class="link">Перейти на главную <i></i></a>
+                </div>
+            </section>
+            
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a href="index.html" class="footer__logo">
+                        <img src="images/icons/logo-big.svg" alt="img">
+                    </a>
+                    <h3>Галерея уюта и комфорта</h3>
+                    <ul class="footer__menu">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__feedback">
+                        <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                        <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Rivoli. Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="img"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar__head">
+                <a href="tel:+77021120066" class="sidebar__head-call">
+                    <img src="images/icons/call-2.svg" alt="img">
+                </a>
+                <a href="index.html" class="sidebar__logo">
+                    <img src="images/icons/logo.svg" alt="img">
+                </a>
+                <button class="sidebar__close" onclick="vue.modalClose()">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="sidebar__menu">
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="sidebar__feedback">
+                <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+            </ul>
+            <a href="tel:+77021120066" class="sidebar__call">+7 702 112 00 66</a>
+        </div>
+
+        <!-- Modale -->
+        <div class="modal modal-feedback" id="modal-feedback">
+            <button class="modal__close" onclick="vue.modalClose()">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- content -->
+            <h3>Заказать звонок</h3>
+            <form>
+                <input required type="text" placeholder="Имя*">
+                <label>Как к вам обращаться?</label>
+
+                <input required type="text" id="phone" placeholder="+7 (___) ___-__-__">
+                <label>Номер телефона</label>
+
+                <button class="modal__submit" type="submit">Отправить заявку</button>
+                <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+            </form>
+            <!-- end content -->
+        </div>
+        <div class="modal modal-success" id="modal-success">
+            <button class="modal__close" onclick="vue.modalClose()">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- content -->
+            <h3>Спасибо!</h3>
+            <p>Ваша заявка принята. Мы свяжется с Вами в ближайшее время!</p>
+            <a href="#" class="link">Перейти на главную <i></i></a>
+            <!-- end content -->
+        </div>
+        
+        <!-- Wrapper -->
+        <div class="wrapper" onclick="vue.modalClose()"></div>
+        
+    </div>
+  
+    <script src="js/carousel.js"></script> 
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

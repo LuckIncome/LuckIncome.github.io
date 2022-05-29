@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/logo.svg">
+    <title>Rivoli</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header class="header">
+            <div class="container">
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/logo.svg" alt="img">
+                </a>
+                <ul class="header__menu">
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+                <div class="header__lang">
+                    <span>рус <i></i></span>
+                    <ul>
+                        <li><a href="#">каз</a></li>
+                        <li><a href="#">ингл</a></li>
+                    </ul>
+                </div>
+                <ul class="header__feedback">
+                    <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                    <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                    <li><a href="tel:+77021120066">+7 702 112 00 66</a></li>
+                </ul>
+                <a href="tel:+77021120066" class="header__call">
+                    <img src="images/icons/call-2.svg" alt="img">
+                </a>
+                <button class="header__toggle" onclick="vue.sidebarToggle()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+    
+        <main class="main">
+            
+            <section class="contactsPage">
+                <div class="container">
+                    <h1 class="title">контакты</h1>
+                    <div class="contactsPage__content">
+                        <div class="contacts__child">
+                            <div class="contacts__item">
+                                <img src="images/icons/schedule.svg" alt="img">
+                                <div>
+                                    <p>Пн-пт 11:00-20:00</p>
+                                    <p>Сб 11:00-17:00</p>
+                                    <p>Вс выходной</p>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/geo.svg" alt="img">
+                                <div>
+                                    <p>Вс выходной Казахстан, 050010, г. Алматы, ул. Кунаева, 139, 2 этаж</p>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/call.svg" alt="img">
+                                <div>
+                                    <a href="tel:+77272723333">+7 (727) 272 33 33</a>
+                                    <a href="tel:+77272723272">+7 (727) 272 32 72</a>
+                                    <a href="tel:+77021120066">+7 702 112 00 66</a>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/email.svg" alt="img">
+                                <div>
+                                    <a href="mailto:info@rivoli.kz">info@rivoli.kz</a>
+                                </div>
+                            </div>
+                            <div class="contacts__networck">
+                                <a href="#"><img src="images/icons/instagram.svg" alt="img"></a>
+                                <a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/alert.svg" alt="img">
+                                <div>
+                                    <p>Все звонки и сообщения обрабатываться только в рабочее время</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactsPage__maps">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46499.20091768616!2d76.91536621332914!3d43.24722882633537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eefe980dd87%3A0x81d50b2937e7dfa1!2z0JPQsNC70LXRgNC10Y8gIlJJVk9MSSI!5e0!3m2!1sru!2skz!4v1650429469518!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contactsPage__content">
+                        <div class="contacts__child">
+                            <div class="contacts__item">
+                                <img src="images/icons/schedule.svg" alt="img">
+                                <div>
+                                    <p>Пн-вс 10:00-20:00</p>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/geo.svg" alt="img">
+                                <div>
+                                    <p>Казахстан, 160000, г. Шымкент, Тамерлановское шоссе 19 ТЦ "Аль-Фараби", бут. 122</p>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/call.svg" alt="img">
+                                <div>
+                                    <a href="tel:+77751960270">+7 775 196 0270</a>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/email.svg" alt="img">
+                                <div>
+                                    <a href="mailto:info@rivoli.kz">info@rivoli.kz</a>
+                                </div>
+                            </div>
+                            <div class="contacts__networck">
+                                <a href="#"><img src="images/icons/instagram.svg" alt="img"></a>
+                                <a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="contactsPage__maps">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23602.98160221638!2d69.59793538553185!3d42.31324883640648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91ea00c754e5f%3A0xa95e08add1a87ca2!2z0JHRg9GC0LjQuiAi0KDQuNCy0L7Qu9C4Ig!5e0!3m2!1sru!2skz!4v1650430120922!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contactsPage__content">
+                        <div class="contacts__child">
+                            <div class="contacts__item">
+                                <img src="images/icons/schedule.svg" alt="img">
+                                <div>
+                                    <p>Пн-пт 10:00-19:00</p>
+                                    <p>Сб-вс 11:00-19:00</p>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/geo.svg" alt="img">
+                                <div>
+                                    <p>Казахстан, 010000, г. Нур-Султан пр. Мангилик Ел, 37 ЖК Триумфальная Арка</p>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/call.svg" alt="img">
+                                <div>
+                                    <a href="tel:+77007008020">+7 700 700 8020</a>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <img src="images/icons/email.svg" alt="img">
+                                <div>
+                                    <a href="mailto:info@rivoli.kz">info@rivoli.kz</a>
+                                </div>
+                            </div>
+                            <div class="contacts__networck">
+                                <a href="#"><img src="images/icons/instagram.svg" alt="img"></a>
+                                <a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a>
+                            </div>
+                        </div>
+                        <div class="contactsPage__maps">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20043.214196640463!2d71.4278383110355!3d51.10104693539716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245851cfc1a3b23%3A0xac48fcf2318dda36!2sRivoli!5e0!3m2!1sru!2skz!4v1650430182784!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a href="index.html" class="footer__logo">
+                        <img src="images/icons/logo-big.svg" alt="img">
+                    </a>
+                    <h3>Галерея уюта и комфорта</h3>
+                    <ul class="footer__menu">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__feedback">
+                        <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                        <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Rivoli. Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="img"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar__head">
+                <a href="tel:+77021120066" class="sidebar__head-call">
+                    <img src="images/icons/call-2.svg" alt="img">
+                </a>
+                <a href="index.html" class="sidebar__logo">
+                    <img src="images/icons/logo.svg" alt="img">
+                </a>
+                <button class="sidebar__close" onclick="vue.modalClose()">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="sidebar__menu">
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="sidebar__feedback">
+                <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+            </ul>
+            <a href="tel:+77021120066" class="sidebar__call">+7 702 112 00 66</a>
+        </div>
+
+        <!-- Modale -->
+        <div class="modal modal-feedback" id="modal-feedback">
+            <button class="modal__close" onclick="vue.modalClose()">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- content -->
+            <h3>Заказать звонок</h3>
+            <form>
+                <input required type="text" placeholder="Имя*">
+                <label>Как к вам обращаться?</label>
+
+                <input required type="text" id="phone" placeholder="+7 (___) ___-__-__">
+                <label>Номер телефона</label>
+
+                <button class="modal__submit" type="submit">Отправить заявку</button>
+                <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+            </form>
+            <!-- end content -->
+        </div>
+        <div class="modal modal-success" id="modal-success">
+            <button class="modal__close" onclick="vue.modalClose()">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- content -->
+            <h3>Спасибо!</h3>
+            <p>Ваша заявка принята. Мы свяжется с Вами в ближайшее время!</p>
+            <a href="#" class="link">Перейти на главную <i></i></a>
+            <!-- end content -->
+        </div>
+        
+        <!-- Wrapper -->
+        <div class="wrapper" onclick="vue.modalClose()"></div>
+        
+    </div>
+  
+    <script src="js/carousel.js"></script> 
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

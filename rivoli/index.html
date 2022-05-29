@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/logo.svg">
+    <title>Rivoli</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header class="header">
+            <div class="container">
+                <a href="index.html" class="header__logo">
+                    <img src="images/icons/logo.svg" alt="img">
+                </a>
+                <ul class="header__menu">
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <div class="header__lang">
+                    <span>рус <i></i></span>
+                    <ul>
+                        <li><a href="#">каз</a></li>
+                        <li><a href="#">ингл</a></li>
+                    </ul>
+                </div>
+                <ul class="header__feedback">
+                    <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                    <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                    <li><a href="tel:+77021120066">+7 702 112 00 66</a></li>
+                </ul>
+                <a href="tel:+77021120066" class="header__call">
+                    <img src="images/icons/call-2.svg" alt="img">
+                </a>
+                <button class="header__toggle" onclick="vue.sidebarToggle()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+    
+        <main class="main">
+            
+            <section class="banner">
+                <div class="container">
+                    <div class="banner__text">
+                        <h1><span>Галерея</span> Уюта  и комфорта</h1>
+                        <p>Исключительные предметы мебели и интерьера от известных мировых производителей</p>
+                    </div>
+                </div>
+                <div class="banner__vue">
+                    <picture onclick="vue.bannerToggle(1)">
+                        <img src="images/banner-1.jpg" alt="img">
+                    </picture>
+                    <picture onclick="vue.bannerToggle(2)">
+                        <img src="images/banner-2.jpg" alt="img">
+                    </picture>
+                    <picture onclick="vue.bannerToggle(3)">
+                        <img src="images/banner-3.jpg" alt="img">
+                    </picture>
+                </div>
+                <div class="banner__slider">
+                    <picture>
+                        <img src="images/banner-1.jpg" alt="img">
+                    </picture>
+                    <picture>
+                        <img src="images/banner-2.jpg" alt="img">
+                    </picture>
+                    <picture>
+                        <img src="images/banner-3.jpg" alt="img">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="help">
+                <div class="container">
+                    <picture>
+                        <img src="images/help.jpg" alt="img">
+                    </picture>
+                    <div class="help__info">
+                        <img src="images/icons/logo.svg" alt="img">
+                        <h3>Мы поможем вам:</h3>
+                        <ul>
+                            <li>создать особенный проект вашего интерьера </li>
+                            <li>подобрать текстиль, освещение, кухонные принадлежности и другие предметы декора</li>
+                            <li>оформить заказ на мебель среднего и люкс класса</li>
+                        </ul>
+                        <a href="#" class="link">Подробнее <i></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="miniGallery">
+                <img src="images/icons/logo-2.svg" class="miniGallery__logo" alt="img">
+                <div class="container">
+                    <h2 class="title">галерея</h2>
+                    <div class="miniGallery__items">
+                        <div class="miniGallery__item">
+                            <picture>
+                                <img src="images/mini-gallery-1.jpg" alt="img">
+                            </picture>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                        </div>
+                        <div class="miniGallery__item">
+                            <picture>
+                                <img src="images/mini-gallery-2.jpg" alt="img">
+                            </picture>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                        </div>
+                        <div class="miniGallery__item">
+                            <picture>
+                                <img src="images/mini-gallery-3.jpg" alt="img">
+                            </picture>
+                            <span>Мы находимся в культурно-историческом центре города Алматы, на пересечении улиц Кунаева и Жамбыла.</span>
+                        </div>
+                    </div>
+                    <div class="miniGallery__dots"></div>
+                    <a href="gallery.html" class="link">перейти в галерею <i></i></a>
+                </div>
+            </section>
+    
+            <section class="partners">
+                <div class="container">
+                    <h2 class="title">наши партнёры</h2>
+                    <div class="partners__items">
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-1.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-2.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-3.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-4.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-5.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-6.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-7.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-8.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-9.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-10.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-11.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-12.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-13.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-14.png" alt="img">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <img src="images/partners-15.png" alt="img">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="miniNews">
+                <div class="container">
+                    <h2 class="title">новости</h2>
+                    <div class="miniNews__slides">
+                        <div class="card">
+                            <picture>
+                                <img src="images/news-1.jpg" alt="img">
+                            </picture>
+                            <div class="card__info">
+                                <span>08.01.2021</span>
+                                <h3>Мне по фэншуй: как правильно сделать перестановку мебели в доме</h3>
+                                <p>“В любой непонятной ситуации двигай мебель”, — смеется Александра Галкина, которая занимается фэншуй более десяти лет. Она поясняет: согласно этой древнекитайской практике, в каждом доме есть энергетически сильные точки. Они помогают реализовать планы и мечты. Соответственно, в противовес им существуют “слабые” зоны, где...</p>
+                                <a href="article.html" class="link">читать подробнее <i></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="images/mini-news-1.jpg" alt="img">
+                            </picture>
+                            <div class="card__info">
+                                <span>08.01.2021</span>
+                                <h3>Мне по фэншуй: как правильно сделать перестановку мебели в доме</h3>
+                                <p>“В любой непонятной ситуации двигай мебель”, — смеется Александра Галкина, которая занимается фэншуй более десяти лет. Она поясняет: согласно этой древнекитайской практике, в каждом доме есть энергетически сильные точки. Они помогают реализовать планы и мечты. Соответственно, в противовес им существуют “слабые” зоны, где...</p>
+                                <a href="article.html" class="link">читать подробнее <i></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="images/mini-news-1.jpg" alt="img">
+                            </picture>
+                            <div class="card__info">
+                                <span>08.01.2021</span>
+                                <h3>Мне по фэншуй: как правильно сделать перестановку мебели в доме</h3>
+                                <p>“В любой непонятной ситуации двигай мебель”, — смеется Александра Галкина, которая занимается фэншуй более десяти лет. Она поясняет: согласно этой древнекитайской практике, в каждом доме есть энергетически сильные точки. Они помогают реализовать планы и мечты. Соответственно, в противовес им существуют “слабые” зоны, где...</p>
+                                <a href="article.html" class="link">читать подробнее <i></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="images/mini-news-1.jpg" alt="img">
+                            </picture>
+                            <div class="card__info">
+                                <span>08.01.2021</span>
+                                <h3>Мне по фэншуй: как правильно сделать перестановку мебели в доме</h3>
+                                <p>“В любой непонятной ситуации двигай мебель”, — смеется Александра Галкина, которая занимается фэншуй более десяти лет. Она поясняет: согласно этой древнекитайской практике, в каждом доме есть энергетически сильные точки. Они помогают реализовать планы и мечты. Соответственно, в противовес им существуют “слабые” зоны, где...</p>
+                                <a href="article.html" class="link">читать подробнее <i></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="images/mini-news-1.jpg" alt="img">
+                            </picture>
+                            <div class="card__info">
+                                <span>08.01.2021</span>
+                                <h3>Мне по фэншуй: как правильно сделать перестановку мебели в доме</h3>
+                                <p>“В любой непонятной ситуации двигай мебель”, — смеется Александра Галкина, которая занимается фэншуй более десяти лет. Она поясняет: согласно этой древнекитайской практике, в каждом доме есть энергетически сильные точки. Они помогают реализовать планы и мечты. Соответственно, в противовес им существуют “слабые” зоны, где...</p>
+                                <a href="article.html" class="link">читать подробнее <i></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="images/mini-news-1.jpg" alt="img">
+                            </picture>
+                            <div class="card__info">
+                                <span>08.01.2021</span>
+                                <h3>Мне по фэншуй: как правильно сделать перестановку мебели в доме</h3>
+                                <p>“В любой непонятной ситуации двигай мебель”, — смеется Александра Галкина, которая занимается фэншуй более десяти лет. Она поясняет: согласно этой древнекитайской практике, в каждом доме есть энергетически сильные точки. Они помогают реализовать планы и мечты. Соответственно, в противовес им существуют “слабые” зоны, где...</p>
+                                <a href="article.html" class="link">читать подробнее <i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="miniNews__dots"></div>
+                    <a href="news.html" class="link">перейти в раздел новости <i></i></a>
+                </div>
+            </section>
+
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="title">контакты</h2>
+                    <div class="contacts__content">
+                        <div class="contacts__info">
+                            <div class="contacts__links">
+                                <button onclick="vue.mapsToggle(1)">Алматы</button>
+                                <button onclick="vue.mapsToggle(2)">Шымкент</button>
+                                <button onclick="vue.mapsToggle(3)">Нур-Султан</button>
+                            </div>
+                            <div class="contacts__items">
+                                <div class="contacts__child">
+                                    <div class="contacts__item">
+                                        <img src="images/icons/schedule.svg" alt="img">
+                                        <div>
+                                            <p>Пн-пт 11:00-20:00</p>
+                                            <p>Сб 11:00-17:00</p>
+                                            <p>Вс выходной</p>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/geo.svg" alt="img">
+                                        <div>
+                                            <p>Вс выходной Казахстан, 050010, г. Алматы, ул. Кунаева, 139, 2 этаж</p>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/call.svg" alt="img">
+                                        <div>
+                                            <a href="tel:+77272723333">+7 (727) 272 33 33</a>
+                                            <a href="tel:+77272723272">+7 (727) 272 32 72</a>
+                                            <a href="tel:+77021120066">+7 702 112 00 66</a>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/email.svg" alt="img">
+                                        <div>
+                                            <a href="mailto:info@rivoli.kz">info@rivoli.kz</a>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__networck">
+                                        <a href="#"><img src="images/icons/instagram.svg" alt="img"></a>
+                                        <a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/alert.svg" alt="img">
+                                        <div>
+                                            <p>Все звонки и сообщения обрабатываться только в рабочее время</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts__child">
+                                    <div class="contacts__item">
+                                        <img src="images/icons/schedule.svg" alt="img">
+                                        <div>
+                                            <p>Пн-вс 10:00-20:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/geo.svg" alt="img">
+                                        <div>
+                                            <p>Казахстан, 160000, г. Шымкент, Тамерлановское шоссе 19 ТЦ "Аль-Фараби", бут. 122</p>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/call.svg" alt="img">
+                                        <div>
+                                            <a href="tel:+77751960270">+7 775 196 0270</a>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/email.svg" alt="img">
+                                        <div>
+                                            <a href="mailto:info@rivoli.kz">info@rivoli.kz</a>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__networck">
+                                        <a href="#"><img src="images/icons/instagram.svg" alt="img"></a>
+                                        <a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a>
+                                    </div>
+                                </div>
+                                <div class="contacts__child">
+                                    <div class="contacts__item">
+                                        <img src="images/icons/schedule.svg" alt="img">
+                                        <div>
+                                            <p>Пн-пт 10:00-19:00</p>
+                                            <p>Сб-вс 11:00-19:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/geo.svg" alt="img">
+                                        <div>
+                                            <p>Казахстан, 010000, г. Нур-Султан пр. Мангилик Ел, 37 ЖК Триумфальная Арка</p>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/call.svg" alt="img">
+                                        <div>
+                                            <a href="tel:+77007008020">+7 700 700 8020</a>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__item">
+                                        <img src="images/icons/email.svg" alt="img">
+                                        <div>
+                                            <a href="mailto:info@rivoli.kz">info@rivoli.kz</a>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__networck">
+                                        <a href="#"><img src="images/icons/instagram.svg" alt="img"></a>
+                                        <a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__maps">
+                            <a target="_blank" href="https://www.google.kz/maps/place/%D0%93%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8F+%22RIVOLI%22/@43.2472288,76.9153662,13z/data=!4m5!3m4!1s0x38836eefe980dd87:0x81d50b2937e7dfa1!8m2!3d43.248573!4d76.950707?hl=ru"><img src="images/icons/maps-1.svg" alt="img"></a>
+                            <a target="_blank" href="https://www.google.kz/maps/place/%D0%91%D1%83%D1%82%D0%B8%D0%BA+%22%D0%A0%D0%B8%D0%B2%D0%BE%D0%BB%D0%B8%22/@42.3132488,69.5979354,14z/data=!4m9!1m2!2m1!1z0JPQsNC70LXRgNC10Y8gIlJJVk9MSSIg0YjRi9C80LrQtdC90YI!3m5!1s0x38a91ea00c754e5f:0xa95e08add1a87ca2!8m2!3d42.3189748!4d69.5962852!15sCibQk9Cw0LvQtdGA0LXRjyAiUklWT0xJIiDRiNGL0LzQutC10L3RglomIiTQs9Cw0LvQtdGA0LXRjyByaXZvbGkg0YjRi9C80LrQtdC90YKSAQVzdG9yZQ?hl=ru"><img src="images/icons/maps-2.svg" alt="img"></a>
+                            <a target="_blank" href="https://www.google.kz/maps/place/Rivoli/@51.1010469,71.4278383,14z/data=!4m5!3m4!1s0x4245851cfc1a3b23:0xac48fcf2318dda36!8m2!3d51.1036609!4d71.4290614?hl=ru"><img src="images/icons/maps-3.svg" alt="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a href="index.html" class="footer__logo">
+                        <img src="images/icons/logo-big.svg" alt="img">
+                    </a>
+                    <h3>Галерея уюта и комфорта</h3>
+                    <ul class="footer__menu">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__feedback">
+                        <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                        <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Rivoli. Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="img"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar__head">
+                <a href="tel:+77021120066" class="sidebar__head-call">
+                    <img src="images/icons/call-2.svg" alt="img">
+                </a>
+                <a href="index.html" class="sidebar__logo">
+                    <img src="images/icons/logo.svg" alt="img">
+                </a>
+                <button class="sidebar__close" onclick="vue.modalClose()">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="sidebar__menu">
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="sidebar__feedback">
+                <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+            </ul>
+            <a href="tel:+77021120066" class="sidebar__call">+7 702 112 00 66</a>
+        </div>
+
+        <!-- Modale -->
+        <div class="modal modal-feedback" id="modal-feedback">
+            <button class="modal__close" onclick="vue.modalClose()">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- content -->
+            <h3>Заказать звонок</h3>
+            <form>
+                <input required type="text" placeholder="Имя*">
+                <label>Как к вам обращаться?</label>
+
+                <input required type="text" id="phone" placeholder="+7 (___) ___-__-__">
+                <label>Номер телефона</label>
+
+                <button class="modal__submit" type="submit">Отправить заявку</button>
+                <p>Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a></p>
+            </form>
+            <!-- end content -->
+        </div>
+        <div class="modal modal-success" id="modal-success">
+            <button class="modal__close" onclick="vue.modalClose()">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- content -->
+            <h3>Спасибо!</h3>
+            <p>Ваша заявка принята. Мы свяжется с Вами в ближайшее время!</p>
+            <a href="#" class="link">Перейти на главную <i></i></a>
+            <!-- end content -->
+        </div>
+        
+        <!-- Wrapper -->
+        <div class="wrapper" onclick="vue.modalClose()"></div>
+
+    </div>
+  
+    <script src="js/carousel.js"></script> 
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>
