@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Твой Мир</title>
+    <script src="js/vendor/vue@2.js"></script>
+    <script src="js/vendor/vue2-touch-events.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/baguetteBox.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <header class="header">
+            <!-- <div class="container">
+                <button @click="toggleSidebar">Open Sidebar</button>
+                
+            </div> -->
+            <div class="container">
+                <div class="header__inner">
+                    <!-- <a href="index.html" class="header__call">
+                        <img src="images/icons/call-black.svg" alt="img">
+                    </a> -->
+                    <a href="index.html" class="header__logo">
+                        <img src="images/icons/logo.svg" alt="img">
+                    </a>
+                    <!-- <img class="header__menuMobile" src="images/icons/menu-mobile.svg" alt="img" onclick="mobileMenu();"> -->
+                </div>
+                <ul class="header__menu blog__menu otherHeader">
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">Вопросы-ответы</a></li>
+                    <li><a href="vacance.html">Вакансии</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <a href="index.html#feedback" class="header__feedback">
+                    Обратная связь
+                </a>
+                <button class="menu_mobile" onclick="showMenu()"><i class="bi bi-list"></i></button>
+
+            </div>
+        </header>
+
+        <section class="contacts contacts__main">
+            <div class="container">
+                <div class="mainBlog__info accordion__info blog__info">
+                    <div>
+                        <div class="blog__pagelink">
+                            <a href="index.html">Главная</a>
+                            <i class="bi bi-chevron-right blog__arrow"></i>
+                            <a href="contacts.html">Контакты</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="title">Контакты</h1>
+                        <img clas="titleLine" src="images/icons/line_title.png" alt="">
+                    </div>
+                </div>
+                <div class="contacts__inner">
+                    <div class="contacts__items">
+                        <div class="contacts__item">
+                            <img src="images/icons/location.svg" alt="">
+                            <div class="contacts__itemBox">
+                                <h2>Офис:</h2>
+                                <h3>Адрес компании</h3>
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <img src="images/icons/timer.svg" alt="">
+                            <div class="contacts__itemBox">
+                                <h2>График работы:</h2>
+                                <h3>c 9.00 до 20.00</h3>
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <img src="images/icons/phone.svg" alt="">
+                            <div class="contacts__itemBox">
+                                <h2>Телефон:</h2>
+                                <h3><a href="#">+7 (812) 000 00 00</a></h3>
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <img src="images/icons/mail.svg" alt="">
+                            <div class="contacts__itemBox">
+                                <h2>Email:</h2>
+                                <h3><a href="#">mail@maii.ru</a></h3>
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <div class="contacts__social">
+                                <img src="images/icons/facebook.svg" alt="">
+                                <img src="images/icons/telegram.svg" alt="">
+                                <img src="images/icons/vk.svg" alt="">
+                                <img src="images/icons/twitter.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A6278e379a446af78072be19229349ee80bd058e30bc000e8940558ecd374dbb4&amp;source=constructor"
+                            width="100%" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <a href="index.html" class="footer__logo">
+                        <img src="images/icons/logo.svg" alt="img">
+                    </a>
+                    <ul class="footer__menu">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Вопрос-Ответ</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a>Мы в соц сетях</a></li>
+                        <li class="footer__menu_social">
+                            <a href="#"><img src="images/icons/facebook.svg" alt=""></a>
+                            <a href="#"><img src="images/icons/telegram.svg" alt=""></a>
+                            <a href="#"><img src="images/icons/vk.svg" alt=""></a>
+                            <a href="#"><img src="images/icons/twitter.svg" alt=""></a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li>Сайт создан при<br /> поддержке доноров</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <p>© 2022 все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="img"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Сайд-бар -->
+
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}">
+            <div class="sidebar__top">
+                <a href="index.html" class="sidebar__logo">
+                    <img id="my-svg" src="images/icons/logo.svg" alt="img">
+                </a>
+                <button class="sidebar__toggle" onclick="showMenu()">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="sidebar__bottom">
+                <ul class="header__menu sidebar__menu">
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">Вопросы-ответы</a></li>
+                    <li><a href="vacance.html">Вакансии</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <a href="index.html#feedback" class="sidebar__feedback">
+                    Обратная связь
+                </a>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        <div class="modal modal-leave-feedback" :class="{'modal-show': isModalLeaveFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                review
+            </div>
+        </div>
+        <!-- /Модалки -->
+
+        <!-- Загрузка сайта -->
+        <div class="loader" :class="{'loader-done' : !isOnload}">
+            <a href="index.html" class="header__logo">
+                <img src="images/icons/logo.svg" alt="img">
+            </a>
+        </div>
+        <!-- /Загрузка сайта -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper-show': isWrapper}">
+        </div>
+        <!-- /Затемнение сайта -->
+
+    </vue>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
+        integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

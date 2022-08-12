@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./img/icons/logo.svg">
+    <!-- Media type (print) doesn't match the current environment, so browser decides it's not that important and loads the stylesheet asynchronously (without delaying page rendering). On load, we change media type so that the stylesheet gets applied to screens. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin media="print" onload="this.media='all'">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./css/style.min.css" media="print" onload="this.media='all'">
+
+    <!-- Fallback that only gets inserted when JavaScript is disabled, in which case we can't load CSS asynchronously. -->
+    <noscript>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
+    </noscript>
+    <title>IceBaha.kz</title>
+</head>
+
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="burger-menu burger-menu--closed">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="header__logo">
+            <a href="index.html">
+                <picture>
+                    <img src="img/icons/logo.svg" alt="">
+                </picture>
+            </a>
+            <div class="desc">Ремонт и установка промышленных холодильников</div>
+        </div>
+        <ul class="header__menu">
+            <li>
+                <div class="list">
+                    <span><a href="about.html">Компания</a> <i class="bi bi-caret-up-fill"></i></span>
+                    <ul>
+                        <a href="about.html">О компании</a>
+                        <a href="articles.html">Статьи</a>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="list">
+                    <span><a href="products.html">Услуги</a> <i class="bi bi-caret-up-fill"></i></span>
+                    <ul>
+                        <a href="product.html">Монтаж холодильного оборудования</a></li>
+                        <a href="#">Продажа агрегатов холодильного оборудования</a></li>
+                        <a href="#">Сервисное обслуживание холодильного оборудования</a></li>
+                        <a href="#">Расчет промышленного холодильного оборудования</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="list">
+                    <span><a href="products.html">Продукция</a> <i class="bi bi-caret-up-fill"></i></span>
+                    <ul>
+                        <a href="product.html">Агрегаты холодильных камер</a>
+                        <a href="#">Агрегаты шоковой заморозки</a>
+                        <a href="#">Агрегаты центрального холодоснабжения</a>
+                        <a href="#">Компрессорно-конденсаторный блок</a></li>
+                        <a href="#">Установка охлаждения жидкости</a>
+                        <a href="#">Льдогенератор</a>
+                        <a href="#">Молокоохладитель</a>
+                        <a href="#">Комплектующие</a>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="articles.html">Статьи</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="header__feedback">
+            <picture>
+                <img src="img/icons/whatsapp_1.svg" alt="">
+            </picture>
+            <a href="tel:+7 705 581 6611">+7 705 581 6611</a>
+        </div>
+    </header>
+    <div class="sidebar">
+        <div class="container">
+            <div class="item-1">
+                <div class="accordion with-icon">
+                    <a class="title">Компания</a>
+                    <div class="icon">+</div>
+                </div>
+                <div class="panel">
+                    <ul>
+                        <a href="about.html">О компании</a>
+                        <a href="articles.html">Статьи</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-2">
+                <div class="accordion with-icon">
+                    <a class="title">Услуги</a>
+                    <div class="icon">+</div>
+                </div>
+                <div class="panel">
+                    <ul>
+                        <a href="product.html">Монтаж холодильного оборудования</a></li>
+                        <a href="#">Продажа агрегатов холодильного оборудования</a></li>
+                        <a href="#">Сервисное обслуживание холодильного оборудования</a></li>
+                        <a href="#">Расчет промышленного холодильного оборудования</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-3">
+                <div class="accordion with-icon">
+                    <a class="title">Продукция</a>
+                    <div class="icon">+</div>
+                </div>
+                <div class="panel">
+                    <ul>
+                        <a href="product.html">Агрегаты холодильных камер</a>
+                        <a href="#">Агрегаты шоковой заморозки</a>
+                        <a href="#">Агрегаты центрального холодоснабжения</a>
+                        <a href="#">Компрессорно-конденсаторный блок</a></li>
+                        <a href="#">Установка охлаждения жидкости</a>
+                        <a href="#">Льдогенератор</a>
+                        <a href="#">Молокоохладитель</a>
+                        <a href="#">Комплектующие</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-4">
+                <div class="accordion">
+                    <a href="articles.html" class="title">Статьи</a>
+                </div>
+                <div class="panel">
+                    <p></p>
+                </div>
+            </div>
+            <div class="item-5">
+                <div class="accordion">
+                    <a href="contacts.html" class="title">Контакты</a>
+                </div>
+                <div class="panel">
+                    <p></p>
+                </div>
+            </div>
+            <a class="call">
+                <picture>
+                    <img src="./img/icons/call.svg" alt="">
+                </picture>
+                <p>+7 705 581 6611</p>
+            </a>
+            <div class="social__contacts">
+                <a class="location" href="#">
+                    <picture>
+                        <img src="./img/icons/location.svg" alt="">
+                    </picture>
+                </a>
+                <a class="soc-call" href="tel:+77055816611">
+                    <picture>
+                        <img src="./img/icons/whatsapp.svg" alt="">
+                    </picture>
+                </a>
+                <a class="email" href="mailto:icebahacompany@mail.ru">
+                    <picture>
+                        <img src="./img/icons/email.svg" alt="">
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <img src="./img/icons/promo__instagram.svg" alt="">
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <img src="./img/icons/promo__youtube.svg" alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="route">
+    <div class="container">
+        <a href="index.html" class="route__older">
+            Главная
+        </a>
+        <div class="route__slesh">
+            /
+        </div>
+        <a href="products.html" class="route__older">
+            Статьи
+        </a>
+        <div class="route__slesh">
+            /
+        </div>
+        <a href="product.html" class="route__corent">
+            Холодильная установка
+        </a>
+    </div>
+</div>
+<div class="promo">
+    <div class="promo__left">
+
+    </div>
+    <div class="promo__right">
+    </div>
+</div>
+<div class="productsPage productsPage--article" style="margin-bottom: 70px;">
+    <div class="container">
+        <div class="productsPage__production" style="align-items: flex-start;">
+            <div class="left">
+                <div class="title">Холодильная установка</div>
+                <p>
+                    Назначение холодильной машины (установки) — понизить температуру охлаждаемого объекта до необходимой по технологии хранения. Холодильные машины применяются в основном в области умеренного холода. Для сохранения качества скоропортящихся пищевых продуктов, необходимо непрерывное воздействие на них холода. Это возможно при создании комплекса условий для достижения которых, необходимо создать совокупность технических средств и технологических процессов, обеспечивающих качество и первоначальную массу при заготовке, производстве, холодильной обработке, хранении пищевых продуктов.
+                </p>
+                <p>
+                    Все звенья процесса взаимосвязаны, поэтому нарушение оптимальных условий их функционирования приводит к снижению качества, значительной потере массы и даже порче пищевых продуктов. Для создания таких условий, кроме холодильного оборудования, необходимо иметь охлаждаемые сооружения различного назначения; холодильные камеры производственных баз, складов, предприятий торговли и общественного питания.
+
+                </p>
+            </div>
+            <div class="right right--article">
+                <picture>
+                    <img src="./img/products_bigPic2.webp" alt="">
+                </picture>
+            </div>
+        </div>
+        <div class="pictures" style="padding-top: 34px">
+            <div class="pictures__img">
+                <picture>
+                    <img src="./img/article_1.webp" alt="">
+                </picture>
+                <picture>
+                    <img src="./img/article_2.webp" alt="">
+                </picture>
+            </div>
+            <p>Состав холодильные установки компрессорно-конденсаторные агрегаты является наружным блоком установки внутренним блоком является воздухоохладитель проточного типа с вентиляторами.</p>
+        </div>
+        <div class="editors">
+            <h2>Описание агрегата</h2>
+            <p>Компрессорно-конденсаторный агрегат — это агрегатированное изделие, представляющее собой совокупность компонентов, направленных на создание необходимых условий для работы холодильной установки в целом. Принцип работы холодильных агрегатов основан на откачке паров кипящего хладагента в испарительной системе холодильной установки через всасывающий коллектор, сжатия этих паров и подачи сжатых паров хладагента через нагнетательный коллектор в систему конденсации холодильной установки. Компрессорно-конденсаторный агрегат состоит из компрессора, конденсатора, электрощита, приборов автоматики и вспомогательных аппаратов (ресиверы, осушители, фильтра, маслоотделителя, отделителя жидкости и др.).. Агрегат, в целом, представляет собой компактное устройство, в котором происходит процесс конденсации паров хладагента в жидкое состояние и соответственно подача жидкого хладагента в испаритель /теплообменник. Холодильный агрегат подсоединяется к холодильной установке посредством жидкостного и всасывающего трубопроводов Агрегаты бывают однокомпрессорные и многокомпрессорные. Агрегат представляет собой изделие полной заводской готовности, смонтированное на единой раме или в закрытом корпусе. Все составные части контура хладагента соединены трубопроводами. Контур испытан на прочность и герметичность. При поставке контур хладагента агрегата заполнен азотом особой чистоты до избыточного давления консервации, все отверстия заглушены. Электрическая часть агрегата собрана и испытана. Агрегаты сертифицированы в соответствии с требованиями национальных стандартов ЕАС.</p>
+        </div>
+        <div class="pictures">
+            <div class="pictures__img">
+                <picture>
+                    <img src="./img/article_3.webp" alt="">
+                </picture>
+                <picture>
+                    <img src="./img/article_4.webp" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top_info">
+                <a href="index.html">
+                    <picture class="logo">
+                        <img src="img/icons/logo.svg" alt="">
+                    </picture>
+                </a>
+                <div class="desc">Ремонт и установка промышленных холодильников</div>
+                <div class="contacts">
+                    <div class="location">
+                        <picture>
+                            <img src="./img/icons/location.svg" alt="">
+                        </picture>
+                        <p>г. Нур-Султан, ул. Жангельдина 38/3</p>
+                    </div>
+                    <div class="call">
+                        <picture>
+                            <img src="./img/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77055816611">
+                            +7 705 581 6611
+                        </a>
+                    </div>
+                    <div class="email">
+                        <picture>
+                            <img src="./img/icons/email.svg" alt="">
+                        </picture>
+                        <a href="mailto:icebahacompany@mail.ru">
+                            icebahacompany@mail.ru
+                        </a>
+                    </div>
+                </div>
+                <div class="social__icons_2">
+                    <a href="#">
+                        <picture>
+                            <img src="./img/icons/promo__instagram.svg" alt="">
+                        </picture>
+                    </a>
+                    <a href="#">
+                        <picture>
+                            <img src="./img/icons/promo__youtube.svg" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__top_menu">
+                <div class="menu-list">
+                    <p>Услуги</p>
+                    <ul>
+                        <li><a href="#">Монтаж холодильного оборудования</a></li>
+                        <li><a href="#">Продажа агрегатов холодильного оборудования</a></li>
+                        <li><a href="#">Сервисное обслуживание холодильного оборудования</a></li>
+                        <li><a href="#">Расчет промышленного холодильного оборудования</a></li>
+                    </ul>
+                </div>
+                <div class="menu-list">
+                    <p>Продукция компании</p>
+                    <ul>
+                        <li><a href="#">Агрегаты холодильных камер</a></li>
+                        <li><a href="#">Агрегаты шоковой заморозки</a></li>
+                        <li><a href="#">Агрегаты центрального холодоснабжения</a></li>
+                        <li><a href="#">Компрессорно-конденсаторный блок</a></li>
+                        <li><a href="#">Установка охлаждения жидкости</a></li>
+                        <li><a href="#">Льдогенератор</a></li>
+                        <li><a href="#">Молокоохладитель</a></li>
+                        <li><a href="#">Комплектующие</a></li>
+                    </ul>
+                </div>
+                <div class="menu-list">
+                    <p>Страницы сайта</p>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2022 IceBaha.com Все права защищены.</p>
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <p>Разработано <a href="https://i-marketing.kz/"><img src="img/icons/IMarketing логотип.svg"
+                        alt="i-marketink.kz"></a></p>
+        </div>
+    </div>
+</footer>
+
+<div class="preloader">
+    <h1 contenteditable data-heading="icebaha">icebaha</h1>
+</div>
+<div class="modal">
+    <div class="modal__wrapper"></div>
+    <form class="modal__content">
+        <picture class="modal__close">
+            <img src="./img/icons/modal__close.svg" alt="">
+        </picture>
+        <h3>Узнать стоимость</h3>
+        <input type="text" placeholder="Имя*">
+        <p>Как к вам обращаться?</p>
+        <input type="tel" placeholder="+7 (___) ___-__-__">
+        <p>Номер телефона</p>
+        <div class="buttons">
+           <button class="buttons__bg">узнать стоимость</button> 
+        </div>
+        <div class="desc">
+            Нажимая на кнопку “ Отправить”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a>
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
+    integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+<!-- <script src="./js/slides.js"></script> -->
+<script src="./js/script.min.js" defer></script>
+
+
+</body>
+</html>

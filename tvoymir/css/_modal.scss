@@ -1,0 +1,42 @@
+.modal {
+    position: fixed;
+    z-index: -200;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 300px;
+    &__close {
+        position: absolute;
+        z-index: 200;
+        top: -10px;
+        right: -10px;
+        color: #fff;
+        font-size: 20px;
+        transition: .4s;
+        opacity: 1;
+        &:hover {
+            opacity: .5;
+            transform: rotate(-180deg);
+        }
+    }
+    &__content {
+        background: #F9F0EE;
+        border-radius: 20px;
+        padding: 20px;
+        min-height: 300px;
+        width: 100%;
+    }
+    &-show {
+        transition: .4s;
+        z-index: 500;
+        opacity: 1;
+    }
+}
+
+.modal-leave-feedback {
+            
+}

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/logo.svg">
+    <title>Stet.kz</title>
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/baguetteBox.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <a class="mobile-logo" href="index.html">
+                <picture>
+                    <img src="images/icons/logo.svg" alt="">
+                </picture>
+            </a>
+            <ul class="sidebar__menu">
+                <li class="menu__list--mobile">
+                    <span>Услуги <i class="bi bi-caret-up-fill"></i></span>
+                    <div class="delta"></div>
+                    <ul>
+                        <li>
+                            <a href="laser_epileps.html">Лазерная Эпиляция</a>
+                            <a href="#">Массаж ручной</a>
+                            <a href="#">Похудение</a>
+                        </li>
+                        <li>
+                            <span>Аппаратная косметология:</span>
+                            <a href="#">SMAS LIFTING</a>
+                            <a href="hifu.html">Интимное сужение Hifu</a>
+                            <a href="#">Удаление тату/татуажа</a>
+                            <a href="#">Удаление сосудистой сетки</a>
+                            <a href="#">Удаление растяжек</a>
+                        </li>
+                        <li>
+                            <span>Иньекционная косметология:</span>
+                            <a href="#">Ботокс</a>
+                            <a href="#">Биоревитализация</a>
+                            <a href="#">Липотерапия</a>
+                            <a href="#">Контурная пластика губ</a>
+                            <a href="#">Мезонити</a>
+                            <a href="#">Коррекция носогубных складок</a>
+                            <a href="#">Лечение гипергидроза</a>
+                            <a href="#">Мезотерапия</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="#">Мы обучаем</a></li>
+                <li><a href="comments.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li>
+                    <a href="#">
+                        <picture><img src="images/icons/instagram.svg" alt="instagram_icon"></picture>
+                    </a>
+                    <a href="#">
+                        <picture><img src="images/icons/whatsapp.svg" alt="whatsapp_icon"></picture>
+                    </a>
+                </li>
+            </ul>
+            <i class="bi bi-x modal__close" onclick="openMenu ()"></i>
+        </div>
+        <!-- header mobile -->
+        <div class="header-mobile">
+            <i class="bi bi-list" onclick="openMenu()"></i>
+            <a class="mobile-logo" href="index.html">
+                <picture>
+                    <img src="images/icons/logo.svg" alt="">
+                </picture>
+            </a>
+            <a class="mobile-w" href="tel:+7 747 290 9000">
+                <picture>
+                    <img src="images/icons/call.svg" alt="">
+                </picture>
+            </a>
+        </div>
+        <!-- header descktop -->
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <!-- <select class="location">
+                        <option>Нур-Султан</option>
+                        <option>Алматы</option>
+                    </select> -->
+                    <div class="location">
+                        <span>Нур-Султан <i class="bi bi-caret-up-fill"></i></span>
+                        <ul>
+                            <li><a href="#">Павлодар</a></li>
+                            <li><a href="#">Аксу</a></li>
+                            <li><a href="#">Экибастуз</a></li>
+                            <li><a href="#">Усть – Каменогорск</a></li>
+                            <li><a href="#">Семей</a></li>
+                            <li><a href="#">Риддер</a></li>
+                            <li><a href="#">Балхаш</a></li>
+                            <li><a href="#">Алтай</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <input type="text" class="info__input">
+                        <picture class="info__searchBtn"><img src="images/icons/search.svg" alt="search_pic"></picture>
+                        <a href="#">
+                            <picture><img src="images/icons/instagram.svg" alt="instagram_icon"></picture>
+                        </a>
+                        <a href="#">
+                            <picture><img src="images/icons/whatsapp.svg" alt="whatsapp_icon"></picture>
+                        </a>
+                        <a href="tel:+7 747 290 9000">+7 747 290 9000</a>
+                    </div>
+                </div>
+                <a class="header__center" href="index.html">
+                    <picture><img src="images/icons/logo.svg" alt="logo"></picture>
+                </a>
+                <div class="header__bottom">
+                    <ul class="menu">
+                        <!-- <li><a href="#">Услуги</a></li> -->
+                        <li class="menu__list">
+                            <span>Услуги <i class="bi bi-caret-up-fill"></i></span>
+                            <div class="delta"></div>
+                            <ul>
+                                <li>
+                                    <a href="laser_epileps.html">Лазерная Эпиляция</a>
+                                    <a href="#">Массаж ручной</a>
+                                    <a href="#">Похудение</a>
+                                </li>
+                                <li>
+                                    <span>Аппаратная косметология:</span>
+                                    <a href="#">SMAS LIFTING</a>
+                                    <a href="hifu.html">Интимное сужение Hifu</a>
+                                    <a href="#">Удаление тату/татуажа</a>
+                                    <a href="#">Удаление сосудистой сетки</a>
+                                    <a href="#">Удаление растяжек</a>
+                                </li>
+                                <li>
+                                    <span>Иньекционная косметология:</span>
+                                    <a href="#">Ботокс</a>
+                                    <a href="#">Биоревитализация</a>
+                                    <a href="#">Липотерапия</a>
+                                    <a href="#">Контурная пластика губ</a>
+                                    <a href="#">Мезонити</a>
+                                    <a href="#">Коррекция носогубных складок</a>
+                                    <a href="#">Лечение гипергидроза</a>
+                                    <a href="#">Мезотерапия</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="#">Мы обучаем</a></li>
+                        <li><a href="comments.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="title title__contacts">Контакты</div>
+
+            <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">Нур-Султан</li>
+                <li class="tab-link" data-tab="tab-2">Павлодар</li>
+                <li class="tab-link" data-tab="tab-3">Аксу</li>
+                <li class="tab-link" data-tab="tab-4">Экибастуз</li>
+                <li class="tab-link" data-tab="tab-5">Усть-Каменогорск</li>
+                <li class="tab-link" data-tab="tab-6">Семей</li>
+                <li class="tab-link" data-tab="tab-7">Риддер</li>
+                <li class="tab-link" data-tab="tab-8">Балхаш</li>
+                <li class="tab-link" data-tab="tab-9">Алтай</li>
+            </ul>
+
+            <div id="tab-1" class="tab-content current">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.ru/maps/?from=mapframe&ll=71.413129%2C51.138036&source=mapframe&um=constructor%3Afeafa0e3ea85c2fb96f99c91033602f3ecb5b878e5eaf713d9870d4129800228&utm_source=mapframe&z=14.5">г.
+                            Нур-Султан, пр.Туран, 22/1</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472909000 ">+7 747 290 9000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.stet_">@laser.stet_</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Afeafa0e3ea85c2fb96f99c91033602f3ecb5b878e5eaf713d9870d4129800228&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.ru/maps/?from=mapframe&ll=76.971815%2C52.281952&source=mapframe&um=constructor%3Ae962e3cf9b6362df8843d1fa2bb4a2c2320223b0ca0edaaa7d892f42557b23b5&utm_source=mapframe&z=13">г.
+                            Павлодар,
+                            проспект Нурсултана Назарбаева, 32</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472707000 ">+7 747 270 7000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://www.instagram.com/laser.pvl">@laser.pvl</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae962e3cf9b6362df8843d1fa2bb4a2c2320223b0ca0edaaa7d892f42557b23b5&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.ru/maps/?from=mapframe&ll=76.971815%2C52.281952&source=mapframe&um=constructor%3Ae962e3cf9b6362df8843d1fa2bb4a2c2320223b0ca0edaaa7d892f42557b23b5&utm_source=mapframe&z=13">г.
+                            Аксу, улица Пушкина, 44</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472707000 ">+7 747 270 7000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.aksu_">@laser.aksu_</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad54589c9f08161ee181d3ed41daae9fe80d44e4f7fd36f312f7f3c5081136f50&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-4" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.kz/maps/29590/ekibastuz/?from=mapframe&ll=75.316502%2C51.730378&mode=usermaps&source=mapframe&um=constructor%3A415bf55e6b669385bf5fcb2d693a347985cc21bc1763a3e78e8da77fc9cf17d3&utm_source=mapframe&z=14">г.
+                            Экибастуз, проспект Абая, 70</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77471747000 ">+7 747 174 7000 </a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.ekibastuz_">@laser.ekibastuz_</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A415bf55e6b669385bf5fcb2d693a347985cc21bc1763a3e78e8da77fc9cf17d3&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-5" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.kz/maps/10306/ust-kamenogorsk/?from=mapframe&ll=82.636417%2C49.950220&mode=usermaps&source=mapframe&um=constructor%3A137ef3a5ff7d2362c8af7dd61b0c143c83d675b1d2d987b313b06860fb361ed9&utm_source=mapframe&z=15">г.
+                            Усть-Каменогорск, улица Кабанбай Батыра, 93</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472709000">+7 747 270 9000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.uka">@laser.uka</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A137ef3a5ff7d2362c8af7dd61b0c143c83d675b1d2d987b313b06860fb361ed9&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-6" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.kz/maps/165/semey/?from=mapframe&ll=80.254150%2C50.410452&mode=usermaps&source=mapframe&um=constructor%3A50c4084813f0799916d22f184bbdef9fb19d8553b4f528e98be757fa039fb3fe&utm_source=mapframe&z=16">г.
+                            Семей, улица Каюма Мухамедханова, 23А</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472709000">+7 747 270 9000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.semey">@laser.semey</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A50c4084813f0799916d22f184bbdef9fb19d8553b4f528e98be757fa039fb3fe&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-7" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.kz/maps/29498/ridder/?from=mapframe&ll=83.512218%2C50.340896&mode=usermaps&source=mapframe&um=constructor%3A002cf795e3c6c2893a5402334aea3508c137de087f9d1a4569f3c389b796616b&utm_source=mapframe&z=15">г.
+                            Риддер, проспект Гагарина, 8Б</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472709000">+7 747 270 9000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.ridder">@laser.ridder</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A002cf795e3c6c2893a5402334aea3508c137de087f9d1a4569f3c389b796616b&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-8" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.kz/maps/10293/balkhash/?from=mapframe&ll=74.972359%2C46.833258&mode=usermaps&source=mapframe&um=constructor%3A2e384b632d89b18506043f8643260e7ff31bc4c732502b8185d8d3deded16183&utm_source=mapframe&z=16">г.
+                            Балхаш, улица Желтоксан, 5</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472709000">+7 747 270 9000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.balkhash">@laser.balkhash</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e384b632d89b18506043f8643260e7ff31bc4c732502b8185d8d3deded16183&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+            <div id="tab-9" class="tab-content">
+                <div class="info">
+                    <div class="adress">
+                        <picture>
+                            <img src="images/icons/location.svg" alt="">
+                        </picture>
+                        <a
+                            href="https://yandex.kz/maps/29492/altay/?from=mapframe&ll=84.277022%2C49.721897&mode=usermaps&source=mapframe&um=constructor%3A4b55fea4826b320823c0bf42bd77e39e1c3817b1d5c30f468c5ccc27d338044b&utm_source=mapframe&z=16">г.
+                            Алтай, бульвар Бурнашова, 12</a>
+                    </div>
+                    <div class="whatsapp">
+                        <picture>
+                            <img src="images/icons/whatsapp.svg" alt="">
+                        </picture>
+                        <a href="tel:+77472709000">+7 747 270 9000</a>
+                    </div>
+                    <div class="instagram">
+                        <picture>
+                            <img src="images/icons/instagram.svg" alt="">
+                        </picture>
+                        <a href="https://instagram.com/laser.altay">@laser.altay</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A4b55fea4826b320823c0bf42bd77e39e1c3817b1d5c30f468c5ccc27d338044b&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a href="index.html" class="footer__logo">
+                        <img src="images/icons/logo-big.svg" alt="img">
+                    </a>
+                    <div class="footer__items">
+                        <ul class="item">
+                            <li><a>Лазерная Эпиляция</a></li>
+                            <li><a>Массаж ручной</a></li>
+                            <li><a>Похудение</a></li>
+                        </ul>
+                        <ul class="item item--list">
+                            <li class="item__title">Аппаратная косметология<i class="bi bi-caret-up-fill"></i></li>
+                            <ul>
+                                <li class="item__links"><a>SMAS LIFTING</a></li>
+                                <li class="item__links"><a>Интимное сужение Hifu</a></li>
+                                <li class="item__links"><a>Удаление тату/татуажа</a></li>
+                                <li class="item__links"><a>Удаление сосудистой сетки</a></li>
+                                <li class="item__links"><a>Удаление растяжек</a></li>
+                            </ul>
+                        </ul>
+                        <ul class="item item--list">
+                            <li class="item__title">Иньекционная косметология<i class="bi bi-caret-up-fill"></i></li>
+                            <ul>
+                                <li class="item__links"><a>Ботокс</a></li>
+                                <li class="item__links"><a>Биоревитализация</a></li>
+                                <li class="item__links"><a>Липотерапия</a></li>
+                                <li class="item__links"><a>Контурная пластика губ</a></li>
+                                <li class="item__links"><a>Мезонити</a></li>
+                                <li class="item__links"><a>Коррекция носогубных складок</a></li>
+                                <li class="item__links"><a>Лечение гипергидроза</a></li>
+                                <li class="item__links"><a>Мезотерапия</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <ul class="footer__menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Галерея</a></li>
+                        <li><a href="#">Мы обучаем</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Соискателям</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__feedback">
+                        <li><a href="#"><img src="images/icons/instagram.svg" alt="img"></a></li>
+                        <li><a href="#"><img src="images/icons/whatsapp.svg" alt="img"></a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2022 Центр лазерной эпиляции «s-tet».</p>
+                    <p>Все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>Разработано <a href="https://i-marketing.kz/"><img src="images/icons/IMarketing логотип.svg"
+                                alt="i-marketink.kz"></a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- modal -->
+        <div class="modal">
+            <i class="bi bi-x modal__close"></i>
+            <iframe src="https://www.youtube.com/embed/vD_pJY_aVsc" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="modal__signUp">
+            <div class="modal__content">
+                <i class="bi bi-x modal__signClose"></i>
+                <!-- <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="number" placeholder="Номер телефона">
+                <textarea cols="30" rows="10" placeholder="Комментарий"></textarea>
+                <a href="#" class="sidebar__feedback modal__btn" style="color: #fff; text-decoration:none;">
+                    Хочу записаться
+                </a> -->
+            </div>
+        </div>
+        <div class="modal__readAll">
+            <div class="modal__content">
+                <i class="bi bi-x modal__reaadAllClose"></i>
+                <h3>Еркегуль</h3>
+                <span>11 марта 2022 в 12:28</span>
+                <div class="text">
+                </div>
+            </div>
+        </div>
+        <div class="modal__viewOriginal">
+            <i class="bi bi-x modal__viewClose"></i>
+            <picture>
+                <img src="" alt="">
+            </picture>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
+        integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+    <script src="js/vendor/ScrollTrigger.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

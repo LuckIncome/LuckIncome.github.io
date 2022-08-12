@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.svg">
+    <title>Твой Мир</title>
+    <script src="js/vendor/vue@2.js"></script>
+    <script src="js/vendor/vue2-touch-events.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/baguetteBox.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <vue id="app">
+
+        <header class="header">
+            <!-- <div class="container">
+                <button @click="toggleSidebar">Open Sidebar</button>
+                
+            </div> -->
+            <div class="container">
+                <div class="header__inner">
+                    <!-- <a href="index.html" class="header__call">
+                        <img src="images/icons/call-black.svg" alt="img">
+                    </a> -->
+                    <a href="index.html" class="header__logo">
+                        <img src="images/icons/logo.svg" alt="img">
+                    </a>
+                    <!-- <img class="header__menuMobile" src="images/icons/menu-mobile.svg" alt="img" onclick="mobileMenu();"> -->
+                </div>
+                <ul class="header__menu">
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">Вопросы-ответы</a></li>
+                    <li><a href="vacance.html">Вакансии</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <a href="index.html#feedback" class="header__feedback">
+                    Обратная связь
+                </a>
+                <button class="menu_mobile" onclick="showMenu()"><i class="bi bi-list"></i></button>
+                
+            </div>
+        </header>
+
+
+        <main class="main">
+
+            <section class="banner">
+                <div class="container">
+                    <div class="slider">
+                        <div class="banner__left">
+                            <h1>Экспресс тесты</h1>
+                            <h2>OraQuick</h2>
+                            <p>
+                                <span>Определение ВИЧ-статуса</span>
+                                <span>за 20 минут</span>
+                            </p>
+                            <a href="#">Заказать самотест</a>
+                            <div class="banner__iconsBox">
+                                <div class="banner__iconsElement">
+                                    <img src="images/icons/health 1.svg" alt="">
+                                    <span>Доступно</span>
+                                </div>
+                                <div class="banner__iconsElement">
+                                    <img src="images/icons/support 1.svg" alt="">
+                                    <span>Просто</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__left">
+                            <h1>Экспресс тесты</h1>
+                            <h2>OraQuick</h2>
+                            <p>
+                                <span>Определение ВИЧ-статуса</span>
+                                <span>за 20 минут</span>
+                            </p>
+                            <a href="#">Заказать самотест</a>
+                            <div class="banner__iconsBox">
+                                <div class="banner__iconsElement">
+                                    <img src="images/icons/health 1.svg" alt="">
+                                    <span>Доступно</span>
+                                </div>
+                                <div class="banner__iconsElement">
+                                    <img src="images/icons/support 1.svg" alt="">
+                                    <span>Просто</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__right">
+                    </div>
+                    <div class="banner__elipse">
+                        <picture><img src="images/image 75.png" alt=""></picture>
+                    </div>
+                </div>
+            </section>
+            <section class="mainAbout">
+                <div class="container">
+                    <picture class="mainAbout__picture">
+                        <img src="images/image 59.png" alt="img">
+                    </picture>
+                    <div class="mainAbout__info">
+                        <h1 class="title">О компании</h1>
+                        <img clas="titleLine" src="images/icons/line_title.png" alt="">
+                        <div class="editors">
+                            <p>Сайт-визитка – небольшой сайт о компании, как правило, состоящий из нескольких
+                                (пяти-шести) веб-страниц. Содержит основную (краткую) информацию об организации,
+                                ее товарах/услугах, прейскуранты и контактные данные. Идеальное решение для
+                                начинающего бизнеса и современная альтернатива лендингам (одностраничникам).</p>
+                            <p>Сайт-визитка – небольшой сайт о компании, как правило, состоящий из нескольких
+                                (пяти-шести) веб-страниц. Содержит основную (краткую) информацию об организации,
+                                ее товарах/услугах, прейскуранты и контактные данные. Идеальное решение для
+                                начинающего бизнеса и современная альтернатива лендингам (одностраничникам).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mainBlog">
+                <div class="container">
+                    <div class="mainBlog__info">
+                        <div>
+                            <h1 class="title">Блог</h1>
+                            <img clas="titleLine" src="images/icons/line_title.png" alt="">
+                        </div>
+                        <a class="mainBlog__button button" href="#">Все статьи</a>
+                    </div>
+                    <div class="mainBlog__slider">
+                        <a href="#" class="mainBlog__sliderItem">
+                            <picture>
+                                <img src="images/image 60.png" alt="">
+                            </picture>
+                            <h2>Название статьи</h2>
+                            <p>О писание на несколько строк.</p>
+                            <span>1.03.2022</span>
+                        </a>
+                        <a href="#" class="mainBlog__sliderItem">
+                            <picture>
+                                <img src="images/image 61.png" alt="">
+                            </picture>
+                            <h2>Название статьи</h2>
+                            <p>О писание на несколько строк.</p>
+                            <span>1.03.2022</span>
+                        </a>
+                        <a href="#" class="mainBlog__sliderItem">
+                            <picture>
+                                <img src="images/image 60.png" alt="">
+                            </picture>
+                            <h2>Название статьи</h2>
+                            <p>О писание на несколько строк.</p>
+                            <span>1.03.2022</span>
+                        </a>
+                        <a href="#" class="mainBlog__sliderItem">
+                            <picture>
+                                <img src="images/image 61.png" alt="">
+                            </picture>
+                            <h2>Название статьи</h2>
+                            <p>О писание на несколько строк.</p>
+                            <span>1.03.2022</span>
+                        </a>
+                        <a href="#" class="mainBlog__sliderItem">
+                            <picture>
+                                <img src="images/image 61.png" alt="">
+                            </picture>
+                            <h2>Название статьи</h2>
+                            <p>О писание на несколько строк.</p>
+                            <span>1.03.2022</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="mainAchiv">
+                <div class="container">
+                    <div class="mainAchiv__info">
+                        <div>
+                            <h1 class="title">Достижения и партнеры</h1>
+                            <img clas="titleLine" src="images/icons/line_title.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mainAchiv__slider">
+                        <picture><img src="images/image 64.png" alt=""></picture>
+                        <picture><img src="images/image 64.png" alt=""></picture>
+                        <picture><img src="images/image 64.png" alt=""></picture>
+                        <picture><img src="images/image 64.png" alt=""></picture>
+                        <picture><img src="images/image 64.png" alt=""></picture>
+                    </div>
+                    <div class="mainPartners__slider">
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                        <picture><img src="images/image 68.png" alt=""></picture>
+                    </div>
+                </div>
+            </section>
+            <section class="mainForm" id="feedback">
+                <div class="container">
+                    <img class="mainForm__left" src="images/doctor.png" alt="">
+                    <form action="#" class="mainForm__right">
+                        <h2>Закажите консультацию специалиста</h2>
+                        <input type="text" placeholder="Как к Вам обращаться">
+                        <span>Как с Вами удобней связаться</span>
+                        <input type="text" placeholder="Телефон, адрес, ссылку на соц профиль  и т.д.">
+                        <button type="submit">Заказать </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <a href="index.html" class="footer__logo">
+                        <img src="images/icons/logo.svg" alt="img">
+                    </a>
+                    <ul class="footer__menu">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Вопрос-Ответ</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li><a>Мы в соц сетях</a></li>
+                        <li class="footer__menu_social">
+                            <a href="#"><img src="images/icons/facebook.svg" alt=""></a>
+                            <a href="#"><img src="images/icons/telegram.svg" alt=""></a>
+                            <a href="#"><img src="images/icons/vk.svg" alt=""></a>
+                            <a href="#"><img src="images/icons/twitter.svg" alt=""></a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li>Сайт создан при<br /> поддержке доноров</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <p>© 2022 все права защищены.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                    <p>Разработано <a href="#"><img src="images/icons/logo-im.svg" alt="img"></a></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Сайд-бар -->
+        
+        <div class="sidebar" :class="{'sidebar-show': isSidebar}">
+            <div class="sidebar__top">
+                <a href="index.html" class="sidebar__logo">
+                    <img id="my-svg" src="images/icons/logo.svg" alt="img">
+                </a>
+                <button class="sidebar__toggle" onclick="showMenu()">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="sidebar__bottom">
+                <ul class="header__menu sidebar__menu">
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">Вопросы-ответы</a></li>
+                    <li><a href="vacance.html">Вакансии</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <a href="index.html#feedback" class="sidebar__feedback">
+                    Обратная связь
+                </a>
+            </div>
+        </div>
+        <!-- /Сайд-бар -->
+
+        <!-- Модалки -->
+        <div class="modal modal-leave-feedback" :class="{'modal-show': isModalLeaveFeedback}">
+            <button @click="toggleWrapper" class="modal__close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal__content">
+                review
+            </div>
+        </div>
+        <!-- /Модалки -->
+
+        <!-- Загрузка сайта -->
+        <div class="loader" :class="{'loader-done' : !isOnload}">
+            <a href="index.html" class="header__logo">
+                <img src="images/icons/logo.svg" alt="img">
+            </a>
+        </div>
+        <!-- /Загрузка сайта -->
+
+        <!-- Затемнение сайта -->
+        <div class="wrapper" :class="{'wrapper-show': isWrapper}">
+        </div>
+        <!-- /Затемнение сайта -->
+
+    </vue>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
+        integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/maska@latest/dist/maska.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.editors {
+    ul, ol {
+        padding-inline-start: 20px;
+        padding-bottom: 15px;
+    }
+    ul {
+        li {
+            list-style-type: disc;
+        }
+    }
+    ol {
+        li {
+            list-style-type: decimal;
+        }
+    }
+    strong {
+        font-weight: 600;
+    }
+    em {
+        font-style: italic;
+    }
+}

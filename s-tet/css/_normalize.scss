@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.main {
+    min-height: 1300px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+input,textarea {
+    background: none;
+    border: none;
+    outline: none;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    padding-left: 0rem;
+    li {
+        list-style-type: none;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .4s ease;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+    box-shadow: none;
+}
