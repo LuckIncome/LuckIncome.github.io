@@ -1,22 +1,68 @@
 # Ссылки
-https://luckincome.github.io/icebaha/index.html
-https://luckincome.github.io/s-tet/index.html
-https://luckincome.github.io/tvoymir/index.html
-https://luckincome.github.io/rivoli/index.html
-https://luckincome.github.io/sudexpert/index.html
-https://luckincome.github.io/resident/index.html
-https://luckincome.github.io/proffmetal/index.html
-https://luckincome.github.io/duende/index.html
-https://luckincome.github.io/diz-ain/index.html
-https://luckincome.github.io/visa-time/index.html
-https://luckincome.github.io/finreview/index.html
-https://luckincome.github.io/itprom/index.html
-https://luckincome.github.io/dar-rail/index.html
-https://luckincome.github.io/qaz-fasad/index.html
-https://luckincome.github.io/itermic.kz/index.html
-https://luckincome.github.io/alias/index.html
-https://luckincome.github.io/GO/index.html
-https://luckincome.github.io/surf/index.html
-https://luckincome.github.io/surfboard/index.html
-https://luckincome.github.io/blog1/Index.html
-https://luckincome.github.io/portfolio2/index.html
+
+<table>
+    <thead>
+    </thead>
+    <tbody>
+        <tr> 
+            <td>https://luckincome.github.io/icebaha/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/s-tet/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/rivoli/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/sudexpert/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/resident/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/proffmetal/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/duende/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/diz-ain/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/visa-time/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/finreview/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/itprom/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/dar-rail/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/qaz-fasad/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/itermic.kz/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/alias/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/GO/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/surf/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/surfboard/index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/blog1/Index.html</td>
+        </tr>
+        <tr> 
+            <td>https://luckincome.github.io/portfolio2/index.html</td>
+        </tr>
+    </tbody>
+</table>
